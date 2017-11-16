@@ -43,7 +43,7 @@ var Data = mongoose.model('Data', dataSchema)
 
 app.get('/' , function(req, res){
 		res.status(200).send('Hello world')
-		console.log('dentro')
+		
 })
 
 app.post('/data', function(req, res){
@@ -71,6 +71,6 @@ app.post('/data', function(req, res){
 
 })
 
-server.listen(8000, function(){
+server.listen(5000, function(){
 	console.log('escuchando puerto 8000')
 })

@@ -9,6 +9,8 @@ var bodyParser = require('body-parser')
 //body-parser
 app.use(bodyParser.json()); //for parsing application/json
 app.use(bodyParser.urlencoded({extended: true})); //for parsing application
+//static html
+app.use('/', express.static(__dirname + '/public'))
 
 //conection base de datos
 mongoose.connect('mongodb://localhost:27017/dani', function(err){
@@ -40,12 +42,12 @@ var dataSchema = new Schema({
 var Data = mongoose.model('Data', dataSchema)
 
 
-
+/*
 app.get('/' , function(req, res){
 		res.status(200).send('Hola como estan')
 		
 })
-
+*/
 app.post('/data', function(req, res){
 	var data  = new Data();
 	data.var1 = req.body.variable1;

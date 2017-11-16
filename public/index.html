@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		google.load('visualization','1.0',{'packages':['corechart']})
+		google.setOnLoadCallback(dibujar)
+
+		function dibujar()
+		{
+			var data = new google.visualization.DataTable()
+			data.addColumn('string','Ciudad')
+			data.addColumn('number','visitas')
+			data.addRows(
+					[
+					['Cd Mexico', 700],
+					['Bogata', 651],
+					['Lima',581],
+					['Caracas',552],
+					['Montevideo',357]	
+					]
+				)
+			var opciones = {'title': 'Visitas a mi web',
+							'width': 500,
+							'height': 300}
+			var grafica = new google.visualization.AreaChart(document.getElementById('charts'))
+			grafica.draw(data,opciones)
+		}
+	</script>
 	<title>	Hola</title>
 </head>
 <body>
-		hola
+		<div id="charts">	</div>
 </body>
 </html>

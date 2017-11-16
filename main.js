@@ -36,6 +36,7 @@ var dataSchema = new Schema({
 	var10: { type: Number, required: true}
 });
 
+//comentario 
 var Data = mongoose.model('Data', dataSchema)
 
 

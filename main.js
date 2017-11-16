@@ -42,7 +42,7 @@ var Data = mongoose.model('Data', dataSchema)
 
 
 app.get('/' , function(req, res){
-		res.status(200).send('Hello world')
+		res.status(200).send('Hola como estan')
 		
 })
 

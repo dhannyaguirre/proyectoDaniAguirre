@@ -9,7 +9,7 @@
       function all() {
         var deferred = $q.defer();
 
-        $http.get('/ingenieros.json')
+        $http.get('/api/documentos')
           .success(function (data) {
             deferred.resolve(data);
           });

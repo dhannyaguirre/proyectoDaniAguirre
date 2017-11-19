@@ -2,8 +2,6 @@ var express = require('express');
 //dependencias proyecto principal
 var path = require('path');
 var logger = require('morgan');
-//var ingenieross = require('./bower_components/ingenieros.json');
-//var convenios = require('./bower_components/convenios.json');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var multer  = require('multer')
@@ -105,6 +103,7 @@ app.get("/menu",function(req,res){
 });
 */
 
+//route para conseguir todo los registros de datos
 app.get("/menu",function(req,res){
 
   Var.find(function(error,documento){
@@ -112,6 +111,32 @@ app.get("/menu",function(req,res){
     res.render("menu/index",{ vars: documento })
   });
 });
+
+//route para guardar un registro en la base de datos 
+app.post('/menu', function(req, res ) {
+
+  	console.log(req.body)
+  	var data = {
+  		var1: req.body.var1,
+  		var2: req.body.var2,
+  		var3: req.body.var3,
+  		var4: req.body.var4,
+  		var5: req.body.var5,
+  		var6: req.body.var6,
+  		var7: req.body.var7,
+  		var8: req.body.var8,
+  		var9: req.body.var9,
+  		var10: req.body.var10
+  	}
+  	var documento = new Var(data);
+	documento.save(function(err){
+		res.redirect("/menu");
+	});
+
+});
+
+//ruta para editar un registro 
+
 
 app.put("/menu/:id", upload.single( 'image_avatar' ), function( req, res, next ){
 	if(req.body.password == app_password){
@@ -201,32 +226,6 @@ app.get("/admin",function(req,res){
 	res.render("admin/form")
 });
 
-app.post('/menu', function(req, res ) {
-
-  	console.log(req.body)
-  	var data = {
-  		var1: req.body.var1,
-  		var2: req.body.var2,
-  		var3: req.body.var3,
-  		var4: req.body.var4,
-  		var5: req.body.var5,
-  		var6: req.body.var6,
-  		var7: req.body.var7,
-  		var8: req.body.var8,
-  		var9: req.body.var9,
-  		var10: req.body.var10
-  	}
-  	
-  	//console.log(data)
-  	var documento = new Var(data);
-	//console.log(req.file);
-	//res.render("index");
-	//console.log(documento)
-	documento.save(function(err){
-		res.redirect("/menu");
-	});
-
-});
 
 app.get("/menu/new", function(req,res){
 	res.render("menu/new");

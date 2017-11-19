@@ -205,7 +205,7 @@ app.post('/menu', function(req, res ) {
 
   	console.log(req.body)
   	var data = {
-  		var1: req.body.va1,
+  		var1: req.body.var1,
   		var2: req.body.var2,
   		var3: req.body.var3,
   		var4: req.body.var4,
@@ -217,11 +217,11 @@ app.post('/menu', function(req, res ) {
   		var10: req.body.var10
   	}
   	
-  	console.log(data)
+  	//console.log(data)
   	var documento = new Var(data);
 	//console.log(req.file);
 	//res.render("index");
-	console.log(documento)
+	//console.log(documento)
 	documento.save(function(err){
 		res.redirect("/menu");
 	});

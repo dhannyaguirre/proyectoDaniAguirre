@@ -210,7 +210,7 @@ app.get("/menu/delete/:id",function(req, res){
 app.delete("/menu/:id",function(req,res){
 	var id = req.params.id;
 	if(req.body.password == app_password){
-		Ingeniero.remove({"_id" : id},function(err){
+		Var.remove({"_id" : id},function(err){
 			if(err){ console.log(err);}
 			res.redirect("/menu");
 		});

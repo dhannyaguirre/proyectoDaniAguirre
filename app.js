@@ -197,7 +197,7 @@ app.get("/admin",function(req,res){
   		Var.find(function(error,documento){
    		 if(error){ console.log(error); }
    			 //res.render("menu/index",{ vars: documento })
- 		 	console.log(documento);
+ 		 	console.log(documento.length);
  		 });
 /*
 		 // ["foo", "Hello World", 2, 3, "bar", 1, 4, 5]	

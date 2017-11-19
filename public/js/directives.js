@@ -51,7 +51,7 @@
       }
     })
 
-     .directive('ingenieroSolicitudes', ['solicitudesService', function (solicitudesService) {
+     .directive('ingenieroSolicitudes', ['ingenieroService', function (ingenieroService) {
       return {
         restrict: 'E',
         templateUrl: 'partials/ingeniero-solicitudes.html',
@@ -62,12 +62,12 @@
           attributes.$observe('name', function (value) {
             if (value) {
               scope.name = value;
-              scope.solicitudes = solicitudesService.getSolicitudes(value);
+              scope.solicitudes = ingenieroService.getSolicitudes(value);
             }
           });
         },
         controller: function ($scope) {
-          $scope.solicitudes = solicitudesService.getSolicitudes($scope.name);
+          $scope.solicitudes = ingenieroService.getSolicitudes($scope.name);
           $scope.solicitud = {};
           $scope.show = false;
 
@@ -83,8 +83,8 @@
 
           $scope.addSolicitud = function () {
             $scope.solicitud.date = Date.now();
-            solicitudesService.saveSolicitud($scope.name, $scope.solicitud);
-            $scope.solicitudes = solicitudesService.getSolicitudes($scope.name);
+            ingenieroService.saveSolicitud($scope.name, $scope.solicitud);
+            $scope.solicitudes = ingenieroService.getSolicitudes($scope.name);
             $scope.solicitud = {};
           };
 

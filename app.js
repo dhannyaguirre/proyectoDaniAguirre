@@ -135,6 +135,27 @@ app.post('/menu', function(req, res ) {
 
 });
 
+
+// ruta de ingreso a admin
+app.get("/admin",function(req,res){
+
+	res.render("admin/form")
+
+});
+
+//ruta para conseguir post y lista de datos
+
+app.post("/admin",function(req,res){
+	if(req.body.password== app_password){
+		Var.find(function(error,documento){
+		if(error){ console.log(error); }
+		res.render("admin/index",{ vars: documento })
+	});
+	}else{
+		res.redirect("/");
+	}
+});
+
 //ruta para editar un registro 
 
 
@@ -186,60 +207,7 @@ app.post("/admin",function(req,res){
 	}
 });
 
-app.get("/admin",function(req,res){
 
-	/*Array.prototype.unique=function(a){
-  		return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
-	});
-  		var myArr = [];
-  		var myArrp = [];
-  		var vars;
-
-  		Var.find(function(error,documento){
-   		 if(error){ console.log(error); }
-   			 //res.render("menu/index",{ vars: documento })
- 		 	//console.log(documento.length);
- 		 	vars= documento
- 		 	for(i=0; i<vars.length; i++) {
-				myArr[i]= vars[i].var1;
-			}
- 		 });
-*/
-		 // ["foo", "Hello World", 2, 3, "bar", 1, 4, 5]	
-	/*for(i=0; i<ingenieross.length; i++) {
-
-		myArr[i]= ingenieross[i].universidad.toLowerCase();
-	}
-	*/
-		//console.log( myArr.unique() );
-
-  /*
-	for(i=0; i<ingenieross.length; i++) {
-		var data = {
-		imageUrl: "http://res.cloudinary.com/dot6c5g5b/image/upload/v1467166958/person_man_a6psrf.png",
-  		ci: ingenieross[i].ci,
-  		apellidos: ingenieross[i].apellidos,
-  		name: ingenieross[i].name,
-  		correo: ingenieross[i].correo,
-  		programa: ingenieross[i].programa,
-  		financiamiento: ingenieross[i].financiamiento,
-  		pais: ingenieross[i].pais,
-  		universidad: ingenieross[i].universidad,
-  		nivel: ingenieross[i].nivel,
-  		area: ingenieross[i].area,
-  		titulo: ingenieross[i].titulo
-  		}
-  		var ingeniero = new Ingeniero(data);
-  		ingeniero.save(function(err){
-				console.log(ingeniero);
-				//res.redirect("/menu");
-			});
-
-	}
-	console.log(data);*/
-	res.render("admin/form")
-
-});
 
 
 app.get("/menu/new", function(req,res){

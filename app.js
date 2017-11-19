@@ -195,7 +195,7 @@ app.get("/menu/edit/:id",function(req,res){
 	});
 
 });
-
+/*
 app.post("/admin",function(req,res){
 	if(req.body.password== app_password){
 		Ingeniero.find(function(error,documento){
@@ -207,7 +207,7 @@ app.post("/admin",function(req,res){
 	}
 });
 
-
+*/
 
 
 app.get("/menu/new", function(req,res){

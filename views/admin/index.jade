@@ -2,26 +2,34 @@ extends ../layout.jade
 block contenido
 	h1 Panel de administración
 	table(class="table")
-		caption Productos Actuales
+		caption Datos Actuales
 		thead
 			tr
-				th #
-				th ci
-				th apellidos
-				th nombre
-				th Imágenes
-				th Acciones
+				th var1
+				th var2
+				th var3
+				th var4
+				th var5
+				th var6
+				th var7
+				th var8
+				th var9
+				th var10
 		tbody
-			each inge in ingenieros
+			each doc in vars
 				tr
-					td= inge.id
-					td= inge.ci
-					td= inge.apellidos
-					td= inge.name
+					td= doc.var1
+					td= doc.var2
+					td= doc.var3
+					td= doc.var4
+					td= doc.var5
+					td= doc.var6
+					td= doc.var7
+					td= doc.var8
+					td= doc.var9
+					td= doc.var10
 					td
-						a(href="#{inge.imageUrl}" class="btn") Ver Imagen
-					td
-						a(href="/menu/edit/#{inge.id}") Editar
+						a(href="/menu/edit/#{doc.id}") Editar
 						=" - "
-						a(href="/menu/delete/#{inge.id}") Eliminar
+						a(href="/menu/delete/#{doc.id}") Eliminar
 						

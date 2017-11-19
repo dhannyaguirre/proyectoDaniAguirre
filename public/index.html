@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Proyecto Integrador</title>
+    <title>{{title && 'Ing | ' + title || 'Ing' }}</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -25,54 +25,20 @@
         </div>
       </div>
     </div>
-   <div class="container">
-      <!-- ingeniero -->
-      <div ng-controller="IngenieroController as ingCtrl">
-        <div class="page-header">
-          <h1>
-           {{ingCtrl.ingeniero.name}} 
-            <small>{{ingCtrl.ingeniero.ingenieria}}</small>
-            <span class="label label-primary pull-right">#{{ingCtrl.ingeniero.id}}</span>
-          </h1>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <img class="avatar center-block" ng-src="img/ingenieros/{{ingCtrl.ingeniero.name | lowercase}}.png">
-          </div>
-          <div class="col-md-6">
-            <ul class="nav nav-tabs nav-justified">
-              <li class="active"><a href="#">Ingenierias</a></li>
-              <li><a href="#">Estadísticas</a></li>
-              <li><a href="#">Evolución</a></li>
-            </ul>
-            <div class="tab-content">
-              <div>
-                <ul class="list-group">
-                  <li class="list-group-item">
-                    <strong>Tipo</strong>
-                    <span class="pull-right">{{ingCtrl.ingeniero.tipo.join(', ')}}</span>
-                  </li>
-                  <li class="list-group-item">
-                    <strong>Edad</strong>
-                    <span class="pull-right">{{ingCtrl.ingeniero.edad}}</span>
-                  </li>
-                  <li class="list-group-item">
-                    <strong>Facultad</strong>
-                    <span class="pull-right">{{ingCtrl.ingeniero.facultad}}</span>
-                  </li>
-                  <li class="list-group-item">
-                    <strong>Habilidades</strong>
-                    <span class="pull-right">{{ingCtrl.ingeniero.habilidades.join(', ')}}</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /ingeniero -->
+   <div class="container-fluid">
+    <div ng-view></div>  
     </div>
+    <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+    <script src="js/lib/angular-resource.min.js"></script>
+    <script src="js/lib/angular-md5.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/services.js"></script>
+    <!--modula pra controladore sdentor del hteml-->
   </body>
 </html>
+

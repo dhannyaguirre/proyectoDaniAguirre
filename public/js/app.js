@@ -1,16 +1,33 @@
 (function () {
-  var app = angular.module('ingedex', []);
 
-  app.controller('IngenieroController', function () {
-    this.ingeniero = {
-      id: "001",
-      name: "Nombre001",
-      ingenieria: "Ingenieria001",
-      tipo: [ "Tipo1", "Tipo2" ],
-      edad: "40",
-      facultad: "facultad001",
-      habilidades: [ "habilidad1", "habilidad2"]
-    };
-  });
+  var app = angular.module('ingedex', [
+    'ngRoute',
+    'angular-md5',
+    'ingedex.controllers',
+    'ingedex.directives',
+    'ingedex.filters',
+    'ingedex.services'
+    ]);
+
+    app.config(['$routeProvider', function ($routeProvider) {
+
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/ingedex.html',
+        controller: 'IngedexController'
+      })
+       .when('/:type', {
+        templateUrl: 'views/ingedex.html',
+        controller: 'IngedexController'
+      })
+      .when('/ingeniero/:name', {
+        templateUrl: 'views/ingeniero.html',
+        controller: 'IngenieroController',
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+
+  }]);
 
 })();

@@ -15,8 +15,11 @@ require( 'string.prototype.startswith' );
 
 var app_password = "1"
 var Schema = mongoose.Schema;
+//mongodb://<dbuser>:<dbpassword>@ds113826.mlab.com:13826/var
 
-mongoose.connect('mongodb://node:node@ds023644.mlab.com:23644/hanmilton');
+mongoose.connect('mongodb://node:node@ds113826.mlab.com:13826/var');
+
+//mongoose.connect('mongodb://node:node@ds023644.mlab.com:23644/hanmilton');
 //mongoose.connect('')
 var cloudinary = require("cloudinary");
 

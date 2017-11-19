@@ -188,7 +188,7 @@ app.post("/admin",function(req,res){
 
 app.get("/admin",function(req,res){
 
-	Array.prototype.unique=function(a){
+	/*Array.prototype.unique=function(a){
   		return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
 	});
   		var myArr = [];
@@ -204,14 +204,14 @@ app.get("/admin",function(req,res){
 				myArr[i]= vars[i].var1;
 			}
  		 });
-
+*/
 		 // ["foo", "Hello World", 2, 3, "bar", 1, 4, 5]	
 	/*for(i=0; i<ingenieross.length; i++) {
 
 		myArr[i]= ingenieross[i].universidad.toLowerCase();
 	}
 	*/
-		console.log( myArr.unique() );
+		//console.log( myArr.unique() );
 
   /*
 	for(i=0; i<ingenieross.length; i++) {

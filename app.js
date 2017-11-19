@@ -169,6 +169,7 @@ app.get("/menu/edit/:id",function(req,res){
 //ruta para guardar editar un registro por el id
 
 app.put("/menu/:id", function( req, res ){
+	console.log('estoy dentro del metodo put')
 	if(req.body.password == app_password){
 		var data = {
 			var1: req.body.var1,

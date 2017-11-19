@@ -2,10 +2,9 @@ extends ../layout.jade
 block contenido
 	h2(class='pacifico big blue') Menú
 	p Documentos Ingresados
-	each var in vars
+	each doc in docs
 		div(class="col-md-4 col-sm-6 col-xs-12 inline-block")
-			h3(class="pacifico")= var.title
-			img(src="#{ var.imageUrl }" class="col-xs-7 col-md-4 no-float")
+			h3(class="pacifico")= doc.title
 			p(style="margin-top:1em;") 
-				small(class="lato small") #{var.pricing}USD
+				small(class="lato small") #{doc.var1}USD
 

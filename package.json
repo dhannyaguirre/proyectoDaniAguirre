@@ -1,16 +1,26 @@
 {
-  "name": "proyectoIntegrador",
+  "name": "myrestapi2",
   "version": "1.0.0",
-  "private": true,
-  "description": "A proyectoIntegrador built in Angular.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": "grunt"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Hanmilton Berrezueta <hanmilton_12@outlook.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-connect": "^0.8.0",
-    "grunt-contrib-watch": "^0.6.1"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cloudinary": "^1.4.1",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.5.2",
+    "multer": "^1.1.0",
+    "express-handlebars": "^2.0.1",
+    "handlebars": "^4.0.4",
+    "image-size": "^0.3.5",
+    "morgan": "^1.7.0",
+    "string.prototype.startswith": "^0.2.0"
   }
 }
+

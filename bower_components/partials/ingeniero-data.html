@@ -1,0 +1,28 @@
+<ul class="list-group">
+  <li class="list-group-item">
+    <strong>Cédula</strong>
+    <span class="pull-right">{{ingeniero.ci}}</span>
+  </li>
+  <li class="list-group-item">
+    <strong>Apellidos</strong>
+    <span class="pull-right">{{ingeniero.apellidos}}</span>
+  </li>
+  <li class="list-group-item">
+    <strong>Nombres</strong>
+    <span class="pull-right">{{ingeniero.name}}</span>
+  </li>
+  <li class="list-group-item">
+    <strong>Correo</strong>
+    <span class="pull-right">
+    <a href="mailto:{{ingeniero.correo}}">
+      {{ingeniero.correo}}
+    </a></span>
+  </li>
+  <li class="list-group-item">
+    <strong>Facultad</strong>
+    <span class="pull-right">
+      <ingeniero-type></ingeniero-type>
+    </span>
+  </li>
+</ul>
+                

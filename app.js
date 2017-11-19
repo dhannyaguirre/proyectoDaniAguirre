@@ -51,9 +51,7 @@ var varSchemaJSON = {
   var7 : Number,
   var8 : Number,
   var9 : Number,
-  var10 : Number,
-  var11 : Number,
-  var12: Number
+  var10 : Number
 };
 /*
 var ingenieroSchemaJSON = {

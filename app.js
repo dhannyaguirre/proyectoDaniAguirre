@@ -161,7 +161,7 @@ app.get("/menu/edit/:id",function(req,res){
 	var id_documento = req.params.id;
 
 	Var.findOne({_id: id_documento},function(error,documento){
-		res.render("menu/edit",{vars: documento});
+		res.render("menu/edit",{doc: documento});
 	});
 
 });

@@ -1,8 +1,8 @@
 extends ../layout.jade
 block contenido
 	div(class="col-md-5 center-block no-float top-space text-left")
-		h1 Eliminar #[span= producto.title]
-		form(method="POST" action="/menu/#{producto.id}?_method=delete" style="margin-top:1.5em;")
+		h1 Eliminar #[span= documento.var1]
+		form(method="POST" action="/menu/#{documento.id}?_method=delete" style="margin-top:1.5em;")
 			div(class="form-group")
 				label Contraseña
 				input(type="password" name="password" placeholder="Contraseña" class="form-control")

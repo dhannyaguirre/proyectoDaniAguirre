@@ -169,7 +169,7 @@ app.get("/menu/edit/:id",function(req,res){
 //ruta para guardar editar un registro por el id
 
 app.put("/menu/:id", function( req, res ){
-	console.log('estoy dentro del metodo put')
+	console.log('estoy dentro del metodo product')
 	if(req.body.password == app_password){
 		var data = {
 			var1: req.body.var1,
@@ -193,41 +193,17 @@ app.put("/menu/:id", function( req, res ){
 	}
 });
 
-/*
-app.get("/menu/edit/:id",function(req,res){
-	var id_producto = req.params.id;
-
-	Ingeniero.findOne({_id: id_producto},function(error,producto){
-		res.render("menu/edit",{product: producto});
-	});
-
-});
-*/
-/*
-app.post("/admin",function(req,res){
-	if(req.body.password== app_password){
-		Ingeniero.find(function(error,documento){
-		if(error){ console.log(error); }
-		res.render("admin/index",{ ingenieros: documento })
-	});
-	}else{
-		res.redirect("/");
-	}
-});
-
-*/
-
-
+// ruta para un nuevo documento
 app.get("/menu/new", function(req,res){
 	res.render("menu/new");
 });
 
-
+//ruta pra la eliminacion de un documento
 app.get("/menu/delete/:id",function(req, res){
 	var id = req.params.id;
 
-	Ingeniero.findOne({"_id": id},function(err,producto){
-		res.render("menu/delete",{producto: producto});
+	Var.findOne({"_id": id},function(err,documento){
+		res.render("menu/delete",{documento: documento});
 	});
 });
 

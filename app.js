@@ -183,6 +183,7 @@ app.put("/menu/:id", function( req, res ){
 			var10: req.body.var10
 		};
 
+		console.log(data)
 		Var.update({"_id": req.params.id},data,function(documento){
 			res.redirect("/menu");
 		});
@@ -191,6 +192,7 @@ app.put("/menu/:id", function( req, res ){
 	}
 });
 
+/*
 app.get("/menu/edit/:id",function(req,res){
 	var id_producto = req.params.id;
 
@@ -199,6 +201,7 @@ app.get("/menu/edit/:id",function(req,res){
 	});
 
 });
+*/
 /*
 app.post("/admin",function(req,res){
 	if(req.body.password== app_password){

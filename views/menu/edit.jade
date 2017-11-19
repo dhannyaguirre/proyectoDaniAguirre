@@ -1,24 +1,38 @@
 extends ../layout.jade
 block contenido
 	div(class="col-md-5 center-block no-float top-space text-left")
-		h1 Editar Producto
-		form(method="POST" action="/menu/#{product.id}?_method=put" style="margin-top:1.5em;" enctype="multipart/form-data")
+		h1 Editar Registro
+		form(method="POST" action="/menu/#{doc.id}?_method=put" style="margin-top:1.5em;" enctype="multipart/form-data")
 			
 			div(class="form-group")
-				label Nombre
-				input(type="text" name="title" value="#{product.title}" placeholder="Nombre del producto" class="form-control")
+				label Variable1
+				input(type="text" name="var1" value="#{doc.var1}" placeholder="Variable1" class="form-control")
 			div(class="form-group")
-				label Descripción
-				textarea(name="description" placeholder="Descripción del producto" class="form-control")
-					=product.description
+				label Variable2
+				input(type="text" name="var2" value="#{doc.var2}" placeholder="Variable2" class="form-control")
 			div(class="form-group")
-				label Costo
-				input(type="number" name="pricing" placeholder="Costo" class="form-control" value="#{product.pricing}")
+				label Variable3
+				input(type="text" name="var3" value="#{doc.var3}" placeholder="Variable3" class="form-control")
 			div(class="form-group")
-				label Imagen del producto
-				input(type="file" name="image_avatar")
+				label Variable4
+				input(type="text" name="var4" value="#{doc.var4}" placeholder="Variable4" class="form-control")
 			div(class="form-group")
-				label Contraseña
-				input(type="password" name="password" placeholder="Contraseña" class="form-control")
+				label Variable5
+				input(type="text" name="var5" value="#{doc.var5}" placeholder="Variable5" class="form-control")
+			div(class="form-group")
+				label Variable6
+				input(type="text" name="var6" value="#{doc.var6}" placeholder="Variable6" class="form-control")
+			div(class="form-group")
+				label Variable7
+				input(type="text" name="var7" value="#{doc.var7}" placeholder="Variable7" class="form-control")
+			div(class="form-group")
+				label Variable8
+				input(type="text" name="var8" value="#{doc.var8}" placeholder="Variable8" class="form-control")
+			div(class="form-group")
+				label Variable9
+				input(type="text" name="var9" value="#{doc.var9}" placeholder="Variable9" class="form-control")
+			div(class="form-group")
+				label Variable10
+				input(type="text" name="var10" value="#{doc.var10}" placeholder="Variable10" class="form-control")
 			div(class="form-group text-right")
 				input(type="submit" class="btn btn-info" value="Guardar")

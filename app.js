@@ -149,12 +149,23 @@ app.post("/admin",function(req,res){
 	if(req.body.password== app_password){
 		Var.find(function(error,documento){
 		if(error){ console.log(error); }
-		res.render("admin/index",{ vars: documento })
+		res.render("admin/index",{ doc: documento })
 	});
 	}else{
 		res.redirect("/");
 	}
 });
+
+//ruta para conseguir editar un registro por el id
+app.get("/menu/edit/:id",function(req,res){
+	var id_documento = req.params.id;
+
+	Var.findOne({_id: id_documento},function(error,documento){
+		res.render("menu/edit",{vars: documento});
+	});
+
+});
+
 
 //ruta para editar un registro 
 

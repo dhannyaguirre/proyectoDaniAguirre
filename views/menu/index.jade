@@ -1,11 +1,11 @@
 extends ../layout.jade
 block contenido
 	h2(class='pacifico big blue') Menú
-	p Productos de calidad en tu mesa
-	each inge in ingenieros
+	p Documentos Ingresados
+	each var in vars
 		div(class="col-md-4 col-sm-6 col-xs-12 inline-block")
-			h3(class="pacifico")= inge.title
-			img(src="#{ inge.imageUrl }" class="col-xs-7 col-md-4 no-float")
+			h3(class="pacifico")= var.title
+			img(src="#{ var.imageUrl }" class="col-xs-7 col-md-4 no-float")
 			p(style="margin-top:1em;") 
-				small(class="lato small") #{inge.pricing}USD
+				small(class="lato small") #{var.pricing}USD
 

@@ -149,7 +149,7 @@ app.post("/admin",function(req,res){
 	if(req.body.password== app_password){
 		Var.find(function(error,documento){
 		if(error){ console.log(error); }
-		res.render("admin/index",{ doc: documento })
+		res.render("admin/index",{ vars: documento })
 	});
 	}else{
 		res.redirect("/");

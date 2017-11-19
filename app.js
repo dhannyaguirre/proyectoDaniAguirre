@@ -2,8 +2,8 @@ var express = require('express');
 //dependencias proyecto principal
 var path = require('path');
 var logger = require('morgan');
-var ingenieross = require('./bower_components/ingenieros.json');
-var convenios = require('./bower_components/convenios.json');
+//var ingenieross = require('./bower_components/ingenieros.json');
+//var convenios = require('./bower_components/convenios.json');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var multer  = require('multer')

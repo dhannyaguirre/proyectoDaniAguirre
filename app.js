@@ -166,35 +166,28 @@ app.get("/menu/edit/:id",function(req,res){
 
 });
 
+//ruta para guardar editar un registro por el id
 
-//ruta para editar un registro 
-
-
-app.put("/menu/:id", upload.single( 'image_avatar' ), function( req, res, next ){
+app.put("/menu/:id", function( req, res ){
 	if(req.body.password == app_password){
 		var data = {
-			title: req.body.title,
-			description: req.body.description,
-			pricing: req.body.pricing
+			var1: req.body.var1,
+			var2: req.body.var2,
+			var3: req.body.var3,
+			var4: req.body.var4,
+			var5: req.body.var5,
+			var6: req.body.var6,
+			var7: req.body.var7,
+			var8: req.body.var8,
+			var9: req.body.var9,
+			var10: req.body.var10
 		};
 
-		if(req.file.hasOwnProperty("path")){
-		cloudinary.uploader.upload(req.file.path, 
-			function(result){
-				data.imageUrl = result.url;
-				Ingeniero.update({"_id": req.params.id},data,function(product){
-					res.redirect("/menu");
-				});	
-			}
-			);
-		}else{
-			Ingeniero.update({"_id": req.params.id},data,function(product){
+		Var.update({"_id": req.params.id},data,function(documento){
 			res.redirect("/menu");
-			});				
-		}
+		});
+							
 		
-		}else{
-		res.redirect("/");
 	}
 });
 

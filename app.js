@@ -193,13 +193,21 @@ app.get("/admin",function(req,res){
 	});
   		var myArr = [];
   		var myArrp = [];
+
+  		Var.find(function(error,documento){
+   		 if(error){ console.log(error); }
+   			 //res.render("menu/index",{ vars: documento })
+ 		 	console.log(documento);
+ 		 });
+/*
 		 // ["foo", "Hello World", 2, 3, "bar", 1, 4, 5]	
 	for(i=0; i<ingenieross.length; i++) {
 
 		myArr[i]= ingenieross[i].universidad.toLowerCase();
 	}
 		console.log( myArr.unique() );
-  	/*
+  */
+  /*
 	for(i=0; i<ingenieross.length; i++) {
 		var data = {
 		imageUrl: "http://res.cloudinary.com/dot6c5g5b/image/upload/v1467166958/person_man_a6psrf.png",
@@ -223,7 +231,8 @@ app.get("/admin",function(req,res){
 
 	}
 	console.log(data);*/
-	res.render("admin/form")
+	//res.render("admin/form")
+
 });
 
 

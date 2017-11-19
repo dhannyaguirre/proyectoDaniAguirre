@@ -193,20 +193,26 @@ app.get("/admin",function(req,res){
 	});
   		var myArr = [];
   		var myArrp = [];
+  		var vars;
 
   		Var.find(function(error,documento){
    		 if(error){ console.log(error); }
    			 //res.render("menu/index",{ vars: documento })
- 		 	console.log(documento.length);
+ 		 	//console.log(documento.length);
+ 		 	vars= documento
+ 		 	for(i=0; i<vars.length; i++) {
+				myArr[i]= vars[i].var1;
+			}
  		 });
-/*
+
 		 // ["foo", "Hello World", 2, 3, "bar", 1, 4, 5]	
-	for(i=0; i<ingenieross.length; i++) {
+	/*for(i=0; i<ingenieross.length; i++) {
 
 		myArr[i]= ingenieross[i].universidad.toLowerCase();
 	}
+	*/
 		console.log( myArr.unique() );
-  */
+
   /*
 	for(i=0; i<ingenieross.length; i++) {
 		var data = {
@@ -231,7 +237,7 @@ app.get("/admin",function(req,res){
 
 	}
 	console.log(data);*/
-	//res.render("admin/form")
+	res.render("admin/form")
 
 });
 

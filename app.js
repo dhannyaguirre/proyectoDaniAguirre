@@ -201,56 +201,27 @@ app.get("/admin",function(req,res){
 	res.render("admin/form")
 });
 
-app.post( '/menu', upload.single( 'image_avatar' ), function( req, res, next ) {
+app.post( '/menu', function( req, res ) {
   
-	
-
-  if(req.body.password == app_password){
   	var data = {
-
-  		id: req.body.id,
-  		name: req.body.name,
-  		ingenieria: req.body.ingenieria,
-  		type: [req.body.type],
-  		edad: req.body.edad,
-  		facultad: req.body.facultad,
-  		abilities: [req.body.abilities],
-  		stats:{
-  			st1: req.body.st1,
-  			st2: req.body.st2,
-  			st3: req.body.st3,
-  			st4: req.body.st4,
-  			st5: req.body.st5,
-  			st6: req.body.st6,
-  			total: req.body.total
-  		},
-  		evolution: [req.body.evolution],
-  		title: req.body.title,
-  		description: req.body.description,
-  		pricing: req.body.pricing
+  		var1: req.body.va1,
+  		var2: req.body.var2,
+  		var3: req.body.var3,
+  		var4: req.body.var4,
+  		var5: req.body.var5,
+  		var6: req.body.var6,
+  		var7: req.body.var7,
+  		var8: req.body.var8,
+  		var9: req.body.var9,
+  		var10: req.body.var10
   	}
   	
-  	var product = new Ingeniero(data);
+  	var documento = new Var(data);
 	//console.log(req.file);
 	//res.render("index");
-	if(req.file.hasOwnProperty("path")){
-		cloudinary.uploader.upload(req.file.path, 
-			function(result){
-				product.imageUrl = result.url;
-				product.save(function(err){
-		 			res.redirect("/menu");
-		 		});
-			}
-			);
-		}else{
-			product.save(function(err){
-				res.redirect("/menu");
-			});
-		}
-		
-	}else{
-		res.render("menu/new");
-	}
+	documento.save(function(err){
+		res.redirect("/menu");
+	});
 
 });
 

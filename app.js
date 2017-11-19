@@ -207,6 +207,7 @@ app.get("/menu/delete/:id",function(req, res){
 	});
 });
 
+//ruta para eliminar un archivo en especifico
 app.delete("/menu/:id",function(req,res){
 	var id = req.params.id;
 	if(req.body.password == app_password){
@@ -220,57 +221,30 @@ app.delete("/menu/:id",function(req,res){
 
 });
 
+
 //get proyecto Principal
 
-app.get('/api/ingenieros', function (req, res) {
+app.get('/api/documentos', function (req, res) {
   var area = req.query.type;
-  Ingeniero.find(function(error,documento){
+  Var.find(function(error,documento){
 		if(error){ console.log(error); }
-		var ingenieros = documento;
+		var docs = documento;
 		//res.render("menu/index",{ products: documento })
 		if (area) {
-		    var results = ingenieros.filter(function (ingeniero) {
-		    if(ingeniero.area.toLowerCase() == area){
-		    	return ingeniero.area	
+		    var results = docs.filter(function (doc) {
+		    if(doc.area.toLowerCase() == area){
+		    	return doc.area	
 		    }
 		    
     });		    
     res.send(results);
   } else {
-    res.send(ingenieros);
+    res.send(docs);
   }
 	});
   
 });
 
-app.get('/api/convenios', function (req, res) {
-  var type = req.query.type;
-
-  if (type) {
-    var results = convenios.filter(function (convenio) {
-      return convenio.type.some(function (t) {
-        return t.toLowerCase() === type;
-      });
-    });
-
-    res.send(results);
-  } else {
-    res.send(convenios);
-  }
-});
-
-app.get('/api/convenios/:name', function (req, res) {
-  var name = req.params.name;
-  var results = convenios.filter(function (convenio) {
-    return convenio.name.toLowerCase() === name;
-  });
-
-  if (results.length > 0) {
-    res.send(results[0]);
-  } else {
-    res.status(404).end();
-  }
-});
 
 app.get('/api/ingenieros/:ci', function (req, res) {
   var ci = req.params.ci;

@@ -3,7 +3,7 @@
   angular.module('ingedex.controllers', [])
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'ingenieroService', function ($rootScope, $scope, $routeParams, ingenieroService) {
       var type = $routeParams.type;
-       var ingenieros = [];
+       var documentos = [];
 
       $rootScope.title = "";
 
@@ -11,27 +11,27 @@
         $scope.type = type;
 
         ingenieroService.byType(type).then(function (data) {
-          $scope.ingenieros = ingenieros =data;
+          $scope.documentos = documentos =data;
           $scope.groupped = partition(data, 4);
         });
       } else {
         ingenieroService.all().then(function (data) {
-          $scope.ingenieros = ingenieros =data;
+          $scope.documentos = documentos =data;
           $scope.groupped = partition(data, 4);
         });
       }
 
       $scope.search = function () {
-        var result = ingenieros;
+        var result = documentos;
         if ($scope.searchTerm) {
-          result = ingenieros.filter(function (ingeniero) {
+          result = documentos.filter(function (ingeniero) {
             var name = ingeniero && ingeniero.name || "";
 
             return name.toLowerCase().indexOf($scope.searchTerm.toLowerCase()) !== -1;
           });
         }
 
-        $scope.ingenieros = result;
+        $scope.documentos = result;
         $scope.groupped = partition(result, 4);
       };
 

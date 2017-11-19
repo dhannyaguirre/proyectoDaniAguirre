@@ -17,7 +17,7 @@ var app_password = "1"
 var Schema = mongoose.Schema;
 
 mongoose.connect('mongodb://node:node@ds023644.mlab.com:23644/hanmilton');
-
+//mongoose.connect('')
 var cloudinary = require("cloudinary");
 
 cloudinary.config( {
@@ -40,6 +40,22 @@ app.use(method_override("_method"));
       age: { type: Number, min: 0 }
 */
 
+
+var varSchemaJSON = {
+  var1: Number,
+  var2 : Number ,
+  var3 : Number,
+  var4 : Number,
+  var5 : Number,
+  var6 : Number ,
+  var7 : Number,
+  var8 : Number,
+  var9 : Number,
+  var10 : Number,
+  var11 : Number,
+  var12: Number
+};
+/*
 var ingenieroSchemaJSON = {
 	ci: Number,
 	apellidos : String ,
@@ -54,17 +70,21 @@ var ingenieroSchemaJSON = {
 	titulo : String,
 	imageUrl: String
 };
+*/
 
-var ingenieroSchema = new Schema(ingenieroSchemaJSON);
+//var ingenieroSchema = new Schema(ingenieroSchemaJSON);
+var varSchema = new Schema(varSchemaJSON);
 
+/*
 ingenieroSchema.virtual("image.url").get(function(){
 	if(this.imageUrl === "" || this.imageUrl === "data.png"){
 		return "default.jpg";
 	}
 	return this.imageUrl;
 });
-
-var Ingeniero = mongoose.model("Ingeniero", ingenieroSchema);
+*/
+var Var = mongoose.model("Var", varSchema);
+//var Ingeniero = mongoose.model("Ingeniero", ingenieroSchema);
 
 app.set("view engine","jade");
 app.use( express.static( __dirname + '/bower_components' ) );
@@ -74,13 +94,22 @@ app.get("/",function(req,res){
 	res.render("index");
 });
 */
-
+/*
 app.get("/menu",function(req,res){
 
 	Ingeniero.find(function(error,documento){
 		if(error){ console.log(error); }
 		res.render("menu/index",{ ingenieros: documento })
 	});
+});
+*/
+
+app.get("/menu",function(req,res){
+
+  Var.find(function(error,documento){
+    if(error){ console.log(error); }
+    res.render("menu/index",{ vars: documento })
+  });
 });
 
 app.put("/menu/:id", upload.single( 'image_avatar' ), function( req, res, next ){

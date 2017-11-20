@@ -17,6 +17,11 @@
           </div>
           <!-- Tabs -->
           <div class="col-md-6" ng-controller="TabsController">
+
+            <canvas id="line" class="chart chart-line" chart-data="data"
+              chart-labels="labels" chart-series="series" chart-options="options"
+              chart-dataset-override="datasetOverride" chart-click="onClick">
+              </canvas>
             <ul class="nav nav-tabs nav-justified">
                <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Variables</a></li>
               <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Alarmas</a></li>

@@ -86,36 +86,16 @@
 
     }])
     .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
-       var name = $routeParams.name;
+       var id = $routeParams.id;
       //$scope.ingeniero = {};
-        Ingeniero.get({ name: name }, function (ingeniero) {
-           $rootScope.title = ingeniero.name;
+        Ingeniero.get({ id: id }, function (ingeniero) {
+           $rootScope.title = ingeniero.id;
           $scope.ingeniero = ingeniero;
       
           });
     }])
 
-    .controller('ConvenioController', ['$rootScope', '$scope', '$routeParams', 'Convenio', function ($rootScope, $scope, $routeParams, Convenio) {
-       var name = $routeParams.name;
-      //$scope.ingeniero = {};
-        Convenio.get({ name: name }, function (convenio) {
-           $rootScope.title = convenio.name;
-          $scope.convenio = convenio;
-      
-          });
-    }])
-
-    .controller('TabsController', ['$scope', function ($scope) {
-      $scope.tab = 1;
-
-      $scope.selectTab = function (tab) {
-        $scope.tab = tab;
-      };
-
-      $scope.isActive = function (tab) {
-        return tab === $scope.tab;
-      };
-    }]).controller('MapCtrl', ['MarkerCreatorService', '$routeParams', '$scope', function (MarkerCreatorService, $routeParams, $scope) {
+   .controller('MapCtrl', ['MarkerCreatorService', '$routeParams', '$scope', function (MarkerCreatorService, $routeParams, $scope) {
         var name2 = $routeParams.name;
          $scope.address = name2;
          console.log($scope.address);

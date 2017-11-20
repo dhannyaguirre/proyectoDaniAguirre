@@ -24,7 +24,7 @@
         templateUrl: 'views/ingedex.html',
         controller: 'IngedexController'
       })
-      .when('/ingeniero/:name', {
+      .when('/ingeniero/:id', {
         templateUrl: 'views/ingeniero.html',
         controller: 'IngenieroController',
       })

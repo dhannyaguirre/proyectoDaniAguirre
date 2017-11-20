@@ -87,6 +87,7 @@
     }])
     .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
        var id = $routeParams.id;
+       console.log("voy hacer peticoion")
       //$scope.ingeniero = {};
         Ingeniero.get({ id: id }, function (ingeniero) {
            $rootScope.title = ingeniero.id;

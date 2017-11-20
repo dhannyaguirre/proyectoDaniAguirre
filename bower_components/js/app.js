@@ -1,6 +1,7 @@
 (function () {
 
   var app = angular.module('ingedex', [
+    'chart.js',
     'google-maps',
     'ngRoute',
     'angular-md5',

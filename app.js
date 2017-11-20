@@ -249,6 +249,7 @@ app.get('/api/documentos', function (req, res) {
 
 
 app.get('/api/ingenieros/:id', function (req, res) {
+	console.log("estoy dentro de id")
   var id = req.params.id;
 
   Ingeniero.find(function(error,documento){

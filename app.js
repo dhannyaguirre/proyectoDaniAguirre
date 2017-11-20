@@ -1,5 +1,5 @@
 var express = require('express');
-//dependencias proyecto principal
+//dependenidas proyecto principal
 var path = require('path');
 var logger = require('morgan');
 var mongoose = require('mongoose');
@@ -247,14 +247,14 @@ app.get('/api/documentos', function (req, res) {
 });
 
 
-app.get('/api/ingenieros/:ci', function (req, res) {
-  var ci = req.params.ci;
+app.get('/api/ingenieros/:id', function (req, res) {
+  var id = req.params.id;
 
   Ingeniero.find(function(error,documento){
 		if(error){ console.log(error); }
 		var ingenieros = documento;
 		var results = ingenieros.filter(function (ingeniero) {
-    		return ingeniero.ci == ci;
+    		return ingeniero.id == id;
   		});
   		if (results.length > 0) {
 	    res.send(results[0]);
@@ -269,25 +269,6 @@ app.get( '/', function( req, res, next ){
   return res.render( 'index' );
 });
 
-app.post( '/upload', upload.single( 'file' ), function( req, res, next ) {
-  if ( !req.file.mimetype.startsWith( 'image/' ) && !req.file.mimetype.startsWith( 'application/' )){
-    return res.status( 422 ).json( {
-      error : 'The uploaded file must be an image'
-    } );
-  }
 
- // var dimensions = sizeOf( req.file.path );
-
-  /*if ( ( dimensions.width < 640 ) || ( dimensions.height < 480 ) ) {
-    return res.status( 422 ).json( {
-      error : 'The image must be at least 640 x 480px'
-    } );
-  }*/
-
-  return res.status( 200 ).send( req.file );
-});
-app.get( '/', function( req, res, next ){
-  return res.render( 'index' );
-});
 
 app.listen(5000);	

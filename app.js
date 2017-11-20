@@ -225,6 +225,7 @@ app.delete("/menu/:id",function(req,res){
 //get proyecto Principal
 
 app.get('/api/documentos', function (req, res) {
+	console.log("estoy dentro angular")
   var area = req.query.type;
   Var.find(function(error,documento){
 		if(error){ console.log(error); }

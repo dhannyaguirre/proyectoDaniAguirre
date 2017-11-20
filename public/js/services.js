@@ -2,7 +2,8 @@
 
   angular.module('ingedex.services', [])
 
-    .factory('ingenieroService', ['$http', '$q', '$filter', '$window', function ($http, $q, $filter, $window) {
+    .factory('documentoService', ['$http', '$q', '$filter', '$window', function ($http, $q, $filter, $window) {
+      console.log(estoy en servidio)
       var normalize = $filter('normalize');
       var localStorage = $window.localStorage;
 

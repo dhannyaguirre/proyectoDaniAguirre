@@ -11,6 +11,7 @@
   "dependencies": {
     "angular-chart.js": "^1.1.1",
     "body-parser": "^1.15.2",
+    "chart.js": "^2.7.1",
     "cloudinary": "^1.4.1",
     "express": "^4.14.0",
     "express-handlebars": "^2.0.1",

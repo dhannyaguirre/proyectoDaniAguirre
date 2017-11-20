@@ -16,18 +16,6 @@
       .when('/home', {
         templateUrl: 'views/home.html',
       })
-      .when('/convenios', {
-        templateUrl: 'views/convedex.html',
-        controller: 'ConvedexController'
-      })
-      .when('/convenios/:type', {
-        templateUrl: 'views/convedex.html',
-        controller: 'ConvedexController'
-      })
-      .when('/convenios/convenio/:name', {
-        templateUrl: 'views/convenio.html',
-        controller: 'ConvenioController',
-      })
       .when('/', {
         templateUrl: 'views/ingedex.html',
         controller: 'IngedexController'

@@ -226,12 +226,12 @@ app.delete("/menu/:id",function(req,res){
 
 app.get('/api/documentos', function (req, res) {
 	console.log("estoy dentro angular")
-  var area = req.query.type;
+  //var area = req.query.type;
   Var.find(function(error,documento){
 		if(error){ console.log(error); }
 		var docs = documento;
 		//res.render("menu/index",{ products: documento })
-		if (area) {
+		/*if (area) {
 		    var results = docs.filter(function (doc) {
 		    if(doc.area.toLowerCase() == area){
 		    	return doc.area	
@@ -241,7 +241,8 @@ app.get('/api/documentos', function (req, res) {
     res.send(results);
   } else {
     res.send(docs);
-  }
+  }*/
+   res.send(docs);
 	});
   
 });

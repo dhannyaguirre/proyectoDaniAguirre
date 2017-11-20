@@ -48,12 +48,25 @@
        //console.log(id)
       //$scope.ingeniero = {};
         Ingeniero.get({ id: id }, function (ingeniero) {
+           
            $rootScope.title = ingeniero.id;
           $scope.ingeniero = ingeniero;
       
           });
     }])
 
+    .controller('TabsController', ['$scope', function ($scope) {
+      $scope.tab = 1;
+
+      $scope.selectTab = function (tab) {
+        $scope.tab = tab;
+      };
+
+      $scope.isActive = function (tab) {
+        return tab === $scope.tab;
+      };
+    }])
+    
    .controller('MapCtrl', ['MarkerCreatorService', '$routeParams', '$scope', function (MarkerCreatorService, $routeParams, $scope) {
         var name2 = $routeParams.name;
          $scope.address = name2;

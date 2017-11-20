@@ -11,6 +11,7 @@
 
         $http.get('/api/documentos')
           .success(function (data) {
+            console.log(data)
             deferred.resolve(data);
           });
 

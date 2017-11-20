@@ -252,11 +252,11 @@ app.get('/api/documentos/:id', function (req, res) {
 	console.log("estoy dentro de id")
   var id = req.params.id;
 
-  Ingeniero.find(function(error,documento){
+  Var.find(function(error,documento){
 		if(error){ console.log(error); }
-		var ingenieros = documento;
-		var results = ingenieros.filter(function (ingeniero) {
-    		return ingeniero.id == id;
+		var docs = documento;
+		var results = docs.filter(function (doc) {
+    		return doc.id == id;
   		});
   		if (results.length > 0) {
 	    res.send(results[0]);

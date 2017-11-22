@@ -33,6 +33,13 @@
         </div>
       </div>
     </div>
+    <div ng-controller="LineCtrl">    
+    <canvas id="line" class="chart chart-line" chart-data="data"
+    chart-labels="labels" chart-series="series" chart-options="options"
+    chart-dataset-override="datasetOverride" chart-click="onClick">
+    </canvas>
+    </div>
+
     <div class="container-fluid">
     	<div ng-view></div>  
     	</div>

@@ -24,7 +24,7 @@
 
       $scope.search = function () {
         var result = ingenieros;
-        console.log(result)
+
         if ($scope.searchTerm) {
           result = ingenieros.filter(function (ingeniero) {
             var name = ingeniero && ingeniero.name || "";
@@ -33,7 +33,9 @@
           });
         }
 
+
         $scope.ingenieros = result;
+        console.log(ingenieros)
         $scope.groupped = partition(result, 4);
       };
 

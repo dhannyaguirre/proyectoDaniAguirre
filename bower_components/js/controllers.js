@@ -46,11 +46,6 @@
       $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
   $scope.series = ['Series A', 'Series B'];
 
-  var result2 = ingenieros.filter(function(ingeniero){
-    return ingeniero.var1
-
-  })
-  console.log(result2)
 
   $scope.data =  $scope.ingenieros
   

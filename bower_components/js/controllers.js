@@ -35,7 +35,6 @@
 
 
         $scope.ingenieros = result;
-        console.log(result)
         $scope.groupped = partition(result, 4);
       };
 
@@ -44,36 +43,7 @@
           return Math.floor(index / n);
         }).toArray().value();
       }
-
-    }])
-    .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
-       var id = $routeParams.id;
-       //console.log(id)
-      //$scope.ingeniero = {};
-        Ingeniero.get({ id: id }, function (ingeniero) {
-           
-           $rootScope.title = ingeniero.id;
-          $scope.ingeniero = ingeniero;
-      
-          });
-    }])
-
-    .controller('TabsController', ['$scope', function ($scope) {
-      $scope.tab = 1;
-
-      $scope.selectTab = function (tab) {
-        $scope.tab = tab;
-      };
-
-      $scope.isActive = function (tab) {
-        return tab === $scope.tab;
-      };
-    }])
-
-
-    .controller("LineCtrl", function ($scope) {
-
-  $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
+      $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
   $scope.series = ['Series A', 'Series B'];
   $scope.data = [
     [65, 59, 80, 81, 56, 55, 40],
@@ -101,7 +71,33 @@
       ]
     }
   };
-})
+
+    }])
+    .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
+       var id = $routeParams.id;
+       //console.log(id)
+      //$scope.ingeniero = {};
+        Ingeniero.get({ id: id }, function (ingeniero) {
+           
+           $rootScope.title = ingeniero.id;
+          $scope.ingeniero = ingeniero;
+      
+          });
+    }])
+
+    .controller('TabsController', ['$scope', function ($scope) {
+      $scope.tab = 1;
+
+      $scope.selectTab = function (tab) {
+        $scope.tab = tab;
+      };
+
+      $scope.isActive = function (tab) {
+        return tab === $scope.tab;
+      };
+    }])
+
+
     
    .controller('MapCtrl', ['MarkerCreatorService', '$routeParams', '$scope', function (MarkerCreatorService, $routeParams, $scope) {
         var name2 = $routeParams.name;

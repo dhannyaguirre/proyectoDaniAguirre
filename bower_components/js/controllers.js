@@ -1,6 +1,6 @@
 (function (_) {
 
-  angular.module('ingedex.controllers', ["chart.js"])
+  angular.module('ingedex.controllers', [])
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
       
       var type = $routeParams.type;

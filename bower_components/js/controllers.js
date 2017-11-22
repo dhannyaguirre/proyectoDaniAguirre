@@ -68,9 +68,8 @@
     }])
 
 
-    .controller("LineCtrl", ['$scope', 'Ingeniero', function ($scope, Ingeniero) {
-      
-      console.log(ingeniero)
+    .controller("LineCtrl", function ($scope) {
+
   $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
   $scope.series = ['Series A', 'Series B'];
   $scope.data = [
@@ -99,7 +98,7 @@
       ]
     }
   };
-}])
+})
     
    .controller('MapCtrl', ['MarkerCreatorService', '$routeParams', '$scope', function (MarkerCreatorService, $routeParams, $scope) {
         var name2 = $routeParams.name;

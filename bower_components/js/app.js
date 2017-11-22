@@ -7,7 +7,8 @@
     'ingedex.controllers',
     'ingedex.directives',
     'ingedex.filters',
-    'ingedex.services'
+    'ingedex.services',
+    'chart.js'
     ]);
 
     app.config(['$routeProvider', function ($routeProvider) {

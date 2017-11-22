@@ -45,7 +45,7 @@
       }
       $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
   $scope.series = ['Series A', 'Series B'];
-  $scope.data =  $scope.ingenieros[0]
+  $scope.data =  $scope.ingenieros
   console.log(data)
   $scope.onClick = function (points, evt) {
     console.log(points, evt);

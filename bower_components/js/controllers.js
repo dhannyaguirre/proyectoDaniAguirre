@@ -35,7 +35,7 @@
 
 
         $scope.ingenieros = result;
-        console.log(ingenieros)
+        console.log(result)
         $scope.groupped = partition(result, 4);
       };
 

@@ -45,8 +45,12 @@
       }
       $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
   $scope.series = ['Series A', 'Series B'];
+
+  ingenieros.filter(function(ingeniero){
+    console.log(ingeniero.var1)
+  })
   $scope.data =  $scope.ingenieros
-  console.log(ingenieros[0])
+  
   $scope.onClick = function (points, evt) {
     console.log(points, evt);
   };

@@ -46,9 +46,11 @@
       $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
   $scope.series = ['Series A', 'Series B'];
 
-
+  ingenieros.filter(function(ingeniero){
+    console.log()
+  })
   $scope.data =  $scope.ingenieros
-  
+  console.log(ingenieros.name)
   $scope.onClick = function (points, evt) {
     console.log(points, evt);
   };
@@ -81,6 +83,7 @@
            
            $rootScope.title = ingeniero.id;
           $scope.ingeniero = ingeniero;
+          console.log(ingeniero)
       
           });
     }])

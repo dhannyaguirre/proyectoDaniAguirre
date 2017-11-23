@@ -57,11 +57,10 @@
       //$scope.ingeniero = {};
         Ingeniero.get({ id: id }, function (ingeniero) {
 
-           $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-            $scope.series = ['Series A', 'Series B'];
+           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
+            $scope.series = ['Temperatura'];
             $scope.data = [
-              [ingeniero.var1, ingeniero.var2, ingeniero.var3, ingeniero.var4, ingeniero.var5, ingeniero.var6, ingeniero.var7, ingeniero.var8, ingeniero.var9, ingeniero.var10],
-              [28, 48, 40, 19, 86, 27, 90]
+              [ingeniero.var1, ingeniero.var2, ingeniero.var3, ingeniero.var4, ingeniero.var5, ingeniero.var6, ingeniero.var7, ingeniero.var8, ingeniero.var9, ingeniero.var10]
             ];
            
                          $scope.onClick = function (points, evt) {

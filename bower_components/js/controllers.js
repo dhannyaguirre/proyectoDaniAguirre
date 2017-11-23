@@ -83,7 +83,7 @@
            
            $rootScope.title = ingeniero.id;
           $scope.ingeniero = ingeniero;
-          console.log(ingeniero.id)
+          console.log(ingeniero._id)
       
           });
     }])

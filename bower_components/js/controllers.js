@@ -18,9 +18,9 @@ var i = 0
       if (type) {
         $scope.type = type;
 
-        $scope.ingenieros = ingenieros = Ingeniero.query({ type: type.toLowerCase() }, function (data) {
+        $scope.ingenieros = ingenieros = Ingeniero.query({ type: type.toLowerCase() }, function (datos) {
            
-          $scope.groupped = partition(data, 4);
+          $scope.groupped = partition(datos, 4);
         });
       } else {
         $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
@@ -55,7 +55,7 @@ var i = 0
                 }
               };
           $scope.groupped = partition(datos, 4);
-             i
+             
         });
 
       }
@@ -101,14 +101,14 @@ var i = 0
 
 
 */
-      function partition(data, n) {
-        return _.chain(data).groupBy(function (element, index) {
+      function partition(datos, n) {
+        return _.chain(datos).groupBy(function (element, index) {
           return Math.floor(index / n);
         }).toArray().value();
       }
      
 
-     
+     i++ 
  
 
 

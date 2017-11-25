@@ -1,5 +1,5 @@
 (function (_) {
-var i = 0 
+var i = -1 
   angular.module('ingedex.controllers', [])
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
       

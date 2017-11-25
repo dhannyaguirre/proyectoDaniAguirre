@@ -31,7 +31,7 @@ var i = 0
               [datos[i].var1, datos[i].var2, datos[i].var3, datos[i].var4, datos[i].var5, datos[i].var6, datos[i].var7, datos[i].var8, datos[i].var9, datos[i].var10]
             ];
 
-            console.log(data[i].var1)
+            console.log(datos[i].var1)
               $scope.onClick = function (points, evt) {
                 console.log(points, evt);
               };
@@ -54,7 +54,7 @@ var i = 0
                   ]
                 }
               };
-          $scope.groupped = partition(data, 4);
+          $scope.groupped = partition(datos, 4);
              i++
         });
 

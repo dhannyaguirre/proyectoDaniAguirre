@@ -14,7 +14,7 @@ var i = 0
           $scope.groupped = partition(data, 4);
         });
 */
-/*
+
       if (type) {
         $scope.type = type;
 
@@ -31,11 +31,42 @@ var i = 0
         });
       }
 
-  */
+      $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
+            $scope.series = ['Temperatura'];
+            $scope.data = [
+              [1 , 1, 2, 2, 5, 9, 8, 4, 9, 10]
+            ];
+           
+              $scope.onClick = function (points, evt) {
+                console.log(points, evt);
+              };
+              $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
+              $scope.options = {
+                scales: {
+                  yAxes: [
+                    {
+                      id: 'y-axis-1',
+                      type: 'linear',
+                      display: true,
+                      position: 'left'
+                    },
+                    {
+                      id: 'y-axis-2',
+                      type: 'linear',
+                      display: true,
+                      position: 'right'
+                    }
+                  ]
+                }
+              };
+           $rootScope.title = ingeniero._id;
+          $scope.ingeniero = ingeniero;
+          console.log(ingeniero.var1)
   
-   $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
+  /*
+   $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
           
-
+/*
         $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
         $scope.series = ['Temperatura'];
         $scope.data = [
@@ -43,11 +74,12 @@ var i = 0
         ];
           $scope.groupped = partition(datos, 4);
           i++
+  
      });
 
    console.log($scope.data)
     //console.log(ingenieros[0])
-      
+*/      
 /*
 
       $scope.search = function () {
@@ -92,7 +124,7 @@ var i = 0
               [ingeniero.var1, ingeniero.var2, ingeniero.var3, ingeniero.var4, ingeniero.var5, ingeniero.var6, ingeniero.var7, ingeniero.var8, ingeniero.var9, ingeniero.var10]
             ];
            
-                         $scope.onClick = function (points, evt) {
+              $scope.onClick = function (points, evt) {
                 console.log(points, evt);
               };
               $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];

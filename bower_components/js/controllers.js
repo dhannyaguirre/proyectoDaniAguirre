@@ -30,7 +30,7 @@ var i = 0
             $scope.data = [
               [data[i].var1, data[i].var2, data[i].var3, data[i].var4, data[i].var5, data[i].var6, data[i].var7, data[i].var8, data[i].var9, data[i].var10]
             ];
-            console.log( [data[i].var1)
+            console.log(data[i].var1)
               $scope.onClick = function (points, evt) {
                 console.log(points, evt);
               };

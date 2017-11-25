@@ -14,6 +14,7 @@
           $scope.groupped = partition(data, 4);
         });
 */
+/*
       if (type) {
         $scope.type = type;
 
@@ -30,10 +31,14 @@
         });
       }
 
-      ingenieros.forEach(function(element) {
-          console.log(element);
-      });
+  */ $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
+          console.log(data)
+         
+          $scope.groupped = partition(data, 4);
 
+     });
+      
+/*
 
       $scope.search = function () {
         var result = ingenieros;
@@ -46,11 +51,12 @@
           });
         }
 
-
         $scope.ingenieros = result;
         $scope.groupped = partition(result, 4);
       };
 
+
+*/
       function partition(data, n) {
         return _.chain(data).groupBy(function (element, index) {
           return Math.floor(index / n);

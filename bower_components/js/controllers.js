@@ -1,5 +1,5 @@
 (function (_) {
-
+var i = 0 
   angular.module('ingedex.controllers', [])
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
       
@@ -32,7 +32,7 @@
       }
 
   */
-  var i = 0 
+  
    $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
           
          console.log(data[i])

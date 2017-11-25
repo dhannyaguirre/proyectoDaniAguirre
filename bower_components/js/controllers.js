@@ -32,11 +32,13 @@
       }
 
   */ $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
-          console.log(data)
+          
          
           $scope.groupped = partition(data, 4);
 
      });
+
+    console.log(data)
       
 /*
 

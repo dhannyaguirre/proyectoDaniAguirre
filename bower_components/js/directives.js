@@ -21,6 +21,12 @@
           templateUrl: 'partials/ingeniero-image.html'
         };
       })
+    .directive('ingenieroImage2', function () {
+        return {
+          restrict: 'E',
+          templateUrl: 'partials/ingeniero-image2.html'
+        };
+      })
     .directive('convenioImage', function () {
         return {
           restrict: 'E',

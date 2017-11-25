@@ -31,7 +31,7 @@ var i = 0
               [datos[0].var1, datos[1].var2]
             ];
 
-            console.log(datos.lenght)
+            console.log(datos)
 
               $scope.onClick = function (points, evt) {
                 console.log(points, evt);

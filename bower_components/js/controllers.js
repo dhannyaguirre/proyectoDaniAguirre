@@ -4,9 +4,15 @@
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
       
       var type = $routeParams.type;
-       var ingenieros = [];
+      var ingenieros = [];
 
       $rootScope.title = "";
+
+      $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
+          console.log(data)
+         
+          $scope.groupped = partition(data, 4);
+        });
 
       if (type) {
         $scope.type = type;
@@ -17,6 +23,7 @@
         });
       } else {
         $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
+          console.log($scope.ingenieros)
          
           $scope.groupped = partition(data, 4);
         });

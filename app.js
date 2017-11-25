@@ -43,6 +43,7 @@ app.use(method_override("_method"));
 
 
 var varSchemaJSON = {
+
   var1: Number,
   var2 : Number ,
   var3 : Number,

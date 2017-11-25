@@ -33,12 +33,12 @@
 
   */ $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
           
-         
+         console.log(data[0])
           $scope.groupped = partition(data, 4);
 
      });
 
-    console.log(ingenieros[0])
+    //console.log(ingenieros[0])
       
 /*
 

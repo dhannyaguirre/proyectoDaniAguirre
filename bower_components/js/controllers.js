@@ -33,10 +33,18 @@ var i = 0
 
   */
   
-   $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
+   $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
           
-         console.log(data[i])
-          $scope.groupped = partition(data, 4);
+/*
+        $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
+        $scope.series = ['Temperatura'];
+        $scope.data = [
+          [ingeniero.var1, ingeniero.var2, ingeniero.var3, ingeniero.var4, ingeniero.var5, ingeniero.var6, ingeniero.var7, ingeniero.var8, ingeniero.var9, ingeniero.var10]
+        ];
+
+*/
+         console.log(datos[i].var1)
+          $scope.groupped = partition(datos, 4);
           i++
      });
 

@@ -59,9 +59,9 @@ var i = 0
                   ]
                 }
               };
-           $rootScope.title = ingeniero._id;
-          $scope.ingeniero = ingeniero;
-          console.log(ingeniero.var1)
+           $rootScope.title = "hola";
+          //$scope.ingeniero = ingeniero;
+          //console.log(ingeniero.var1)
   
   /*
    $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {

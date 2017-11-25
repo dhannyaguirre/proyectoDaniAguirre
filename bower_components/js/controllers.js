@@ -23,7 +23,7 @@ var i = 0
           $scope.groupped = partition(datos, 4);
         });
       } else {
-        $scope.ingenieros = ingenieros = Ingeniero.query(function (datos, i) {
+        $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
           
           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];

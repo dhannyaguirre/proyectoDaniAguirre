@@ -54,7 +54,7 @@ var i = 0
                   ]
                 }
               };
-          $scope.groupped = partition(data, 4);
+          $scope.groupped = partition(data, 2);
              i++
         });
 

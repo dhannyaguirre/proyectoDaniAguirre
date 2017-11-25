@@ -28,12 +28,10 @@ var i = 0
           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [
-              [datos[i].var1, datos[i].var2, datos[i].var3, datos[i].var4, datos[i].var5, datos[i].var6, datos[i].var7, datos[i].var8, datos[i].var9, datos[i].var10]
+              [datos[0].var1, datos[1].var2]
             ];
 
-            console.log(datos[0].var1)
-            console.log(datos[1].var1)
-            console.log(datos[2].var1)
+            console.log(datos.lenght)
 
               $scope.onClick = function (points, evt) {
                 console.log(points, evt);

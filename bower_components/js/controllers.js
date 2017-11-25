@@ -1,5 +1,6 @@
 (function (_) {
 var i = 0  
+var n = 0 
   angular.module('ingedex.controllers', [])
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
       
@@ -24,14 +25,12 @@ var i = 0
         });
       } else {
         $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
-          
+          n = datos.length
           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [
-              [datos[0].var1, datos[1].var2]
+              [datos[n-12].var1, datos[n-11].var1,datos[n-10].var1,datos[n-9].var1,datos[n-8].var1,datos[n-7].var1, datos[n-6].var1,datos[n-5].var1,datos[n-4].var1,datos[n-3].var1,datos[n-2].var1,,datos[n-1].var1]
             ];
-
-            console.log(datos.length)
 
               $scope.onClick = function (points, evt) {
                 console.log(points, evt);

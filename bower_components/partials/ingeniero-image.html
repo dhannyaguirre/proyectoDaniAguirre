@@ -10,7 +10,7 @@
               <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
               <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
             </ul>
-            <div class="tab-content">
+            <div>
               <!-- Ingenierias -->
               <div ng-show="isActive(1)">
                     <canvas id="line" class="chart chart-line" chart-data="data"

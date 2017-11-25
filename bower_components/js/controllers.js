@@ -8,12 +8,12 @@
 
       $rootScope.title = "";
 
-      $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
+    /*  $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
           console.log(data)
          
           $scope.groupped = partition(data, 4);
         });
-
+*/
       if (type) {
         $scope.type = type;
 
@@ -23,7 +23,7 @@
         });
       } else {
         $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
-          console.log($scope.ingenieros)
+          console.log(data)
          
           $scope.groupped = partition(data, 4);
         });

@@ -23,7 +23,7 @@
         });
       } else {
         $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
-          console.log(data[0])
+          console.log(data[0]._id)
          
           $scope.groupped = partition(data, 4);
 

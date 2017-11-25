@@ -6,30 +6,34 @@
     <div class="col-md-6" ng-controller="TabsController">
 
             <ul class="nav nav-tabs nav-justified">
-               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Variables</a></li>
-              <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Alarmas</a></li>
-              <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Información Data</a></li>
+               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+              <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+              <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
             </ul>
             <div class="tab-content">
               <!-- Ingenierias -->
               <div ng-show="isActive(1)">
-                <ingeniero-data></ingeniero-data>
+                    <canvas id="line" class="chart chart-line" chart-data="data"
+                      chart-labels="labels" chart-series="series" chart-options="options"
+                      chart-dataset-override="datasetOverride" chart-click="onClick">
+                      </canvas>
               </div>
               <!--Estadisticas-->
               <!-- Stats -->
               <div ng-show="isActive(2)">
-                <ingeniero-stats></ingeniero-stats>
-              </div>
+                  <canvas id="bar" class="chart chart-bar"
+                    chart-data="data" chart-labels="labels"> chart-series="series"
+                  </canvas>
+                </div>
                <!-- Evolucion -->
               <div ng-show="isActive(3)">
-                <ingeniero-evolution></ingeniero-evolution>
+                <canvas id="doughnut" class="chart chart-doughnut"
+                  chart-data="data" chart-labels="labels">
+                </canvas>
               </div>
             </div>
           </div>  
-    <canvas id="line" class="chart chart-line" chart-data="data"
-    chart-labels="labels" chart-series="series" chart-options="options"
-    chart-dataset-override="datasetOverride" chart-click="onClick">
-    </canvas>
+    
     <!--
     <canvas id="bar" class="chart chart-bar"
       chart-data="data" chart-labels="labels"> chart-series="series"

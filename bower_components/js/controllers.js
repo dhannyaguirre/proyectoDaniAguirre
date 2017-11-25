@@ -31,11 +31,13 @@
         });
       }
 
-  */ $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
+  */
+  var i = 0 
+   $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
           
-         console.log(data[0])
+         console.log(data[i])
           $scope.groupped = partition(data, 4);
-
+          i++
      });
 
     //console.log(ingenieros[0])

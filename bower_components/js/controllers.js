@@ -55,7 +55,7 @@ var i = 0
                 }
               };
           $scope.groupped = partition(datos, 4);
-             
+              i++ 
         });
 
       }
@@ -108,7 +108,7 @@ var i = 0
       }
      
 
-     i++ 
+    
  
 
 

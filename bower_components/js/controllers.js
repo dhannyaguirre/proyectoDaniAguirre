@@ -19,7 +19,7 @@ var i = 0
         $scope.type = type;
 
         $scope.ingenieros = ingenieros = Ingeniero.query({ type: type.toLowerCase() }, function (datos) {
-           
+           console.log("estoy en dentro de tipo  ")
           $scope.groupped = partition(datos, 4);
         });
       } else {

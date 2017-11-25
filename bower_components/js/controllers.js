@@ -25,13 +25,7 @@ var i = 0
       } else {
         $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
           
-         
-          $scope.groupped = partition(data, 4);
-
-        });
-      }
-
-      $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
+          $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [
               [1 , 1, 2, 2, 5, 9, 8, 4, 9, 10]
@@ -59,7 +53,13 @@ var i = 0
                   ]
                 }
               };
-           $rootScope.title = "hola";
+          $scope.groupped = partition(data, 4);
+
+        });
+      }
+
+      
+           //$rootScope.title = "hola";
           //$scope.ingeniero = ingeniero;
           //console.log(ingeniero.var1)
   

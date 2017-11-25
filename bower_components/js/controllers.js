@@ -38,7 +38,7 @@
 
      });
 
-    console.log(ingenieros)
+    console.log(ingenieros[0])
       
 /*
 

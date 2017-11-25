@@ -2,7 +2,30 @@
 <img class="avatar center-block" ng-src="{{ingeniero.imageUrl}}">
 -->
 
- <div ng-controller="IngedexController">    
+ <div ng-controller="IngedexController">  
+    <div class="col-md-6" ng-controller="TabsController">
+
+            <ul class="nav nav-tabs nav-justified">
+               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Variables</a></li>
+              <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Alarmas</a></li>
+              <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Información Data</a></li>
+            </ul>
+            <div class="tab-content">
+              <!-- Ingenierias -->
+              <div ng-show="isActive(1)">
+                <ingeniero-data></ingeniero-data>
+              </div>
+              <!--Estadisticas-->
+              <!-- Stats -->
+              <div ng-show="isActive(2)">
+                <ingeniero-stats></ingeniero-stats>
+              </div>
+               <!-- Evolucion -->
+              <div ng-show="isActive(3)">
+                <ingeniero-evolution></ingeniero-evolution>
+              </div>
+            </div>
+          </div>  
     <canvas id="line" class="chart chart-line" chart-data="data"
     chart-labels="labels" chart-series="series" chart-options="options"
     chart-dataset-override="datasetOverride" chart-click="onClick">

@@ -23,12 +23,17 @@
         });
       } else {
         $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
-          console.log(data.var1)
+          
          
           $scope.groupped = partition(data, 4);
 
         });
       }
+
+      ingenieros.forEach(function(element) {
+          console.log(element);
+      });
+
 
       $scope.search = function () {
         var result = ingenieros;

@@ -124,7 +124,7 @@ var n = 0
        var id = $routeParams.id;
        console.log(id)
 
-
+       $scope.id= id ;
       var type = $routeParams.type;
       
       var ingenieros = [];

@@ -125,7 +125,7 @@ app.get("/menu",function(req,res){
 //route para conseguir todo los registros de datos
 app.get("/menu",function(req,res){
 
-  Var.find(function(error,documento){
+  Var.find({}.sort('-date').limit(12),function(error,documento){
     if(error){ console.log(error); }
     res.render("menu/index",{ vars: documento })
   });

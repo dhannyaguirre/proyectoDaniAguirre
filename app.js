@@ -252,7 +252,7 @@ app.delete("/menu/:id",function(req,res){
 app.get('/api/documentos', function (req, res) {
 	console.log("limitando")
   //var area = req.query.type;
-find({
+Var.find({
   }).
   limit(10).
   sort({ occupation: -1 }).

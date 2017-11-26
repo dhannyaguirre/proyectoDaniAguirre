@@ -3,9 +3,9 @@
 -->
 
  <div ng-controller="IngedexController">  
-  {{i}}
+  
     <div class="col-md-12" ng-controller="TabsController">
-    {{i}}
+
 
             <ul class="nav nav-tabs nav-justified">
                <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
@@ -15,7 +15,7 @@
             <div class="tab-content">
               <!-- Ingenierias -->
               <div ng-show="isActive(1)">
-                  <canvas id="line" class="chart chart-line" chart-data="data[1]"
+                  <canvas id="line" class="chart chart-line" chart-data="data[0]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">
                       </canvas>
@@ -24,13 +24,13 @@
               <!-- Stats -->
               <div ng-show="isActive(2)">
                   <canvas id="bar" class="chart chart-bar"
-                    chart-data="data" chart-labels="labels"> chart-series="series"
+                    chart-data="data[i]" chart-labels="labels"> chart-series="series"
                   </canvas>
                 </div>
                <!-- Evolucion -->
               <div ng-show="isActive(3)">
                 <canvas id="doughnut" class="chart chart-doughnut"
-                  chart-data="data" chart-labels="labels">
+                  chart-data="data[i]" chart-labels="labels">
                 </canvas>
               </div>
             </div>

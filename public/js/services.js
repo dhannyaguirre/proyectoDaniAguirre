@@ -19,6 +19,8 @@
         return deferred.promise;
       }
 
+        
+
        function byName(name) {
         name = normalize(name);
         var deferred = $q.defer();

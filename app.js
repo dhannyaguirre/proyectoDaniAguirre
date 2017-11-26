@@ -270,10 +270,10 @@ app.delete("/menu/:id",function(req,res){
 
 //get proyecto Principal
 
-app.get('/api/documentos', function (req, res) {
+app.get('/api/limites', function (req, res) {
 	console.log("limitando")
   //var area = req.query.type;
-Var.find({
+Lim.find({
   }).
   limit(12).
   sort({ occupation: -1 }).
@@ -283,6 +283,45 @@ Var.find({
     var docs = documento;
      res.send(docs);
   });
+
+});
+
+
+
+
+
+app.get('/api/documentos', function (req, res) {
+	console.log("limitando")
+
+
+
+  //var area = req.query.type;
+Var.find({
+  }).
+  limit(12).
+  sort({ occupation: -1 }).
+  exec(function(error,documento){
+    if(error){ console.log(error); }
+
+    	Lim.find({
+			  }).
+			  limit(12).
+			  sort({ occupation: -1 }).
+			  exec(function(error,limites){
+    		if(error){ console.log(error); }
+    		var docs = documento;
+    		var lims = limites;
+     res.send({{docs: docs, lims : lims}});
+  });
+
+});
+
+
+    console.log(documento)
+    var docs = documento;
+     res.send(docs);
+  });
+
 
 
 

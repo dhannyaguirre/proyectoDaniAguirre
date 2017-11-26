@@ -123,16 +123,39 @@ var n = 0
     .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
        var id = $routeParams.id;
        console.log(id)
-       //console.log(id)
-      //$scope.ingeniero = {};
-        Ingeniero.get({ id: id }, function (ingeniero) {
+      var ingenieros = [];
 
-           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
+      $rootScope.title = "";
+
+    /*  $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
+          console.log(data)
+         
+          $scope.groupped = partition(data, 4);
+        });
+*/
+
+      if (type) {
+        $scope.type = type;
+
+        $scope.ingenieros = ingenieros = Ingeniero.query({ type: type.toLowerCase() }, function (datos) {
+           console.log("estoy en dentro de tipo ")
+          $scope.groupped = partition(datos, 4);
+        });
+      } else {
+        $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
+          n = datos.length
+          $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [
-              [ingeniero.var1, ingeniero.var2, ingeniero.var3, ingeniero.var4, ingeniero.var5, ingeniero.var6, ingeniero.var7, ingeniero.var8, ingeniero.var9, ingeniero.var10]
+              [datos[n-12].var1, datos[n-11].var1,datos[n-10].var1,datos[n-9].var1,datos[n-8].var1,datos[n-7].var1, datos[n-6].var1,datos[n-5].var1,datos[n-4].var1,datos[n-3].var1,datos[n-2].var1,,datos[n-1].var1],
+              [datos[n-12].var2, datos[n-11].var2,datos[n-10].var2,datos[n-9].var2,datos[n-8].var2,datos[n-7].var2, datos[n-6].var2,datos[n-5].var2,datos[n-4].var2,datos[n-3].var2,datos[n-2].var2,,datos[n-1].var2],
+              [datos[n-12].var3, datos[n-11].var3,datos[n-10].var3,datos[n-9].var3,datos[n-8].var3,datos[n-7].var3, datos[n-6].var3,datos[n-5].var3,datos[n-4].var3,datos[n-3].var3,datos[n-2].var3,,datos[n-1].var3],
+              [datos[n-12].var4, datos[n-11].var4,datos[n-10].var4,datos[n-9].var4,datos[n-8].var4,datos[n-7].var4, datos[n-6].var4,datos[n-5].var4,datos[n-4].var4,datos[n-3].var4,datos[n-2].var4,,datos[n-1].var4],
+              [datos[n-12].var5, datos[n-11].var5,datos[n-10].var5,datos[n-9].var5,datos[n-8].var5,datos[n-7].var5, datos[n-6].var5,datos[n-5].var5,datos[n-4].var5,datos[n-3].var5,datos[n-2].var5,,datos[n-1].var5],
+              [datos[n-12].var6, datos[n-11].var6,datos[n-10].var6,datos[n-9].var6,datos[n-8].var6,datos[n-7].var6, datos[n-6].var6,datos[n-5].var6,datos[n-4].var6,datos[n-3].var6,datos[n-2].var6,,datos[n-1].var6]
             ];
-           
+            
+
               $scope.onClick = function (points, evt) {
                 console.log(points, evt);
               };
@@ -155,11 +178,61 @@ var n = 0
                   ]
                 }
               };
-           $rootScope.title = ingeniero._id;
-          $scope.ingeniero = ingeniero;
-          console.log(ingeniero.var1)
+          $scope.groupped = partition(datos, 4);
+              i++ 
+        });
+
+      }
+
       
+           //$rootScope.title = "hola";
+          //$scope.ingeniero = ingeniero;
+          //console.log(ingeniero.var1)
+  
+  /*
+   $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
+          
+/*
+        $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
+        $scope.series = ['Temperatura'];
+        $scope.data = [
+          [datos[i].var1, datos[i].var2, datos[i].var3, datos[i].var4, datos[i].var5, datos[i].var6, datos[i].var7, datos[i].var8, datos[i].var9, datos[i].var10]
+        ];
+          $scope.groupped = partition(datos, 4);
+          i++
+  
+     });
+
+   console.log($scope.data)
+    //console.log(ingenieros[0])
+*/      
+/*
+
+      $scope.search = function () {
+        var result = ingenieros;
+
+        if ($scope.searchTerm) {
+          result = ingenieros.filter(function (ingeniero) {
+            var name = ingeniero && ingeniero.name || "";
+
+            return name.toLowerCase().indexOf($scope.searchTerm.toLowerCase()) !== -1;
           });
+        }
+
+        $scope.ingenieros = result;
+        $scope.groupped = partition(result, 4);
+      };
+
+
+*/
+      function partition(datos, n) {
+        return _.chain(datos).groupBy(function (element, index) {
+          return Math.floor(index / n);
+        }).toArray().value();
+      }
+     
+
+
     }])
 
     .controller('TabsController', ['$scope', function ($scope) {

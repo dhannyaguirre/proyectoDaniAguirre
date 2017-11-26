@@ -124,22 +124,12 @@ app.get("/menu",function(req,res){
 
 //route para conseguir todo los registros de datos
 app.get("/menu",function(req,res){
-	 console.log(limitando)
-find({
-  }).
-  limit(10).
-  sort({ occupation: -1 }).
-  exec(function(error,documento){
-    if(error){ console.log(error); }
-    console.log(documento)
-    res.render("menu/index",{ vars: documento })
-  });
-/*
+
+
   Var.find(function(error,documento){
     if(error){ console.log(error); }
     res.render("menu/index",{ vars: documento })
   });
-*/
 }
 
 
@@ -260,8 +250,24 @@ app.delete("/menu/:id",function(req,res){
 //get proyecto Principal
 
 app.get('/api/documentos', function (req, res) {
-	console.log("estoy dentro angular")
+	console.log("limitando")
   //var area = req.query.type;
+find({
+  }).
+  limit(10).
+  sort({ occupation: -1 }).
+  exec(function(error,documento){
+    if(error){ console.log(error); }
+    console.log(documento)
+    var docs = documento;
+     res.send(docs);
+  });
+
+
+
+
+/*
+
   Var.find(function(error,documento){
 		if(error){ console.log(error); }
 		var docs = documento;
@@ -276,10 +282,10 @@ app.get('/api/documentos', function (req, res) {
     res.send(results);
   } else {
     res.send(docs);
-  }*/
+  }
    res.send(docs);
 	});
-  
+  */
 });
 
 

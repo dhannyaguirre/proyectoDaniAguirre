@@ -1,5 +1,5 @@
 <!-- ingeniero -->
-      <div ng-if="!ingeniero">
+      <div ng-if="!ingenieros[i]">
         <div class="page-header">
           <h1>Error</h1>
         </div>
@@ -7,7 +7,7 @@
           <p>Ingeniero no encontrado</p>
         </div>
       </div>
-      <div ng-if="ingeniero">
+      <div ng-if="ingenieros[i]">
         <div class="page-header">
           <ingeniero-name></ingeniero-name>
         </div>
@@ -17,7 +17,7 @@
           </div>
           <!-- Tabs -->
           <div class="col-md-6" ng-controller="TabsController">
-
+          {{i}}
             <ul class="nav nav-tabs nav-justified">
                <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Variables</a></li>
               <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Alarmas</a></li>

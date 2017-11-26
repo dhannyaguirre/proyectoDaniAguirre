@@ -70,6 +70,23 @@ var varSchemaJSON = {
   var9 : Number,
   var10 : Number
 };
+
+
+var limSchemaJSON = {
+
+  lim1: Number,
+  lim2 : Number ,
+  lim3 : Number,
+  lim4 : Number,
+  lim5 : Number,
+  lim6 : Number ,
+  lim7 : Number,
+  lim8 : Number,
+  lim9 : Number,
+  lim10 : Number,
+  lim11 : Number,
+  lim12 : Number
+};
 /*
 var ingenieroSchemaJSON = {
 	ci: Number,
@@ -92,7 +109,7 @@ var ingenieroSchemaJSON = {
 
 //var ingenieroSchema = new Schema(ingenieroSchemaJSON);
 var varSchema = new Schema(varSchemaJSON);
-
+var limSchema = new Schema(limSchemaJSON);
 /*
 ingenieroSchema.virtual("image.url").get(function(){
 	if(this.imageUrl === "" || this.imageUrl === "data.png"){
@@ -101,6 +118,7 @@ ingenieroSchema.virtual("image.url").get(function(){
 	return this.imageUrl;
 });
 */
+var Lim = mongoose.model("Lim", limSchema);
 var Var = mongoose.model("Var", varSchema);
 //var Ingeniero = mongoose.model("Ingeniero", ingenieroSchema);
 
@@ -140,18 +158,21 @@ app.post('/menu', function(req, res ) {
 
   	console.log(req.body)
   	var data = {
-  		var1: req.body.var1,
-  		var2: req.body.var2,
-  		var3: req.body.var3,
-  		var4: req.body.var4,
-  		var5: req.body.var5,
-  		var6: req.body.var6,
-  		var7: req.body.var7,
-  		var8: req.body.var8,
-  		var9: req.body.var9,
-  		var10: req.body.var10
+  		lim1: req.body.var1,
+  		lim2: req.body.var2,
+  		lim3: req.body.var3,
+  		lim4: req.body.var4,
+  		lim5: req.body.var5,
+  		lim6: req.body.var6,
+  		lim7: req.body.var7,
+  		lim8: req.body.var8,
+  		lim9: req.body.var9,
+  		lim10: req.body.var10,
+  		lim10: req.body.var11,
+  		lim10: req.body.var12
+
   	}
-  	var documento = new Var(data);
+  	var documento = new Lim(data);
 	documento.save(function(err){
 		res.redirect("/menu");
 	});

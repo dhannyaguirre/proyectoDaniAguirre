@@ -124,12 +124,26 @@ app.get("/menu",function(req,res){
 
 //route para conseguir todo los registros de datos
 app.get("/menu",function(req,res){
-
+	 console.log(limitando)
+find({
+  }).
+  limit(10).
+  sort({ occupation: -1 }).
+  exec(function(error,documento){
+    if(error){ console.log(error); }
+    console.log(documento)
+    res.render("menu/index",{ vars: documento })
+  });
+/*
   Var.find(function(error,documento){
     if(error){ console.log(error); }
     res.render("menu/index",{ vars: documento })
   });
-});
+*/
+}
+
+
+);
 
 //route para guardar un registro en la base de datos 
 app.post('/menu', function(req, res ) {

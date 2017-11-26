@@ -254,7 +254,7 @@ app.get('/api/documentos', function (req, res) {
   //var area = req.query.type;
 Var.find({
   }).
-  limit(10).
+  limit(12).
   sort({ occupation: -1 }).
   exec(function(error,documento){
     if(error){ console.log(error); }

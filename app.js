@@ -310,10 +310,8 @@ Var.find({
 			  exec(function(error,limites){
     		if(error){ console.log(error); }
     		var docs = documento;
-    		var lims = limites;
-     res.send({docs: docs, lims: lims});
-  });
-
+      		var lims = limites;
+            res.send({docs: docs, lims: lims});
 });
 
 

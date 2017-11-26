@@ -21,7 +21,7 @@
           templateUrl: 'partials/ingeniero-image.html'
         };
       })
-    .directive('ingenieroImage2', function () {
+    .directive('ingenieroImages', function () {
         return {
           restrict: 'E',
           templateUrl: 'partials/ingeniero-image2.html'

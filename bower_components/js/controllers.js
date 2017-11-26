@@ -3,8 +3,7 @@ var i = 0
 var n = 0 
   angular.module('ingedex.controllers', [])
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
-   
-
+      
       var type = $routeParams.type;
       var ingenieros = [];
 
@@ -21,10 +20,10 @@ var n = 0
         $scope.type = type;
 
         $scope.ingenieros = ingenieros = Ingeniero.query({ type: type.toLowerCase() }, function (datos) {
+           console.log("estoy en dentro de tipo ")
           $scope.groupped = partition(datos, 4);
         });
       } else {
-        console.log(datos)
         $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
           n = datos.length
           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];

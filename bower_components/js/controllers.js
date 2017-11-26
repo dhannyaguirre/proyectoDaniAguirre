@@ -156,15 +156,18 @@ var n = 0
 
         $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
 
+           n = datos.length
            $scope.limites = limites = Limite.query(function (limites) {
-
-            console.log(limites[0])
+            
+            console.log(limites[0].lim1)
+            console.log(datos[n-12].var1)
+            
             $scope.colors = ['#ff6384', '#ff8e72'];
           });
 
 
 
-          n = datos.length
+         
           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [

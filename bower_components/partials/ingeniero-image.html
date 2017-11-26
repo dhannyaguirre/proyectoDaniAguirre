@@ -15,6 +15,9 @@
             <div class="tab-content">
               <!-- Ingenierias -->
               <div ng-show="isActive(1)">
+                  <div>
+                    {{i}}
+                  </div>
                   <canvas id="line" class="chart chart-line" chart-data="data[0]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">

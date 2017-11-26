@@ -124,7 +124,7 @@ var n = 0
        var id = $routeParams.id;
        console.log(id)
        
-       $scope.colors = ['#ff6384', '#ff8e72'];
+       
        $scope.id= id ;
 
       var type = $routeParams.type;
@@ -156,11 +156,13 @@ var n = 0
 
         $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
 
-           $scope.limites = limites = Limite.query(function (datos) {
+           $scope.limites = limites = Limite.query(function (limites) {
+
+            console.log(limites[0])
+            $scope.colors = ['#ff6384', '#ff8e72'];
           });
 
-           console.log(limites[0]);
-          
+
 
           n = datos.length
           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];

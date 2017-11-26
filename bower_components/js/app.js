@@ -27,7 +27,7 @@
       })
       .when('/ingeniero/:id', {
         templateUrl: 'views/ingeniero.html',
-        controller: 'IngenieroController',
+        controller: 'IngedexController',
       })
       .otherwise({
         redirectTo: '/'

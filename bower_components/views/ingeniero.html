@@ -11,7 +11,7 @@
       <div ng-if="ingeniero">
         <div class="page-header">
           <ingeniero-name></ingeniero-name>
-          {{ingenieros[0]}}
+          {{ingeniero}}
         </div>
         <div class="row">
           <div class="col-md-6">
@@ -24,6 +24,7 @@
             
               <!-- Ingenierias -->
               <div ng-show="isActive(1)">
+                  porque no vale
                   <canvas id="line" class="chart chart-line" chart-data="data[0]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">

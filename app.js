@@ -292,7 +292,17 @@ Var.find({
 app.get('/api/documentos/:id', function (req, res) {
 	console.log("estoy dentro de id")
   var id = req.params.id;
-
+Var.find({
+  }).
+  limit(12).
+  sort({ occupation: -1 }).
+  exec(function(error,documento){
+    if(error){ console.log(error); }
+    console.log(documento)
+    var docs = documento;
+     res.send(docs);
+  });
+/*
   Var.find(function(error,documento){
 		if(error){ console.log(error); }
 		var docs = documento;
@@ -305,6 +315,7 @@ app.get('/api/documentos/:id', function (req, res) {
 	    res.status(404).end();
 	  }
 	});
+	*/
 });
 
 app.get( '/', function( req, res, next ){

@@ -3,7 +3,7 @@ var i = 0
 var n = 0 
   angular.module('ingedex.controllers', [])
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
-      
+      console.log(estoy aqi dentro de controller)
       var type = $routeParams.type;
       var ingenieros = [];
 

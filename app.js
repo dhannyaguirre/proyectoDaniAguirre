@@ -311,7 +311,7 @@ Var.find({
     		if(error){ console.log(error); }
     		var docs = documento;
     		var lims = limites;
-     res.send({docs: docs; lims : lims});
+     res.send({docs: docs, lims: lims});
   });
 
 });

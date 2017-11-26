@@ -290,7 +290,7 @@ Var.find({
 
 
 app.get('/api/documentos/:id', function (req, res) {
-	console.log("estoy dentro de id")
+	
   var id = req.params.id;
 Var.find({
   }).
@@ -300,7 +300,7 @@ Var.find({
     if(error){ console.log(error); }
     console.log(documento)
     var docs = documento;
-     res.send(docs);
+     res.send({docs: docs, id : id});
   });
 /*
   Var.find(function(error,documento){

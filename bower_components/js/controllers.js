@@ -29,11 +29,14 @@ var n = 0
           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [
-              [datos[n-12].var1, datos[n-11].var1,datos[n-10].var1,datos[n-9].var1,datos[n-8].var1,datos[n-7].var1, datos[n-6].var1,datos[n-5].var1,datos[n-4].var1,datos[n-3].var1,datos[n-2].var1,,datos[n-1].var1]
+              [datos[n-12].var1, datos[n-11].var1,datos[n-10].var1,datos[n-9].var1,datos[n-8].var1,datos[n-7].var1, datos[n-6].var1,datos[n-5].var1,datos[n-4].var1,datos[n-3].var1,datos[n-2].var1,,datos[n-1].var1],
+              [datos[n-12].var2, datos[n-11].var2,datos[n-10].var2,datos[n-9].var2,datos[n-8].var2,datos[n-7].var2, datos[n-6].var2,datos[n-5].var2,datos[n-4].var2,datos[n-3].var2,datos[n-2].var2,,datos[n-1].var2],
+              [datos[n-12].var3, datos[n-11].var3,datos[n-10].var3,datos[n-9].var3,datos[n-8].var3,datos[n-7].var3, datos[n-6].var3,datos[n-5].var3,datos[n-4].var3,datos[n-3].var3,datos[n-2].var3,,datos[n-1].var3],
+              [datos[n-12].var4, datos[n-11].var4,datos[n-10].var4,datos[n-9].var4,datos[n-8].var4,datos[n-7].var4, datos[n-6].var4,datos[n-5].var4,datos[n-4].var4,datos[n-3].var4,datos[n-2].var4,,datos[n-1].var4],
+              [datos[n-12].var5, datos[n-11].var5,datos[n-10].var5,datos[n-9].var5,datos[n-8].var5,datos[n-7].var5, datos[n-6].var5,datos[n-5].var5,datos[n-4].var5,datos[n-3].var5,datos[n-2].var5,,datos[n-1].var5],
+              [datos[n-12].var6, datos[n-11].var6,datos[n-10].var6,datos[n-9].var6,datos[n-8].var6,datos[n-7].var6, datos[n-6].var6,datos[n-5].var6,datos[n-4].var6,datos[n-3].var6,datos[n-2].var6,,datos[n-1].var6]
             ];
-             $scope.data2 = [
-              [datos[n-12].var1, datos[n-11].var1,datos[n-10].var1,datos[n-9].var1,datos[n-8].var1,datos[n-7].var1, datos[n-6].var1,datos[n-5].var1,datos[n-4].var1,datos[n-3].var1,datos[n-2].var1,,datos[n-1].var1]
-            ];
+            
 
               $scope.onClick = function (points, evt) {
                 console.log(points, evt);

@@ -36,6 +36,156 @@
               </div>
             </div>
         </div>
+        <div ng-if="i == 2">
+              <ul class="nav nav-tabs nav-justified">
+               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+              <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+              <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+            </ul>
+            <div class="tab-content">
+            
+              <!-- Ingenierias -->
+              <div ng-show="isActive(1)">
+                  <canvas id="line" class="chart chart-line" chart-data="data[1]"
+                      chart-labels="labels" chart-series="series" chart-options="options"
+                      chart-dataset-override="datasetOverride" chart-click="onClick">
+                      </canvas>
+              </div>
+              <!--Estadisticas-->
+              <!-- Stats -->
+              <div ng-show="isActive(2)">
+                  <canvas id="bar" class="chart chart-bar"
+                    chart-data="data[0]" chart-labels="labels"> chart-series="series"
+                  </canvas>
+                </div>
+               <!-- Evolucion -->
+              <div ng-show="isActive(3)">
+                <canvas id="doughnut" class="chart chart-doughnut"
+                  chart-data="data[0]" chart-labels="labels">
+                </canvas>
+              </div>
+            </div>
+        </div>
+        <div ng-if="i == 3">
+              <ul class="nav nav-tabs nav-justified">
+               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+              <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+              <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+            </ul>
+            <div class="tab-content">
+            
+              <!-- Ingenierias -->
+              <div ng-show="isActive(1)">
+                  <canvas id="line" class="chart chart-line" chart-data="data[2]"
+                      chart-labels="labels" chart-series="series" chart-options="options"
+                      chart-dataset-override="datasetOverride" chart-click="onClick">
+                      </canvas>
+              </div>
+              <!--Estadisticas-->
+              <!-- Stats -->
+              <div ng-show="isActive(2)">
+                  <canvas id="bar" class="chart chart-bar"
+                    chart-data="data[0]" chart-labels="labels"> chart-series="series"
+                  </canvas>
+                </div>
+               <!-- Evolucion -->
+              <div ng-show="isActive(3)">
+                <canvas id="doughnut" class="chart chart-doughnut"
+                  chart-data="data[0]" chart-labels="labels">
+                </canvas>
+              </div>
+            </div>
+        </div>
+        <div ng-if="i == 4">
+              <ul class="nav nav-tabs nav-justified">
+               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+              <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+              <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+            </ul>
+            <div class="tab-content">
+            
+              <!-- Ingenierias -->
+              <div ng-show="isActive(1)">
+                  <canvas id="line" class="chart chart-line" chart-data="data[3]"
+                      chart-labels="labels" chart-series="series" chart-options="options"
+                      chart-dataset-override="datasetOverride" chart-click="onClick">
+                      </canvas>
+              </div>
+              <!--Estadisticas-->
+              <!-- Stats -->
+              <div ng-show="isActive(2)">
+                  <canvas id="bar" class="chart chart-bar"
+                    chart-data="data[0]" chart-labels="labels"> chart-series="series"
+                  </canvas>
+                </div>
+               <!-- Evolucion -->
+              <div ng-show="isActive(3)">
+                <canvas id="doughnut" class="chart chart-doughnut"
+                  chart-data="data[0]" chart-labels="labels">
+                </canvas>
+              </div>
+            </div>
+        </div>
+        <div ng-if="i == 5">
+              <ul class="nav nav-tabs nav-justified">
+               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+              <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+              <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+            </ul>
+            <div class="tab-content">
+            
+              <!-- Ingenierias -->
+              <div ng-show="isActive(1)">
+                  <canvas id="line" class="chart chart-line" chart-data="data[4]"
+                      chart-labels="labels" chart-series="series" chart-options="options"
+                      chart-dataset-override="datasetOverride" chart-click="onClick">
+                      </canvas>
+              </div>
+              <!--Estadisticas-->
+              <!-- Stats -->
+              <div ng-show="isActive(2)">
+                  <canvas id="bar" class="chart chart-bar"
+                    chart-data="data[0]" chart-labels="labels"> chart-series="series"
+                  </canvas>
+                </div>
+               <!-- Evolucion -->
+              <div ng-show="isActive(3)">
+                <canvas id="doughnut" class="chart chart-doughnut"
+                  chart-data="data[0]" chart-labels="labels">
+                </canvas>
+              </div>
+            </div>
+        </div>
+        <div ng-if="i == 6">
+              <ul class="nav nav-tabs nav-justified">
+               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+              <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+              <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+            </ul>
+            <div class="tab-content">
+            
+              <!-- Ingenierias -->
+              <div ng-show="isActive(1)">
+                  <canvas id="line" class="chart chart-line" chart-data="data[5]"
+                      chart-labels="labels" chart-series="series" chart-options="options"
+                      chart-dataset-override="datasetOverride" chart-click="onClick">
+                      </canvas>
+              </div>
+              <!--Estadisticas-->
+              <!-- Stats -->
+              <div ng-show="isActive(2)">
+                  <canvas id="bar" class="chart chart-bar"
+                    chart-data="data[0]" chart-labels="labels"> chart-series="series"
+                  </canvas>
+                </div>
+               <!-- Evolucion -->
+              <div ng-show="isActive(3)">
+                <canvas id="doughnut" class="chart chart-doughnut"
+                  chart-data="data[0]" chart-labels="labels">
+                </canvas>
+              </div>
+            </div>
+        </div>
             
           </div>  
     

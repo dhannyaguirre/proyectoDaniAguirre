@@ -129,6 +129,7 @@ app.get("/menu",function(req,res){
 	.limit(20)
 	.exec(function(error,documento){
     if(error){ console.log(error); }
+    console.log(documento)
     res.render("menu/index",{ vars: documento })
   });
 });

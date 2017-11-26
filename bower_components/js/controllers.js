@@ -120,7 +120,7 @@ var n = 0
 
 
     }])
-    .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', 'Limite' ,function ($rootScope, $scope, $routeParams, Ingeniero, Limite) {
+    .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
        var id = $routeParams.id;
        console.log(id)
        
@@ -129,7 +129,6 @@ var n = 0
       var type = $routeParams.type;
       
       var ingenieros = [];
-      var limites = [];
 
       $rootScope.title = "";
 
@@ -148,10 +147,6 @@ var n = 0
           $scope.groupped = partition(datos, 4);
         });
       } else {
-        $scope.limites = limites = Limite.query(function (datos) {
-          console.log(datos)
-        }
-        
         $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
           n = datos.length
           $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];

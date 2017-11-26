@@ -11,6 +11,21 @@ var sizeOf    =   require( 'image-size' );
 var exphbs    =   require( 'express-handlebars' );
 require( 'string.prototype.startswith' );
 
+
+/* cambios aplicacione
+	color gris
+	Pantalla principal -> Cambio de mediciones
+	Systema supervisorio y adquisicion de datos -> cambio por mediciones
+	head mas pequeño
+	tarjetas configurar label de cajas por variables
+	añadir limite minimo y limite maximo apra alarmas en creacion
+	cambiar a rojo grafica fuera limites alarmas
+	cambio de variables por historicos
+	indnividual por presion temperatura por dikmension
+	variable variar por numero y solo poner dato fecha hora valor
+	10 datos pra mandar agrupar la variable
+	
+*/
 var app_password = "1"
 var Schema = mongoose.Schema;
 //mongodb://<dbuser>:<dbpassword>@ds113826.mlab.com:13826/var
@@ -70,6 +85,9 @@ var ingenieroSchemaJSON = {
 	titulo : String,
 	imageUrl: String
 };
+/*
+	dimensiones
+	
 */
 
 //var ingenieroSchema = new Schema(ingenieroSchemaJSON);
@@ -190,7 +208,9 @@ app.put("/menu/:id", function( req, res ){
 			res.redirect("/menu");
 		});
 							
-		
+	/*
+	fecha hora y valor
+	*/
 	}
 });
 

@@ -123,6 +123,8 @@ var n = 0
     .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
        var id = $routeParams.id;
        console.log(id)
+        var lim1 = $scope.lim1
+        console.log(lim1)
        $scope.colors = ['#ff6384', '#ff8e72'];
        $scope.id= id ;
       var type = $routeParams.type;

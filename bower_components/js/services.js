@@ -6,7 +6,7 @@
         return $resource('/api/documentos/:id', {id:'@id'});
      }])
 
-      .factory('Limites', ['$resource', function ($resource) {
+      .factory('Limite', ['$resource', function ($resource) {
         //return $resource('/api/ingenieros/:name');
         return $resource('/api/limites');
      }])

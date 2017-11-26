@@ -120,7 +120,7 @@ var n = 0
 
 
     }])
-    .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', 'Limite' , function ($rootScope, $scope, $routeParams, Ingeniero, 'Limite') {
+    .controller('IngenieroController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', 'Limite' , function ($rootScope, $scope, $routeParams, Ingeniero, Limite) {
        var id = $routeParams.id;
        console.log(id)
        

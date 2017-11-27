@@ -169,7 +169,10 @@ app.post('/menu', function(req, res ) {
 			var7: req.body.var7,
 			var8: req.body.var8,
 			var9: req.body.var9,
-			var10: req.body.var10
+			var10: req.body.var10,
+			hora: req.body.hora,
+			min: req.body.min,
+			seg: req.body.seg
 
   	}
   	var documento = new Var(data);

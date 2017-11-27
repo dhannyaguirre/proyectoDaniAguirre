@@ -28,15 +28,15 @@ var n = 0
 
 */
             var c1 = false
-            var c2 
-            var c3 
-            var c4
-            var c5
-            var c6
-            var c7
-            var c8
-            var c9
-            var c10
+            var c2 = false
+            var c3 =false
+            var c4 = false
+            var c5 = false
+            var c6 = false
+            var c7= false
+            var c8 = false
+            var c9 = false
+            var c10 = false
 
 
             //$scope.colors = ['#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f']

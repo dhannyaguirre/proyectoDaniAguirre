@@ -146,7 +146,7 @@ var n = 0
             var c1 
             var c2 
             var c3 
-
+            $scope.colors 
       if (type) {
         $scope.type = type;
 
@@ -210,15 +210,13 @@ var n = 0
                   }
               }
             }else {
-              c1 = '#45b7cd'
-                c2 = '#45b7cd'
-                c3 = '#45b7cd'
+                $scope.colors = ['#ff6384', '#ff8e72'];
             }   
             });
             
           
             
-            $scope.colors 
+            
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [

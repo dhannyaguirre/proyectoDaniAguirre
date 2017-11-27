@@ -358,7 +358,8 @@ var n = 0
             $scope.colors[8] = c9
             $scope.colors[9] = c10
 
-            console.log(datos[n-12].hora)
+            console.log("Esta es la hora" + datos[n-12].hora)
+
 /*
 
                 $scope.hora1= datos[n].hora;

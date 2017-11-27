@@ -173,6 +173,7 @@ var n = 0
                 console.log("dentro de for")
 
               if(3 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
+                console.log("dentro de if de for")                
                 $scope.colors = ['#ff6384', '#ff8e72'];
               }
             }

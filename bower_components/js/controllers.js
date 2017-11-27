@@ -107,28 +107,6 @@ var n = 0
                    $scope.color5= c5 ;
                     $scope.color6= c6 ;
               
-                $scope.hora1= [datos[0].hora;
-                $scope.hora2= [datos[1].hora ;
-                $scope.hora3= [datos[2].hora;
-                $scope.hora4= [datos[3].hora;
-                $scope.hora5= [datos[4].hora;
-                $scope.hora6= [datos[5].hora;
-              
-
-                $scope.min1= [datos[0].min;
-                $scope.min2= [datos[1].min ;
-                $scope.min3= [datos[2].min;
-                $scope.min4= [datos[3].min;
-                $scope.min5= [datos[4].min;
-                $scope.min6= [datos[5].min;
-
-
-                $scope.seg1= [datos[0].seg;
-                $scope.seg2= [datos[1].seg ;
-                $scope.seg3= [datos[2].seg;
-                $scope.seg4= [datos[3].seg;
-                $scope.seg5= [datos[4].seg;
-                $scope.seg6= [datos[5].seg;
               console.log($scope.color3)
 
 

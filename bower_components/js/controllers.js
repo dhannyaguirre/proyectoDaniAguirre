@@ -150,10 +150,6 @@ var n = 0
         });
       } else {
 
-
-       
-
-
         $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
 
            n = datos.length
@@ -211,16 +207,7 @@ var n = 0
             }   
             });
             
-            
-            
-          
-        }
-          
-
-
-
-         
-          $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
+            $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [
               [datos[n-12].var1, datos[n-11].var1,datos[n-10].var1,datos[n-9].var1,datos[n-8].var1,datos[n-7].var1, datos[n-6].var1,datos[n-5].var1,datos[n-4].var1,datos[n-3].var1,datos[n-2].var1,,datos[n-1].var1],
@@ -230,7 +217,6 @@ var n = 0
               [datos[n-12].var5, datos[n-11].var5,datos[n-10].var5,datos[n-9].var5,datos[n-8].var5,datos[n-7].var5, datos[n-6].var5,datos[n-5].var5,datos[n-4].var5,datos[n-3].var5,datos[n-2].var5,,datos[n-1].var5],
               [datos[n-12].var6, datos[n-11].var6,datos[n-10].var6,datos[n-9].var6,datos[n-8].var6,datos[n-7].var6, datos[n-6].var6,datos[n-5].var6,datos[n-4].var6,datos[n-3].var6,datos[n-2].var6,,datos[n-1].var6]
             ];
-            
 
               $scope.onClick = function (points, evt) {
                 console.log(points, evt);
@@ -254,62 +240,27 @@ var n = 0
                   ]
                 }
               };
-          $scope.groupped = partition(datos, 4);
+              $scope.groupped = partition(datos, 4);
               i++ 
-        });
+            });
 
       }
-
-      
-           //$rootScope.title = "hola";
-          //$scope.ingeniero = ingeniero;
-          //console.log(ingeniero.var1)
+           
   
-  /*
-   $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
-          
-/*
-        $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
-        $scope.series = ['Temperatura'];
-        $scope.data = [
-          [datos[i].var1, datos[i].var2, datos[i].var3, datos[i].var4, datos[i].var5, datos[i].var6, datos[i].var7, datos[i].var8, datos[i].var9, datos[i].var10]
-        ];
-          $scope.groupped = partition(datos, 4);
-          i++
-  
-     });
-
-   console.log($scope.data)
-    //console.log(ingenieros[0])
-*/      
-/*
-
-      $scope.search = function () {
-        var result = ingenieros;
-
-        if ($scope.searchTerm) {
-          result = ingenieros.filter(function (ingeniero) {
-            var name = ingeniero && ingeniero.name || "";
-
-            return name.toLowerCase().indexOf($scope.searchTerm.toLowerCase()) !== -1;
-          });
-        }
-
-        $scope.ingenieros = result;
-        $scope.groupped = partition(result, 4);
-      };
-
-
-*/
-      function partition(datos, n) {
+       function partition(datos, n) {
         return _.chain(datos).groupBy(function (element, index) {
           return Math.floor(index / n);
         }).toArray().value();
       }
      
 
+    
+ 
+
+
 
     }])
+
 
     .controller('TabsController', ['$scope', function ($scope) {
       $scope.tab = 1;

@@ -173,7 +173,7 @@ var n = 0
 
               if(3 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
                 console.log('aqui estoy')
-                c1 = '#ff6384'
+                c1 = '#ff0000'
               }
             }
             } else if (id == 2){

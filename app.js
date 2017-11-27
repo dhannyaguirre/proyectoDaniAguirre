@@ -158,21 +158,19 @@ app.post('/menu', function(req, res ) {
 
   	console.log(req.body)
   	var data = {
-  		lim1: req.body.var1,
-  		lim2: req.body.var2,
-  		lim3: req.body.var3,
-  		lim4: req.body.var4,
-  		lim5: req.body.var5,
-  		lim6: req.body.var6,
-  		lim7: req.body.var7,
-  		lim8: req.body.var8,
-  		lim9: req.body.var9,
-  		lim10: req.body.var10,
-  		lim10: req.body.var11,
-  		lim10: req.body.var12
+  		var1: req.body.var1,
+			var2: req.body.var2,
+			var3: req.body.var3,
+			var4: req.body.var4,
+			var5: req.body.var5,
+			var6: req.body.var6,
+			var7: req.body.var7,
+			var8: req.body.var8,
+			var9: req.body.var9,
+			var10: req.body.var10
 
   	}
-  	var documento = new Lim(data);
+  	var documento = new Var(data);
 	documento.save(function(err){
 		res.redirect("/menu");
 	});

@@ -53,7 +53,7 @@ var n = 0
            n = datos.length
            $scope.limites = limites = Limite.query(function (limites) {
           
-            if(id == 1){
+            if(!id){
               
               
               

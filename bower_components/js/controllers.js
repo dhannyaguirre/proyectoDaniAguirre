@@ -156,21 +156,22 @@ var n = 0
            $scope.limites = limites = Limite.query(function (limites) {
           
            $scope.limites = [
-              [limites[0].var1, limites[0].var2],
+              [limites[0].lim1, limites[0].lim2],
               [limites[0].var3, limites[0].var4],
               [limites[0].var5, limites[0].var6],
               [limites[0].var7, limites[0].var8],
-              [limites[0].var9, limites[0].var10],
-              [limites[0].var11, limites[0].var12]
+              [limites[0].var9, limites[0].lim10],
+              [limites[0].lim11, limites[0].lim12]
             ];
 
             if(id == 1){
-              console.log("dentro de id 1")
-              console.log(limites)
-              console.log(limites)
+              
+              console.log(limites[0].lim1)
+              console.log(limites[0].lim2)
               
               for(var j= 12; j>0; j--){
-              if(limites[0].var1 > datos[n-j].var1 || limites[0].var2 < datos[n-j].var1 ){
+
+              if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
                 $scope.colors = ['#ff6384', '#ff8e72'];
               }
             }
@@ -197,14 +198,14 @@ var n = 0
             } 
             else if (id == 5){
                 for(var j= 12; j>0; j--){
-                  if(limites[0].var9 > datos[n-j].var5 || limites[0].var10 < datos[n-j].var5 ){
+                  if(limites[0].var9 > datos[n-j].var5 || limites[0].lim10 < datos[n-j].var5 ){
                     $scope.colors = ['#ff6384', '#ff8e72'];
                   }
               }
             } 
             else if (id == 6){
                 for(var j= 12; j>0; j--){
-                  if(limites[0].var11 > datos[n-j].var6 || limites[0].var11 < datos[n-j].var6 ){
+                  if(limites[0].lim11 > datos[n-j].var6 || limites[0].lim12 < datos[n-j].var6 ){
                     $scope.colors = ['#ff6384', '#ff8e72'];
                   }
               }

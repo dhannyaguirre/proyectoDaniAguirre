@@ -62,9 +62,9 @@ var n = 0
                 
 
               if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
-                console.log('aqui estoy')
+               // console.log('aqui estoy')
                c1= true
-               console.log(c1)
+               
               }
             }
 
@@ -101,6 +101,11 @@ var n = 0
 
               
                $scope.color1= c1 ;
+                $scope.color2= c2 ;
+                 $scope.color3= c3 ;
+                  $scope.color4= c4 ;
+                   $scope.color5= c5 ;
+                    $scope.color6= c6 ;
               console.log($scope.color1) 
             $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
           

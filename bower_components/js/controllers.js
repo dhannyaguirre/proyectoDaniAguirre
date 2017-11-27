@@ -106,7 +106,7 @@ var n = 0
                   $scope.color4= c4 ;
                    $scope.color5= c5 ;
                     $scope.color6= c6 ;
-              console.log($scope.color1) 
+              console.log($scope.color2) 
             $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
           
             $scope.colors2 = ['#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f']

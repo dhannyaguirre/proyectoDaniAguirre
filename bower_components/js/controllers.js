@@ -386,7 +386,7 @@ var n = 0
                 $scope.seg5= datos[n-8].seg;
                 $scope.seg6= datos[n-7].seg;
             
-  */         
+         
             //console.log($scope.colors)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];

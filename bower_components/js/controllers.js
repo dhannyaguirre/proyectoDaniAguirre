@@ -147,16 +147,16 @@ var n = 0
               }
               
             $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
-            $scope.colors[0] = '#d9230f'
-            $scope.colors[1] = '#d9230f'
-            $scope.colors[2] = '#d9230f'
-            $scope.colors[3] = '#d9230f'
-            $scope.colors[4] = '#d9230f'
-            $scope.colors[5] = '#d9230f'
-            $scope.colors[6] ='#d9230f'
-            $scope.colors[7] = '#d9230f'
-            $scope.colors[8] = '#d9230f'
-            $scope.colors[9] = '#d9230f'
+            $scope.colors[0] = c1
+            $scope.colors[1] = c2
+            $scope.colors[2] = c3
+            $scope.colors[3] = c4
+            $scope.colors[4] = c5
+            $scope.colors[5] = c6
+            $scope.colors[6] =c7
+            $scope.colors[7] = c8
+            $scope.colors[8] = c9
+            $scope.colors[9] = c10
 
             
            

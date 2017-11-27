@@ -155,15 +155,6 @@ var n = 0
            n = datos.length
            $scope.limites = limites = Limite.query(function (limites) {
           
-           $scope.limites = [
-              [limites[0].lim1, limites[0].lim2],
-              [limites[0].var3, limites[0].var4],
-              [limites[0].var5, limites[0].var6],
-              [limites[0].var7, limites[0].var8],
-              [limites[0].var9, limites[0].lim10],
-              [limites[0].lim11, limites[0].lim12]
-            ];
-
             if(id == 1){
               
               console.log(limites[0].lim1)
@@ -175,7 +166,7 @@ var n = 0
               if(3 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
 
                 $scope.colors = ['#ff6384', '#ff8e72'];
-                console.log($scope.colors)
+                
               }
             }
             } else if (id == 2){
@@ -215,6 +206,7 @@ var n = 0
             }   
             });
             
+            console.log($scope.colors)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [

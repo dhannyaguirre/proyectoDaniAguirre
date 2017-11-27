@@ -16,10 +16,19 @@
             
               <!-- Ingenierias -->
               <div ng-show="isActive(1)">
-                  <canvas id="line"  chart-colors="colors"  class="chart chart-line" chart-data="data[0]"
+                <div  ng-if="color1">
+                    <canvas  id="line"  chart-colors="colors"  class="chart chart-line" chart-data="data[0]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">
                       </canvas>
+                </div>
+                <div  ng-if="!color1">
+                    <canvas id="line"  chart-colors="colors2"  class="chart chart-line" chart-data="data[0]"
+                      chart-labels="labels" chart-series="series" chart-options="options"
+                      chart-dataset-override="datasetOverride" chart-click="onClick">
+                      </canvas>
+                </div>
+                  
               </div>
               <!--Estadisticas-->
               <!-- Stats -->

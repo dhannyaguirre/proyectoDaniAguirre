@@ -245,9 +245,10 @@ var n = 0
             }   
             });
             
-          
             
-            $scope.colors = [c1,c2,c3,c4,c5,c6]
+            
+            $scope.colors = []
+            $scope.colors.push(c1)
             console.log($scope.colors)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];

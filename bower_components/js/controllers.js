@@ -142,6 +142,7 @@ var n = 0
           var c1 = '#ff6384'
             var c2 = '#ff6384'
             var c3 = '#ff6384'
+
 */
             var c1 
             var c2 
@@ -150,6 +151,7 @@ var n = 0
             var c5
             var c6
 
+            $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360']
       if (type) {
         $scope.type = type;
 
@@ -245,15 +247,6 @@ var n = 0
             }   
             });
             
-            
-            
-            $scope.colors = []
-            $scope.colors.push(c1)
-            $scope.colors.push(c2)
-            $scope.colors.push(c3)
-            $scope.colors.push(c4)
-            $scope.colors.push(c5)
-            $scope.colors.push(c6)
             
             console.log($scope.colors)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];

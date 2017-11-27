@@ -151,10 +151,10 @@ var n = 0
       } else {
 
         $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
-
+          console.log("dentro datos")
            n = datos.length
            $scope.limites = limites = Limite.query(function (limites) {
-            
+            console.log("dentro LIMITES")
            $scope.data = [
               [limites[0].var1, limites[0].var2],
               [limites[0].var3, limites[0].var4],

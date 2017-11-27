@@ -53,7 +53,7 @@ var n = 0
            n = datos.length
            $scope.limites = limites = Limite.query(function (limites) {
           
-            if(id == 1){
+            
               
               
               
@@ -74,7 +74,7 @@ var n = 0
                 c10='#d9230f'
               }
             }
-            } else if (id == 2){
+
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim3 > datos[n-j].var2 || limites[0].lim4 < datos[n-j].var2 ){
                    c1 = '#d9230f'
@@ -89,8 +89,6 @@ var n = 0
                 c10='#d9230f'
                   }
               }
-            }
-            else if (id == 3){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim5 > datos[n-j].var3 || limites[0].lim6 < datos[n-j].var3 ){
                     c1 = '#d9230f'
@@ -105,8 +103,6 @@ var n = 0
                 c10='#d9230f'
                   }
               }
-            } 
-            else if (id == 4){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim7 > datos[n-j].var4 || limites[0].lim8 < datos[n-j].var4 ){
                     c1 = '#d9230f'
@@ -121,8 +117,6 @@ var n = 0
                 c10='#d9230f'
                   }
               }
-            } 
-            else if (id == 5){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim9 > datos[n-j].var5 || limites[0].lim10 < datos[n-j].var5 ){
                     c1 = '#d9230f'
@@ -137,8 +131,6 @@ var n = 0
                 c10='#d9230f'
                   }
               }
-            } 
-            else if (id == 6){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim11 > datos[n-j].var6 || limites[0].lim12 < datos[n-j].var6 ){
                    c1 = '#d9230f'
@@ -153,18 +145,7 @@ var n = 0
                 c10='#d9230f'
                   }
               }
-            }else {
-              c1 = '#d9230f'
-                c2 = '#d9230f'
-                c3 = '#d9230f'
-                c4 = '#d9230f'
-                c5 = '#d9230f'
-                c6 = '#d9230f'
-                c7= '#d9230f'
-                c8= '#d9230f'
-                c9='#d9230f'
-                c10='#d9230f'
-            }   
+              
             
             console.log(c1)
            

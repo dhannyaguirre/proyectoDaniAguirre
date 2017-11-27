@@ -157,8 +157,7 @@ var n = 0
           
             if(id == 1){
               
-              console.log(limites[0].lim1)
-              console.log(limites[0].lim2)
+              
               
               for(var j= 12; j>0; j--){
                 
@@ -206,7 +205,7 @@ var n = 0
             }   
             });
             
-            console.log($scope.colors)
+            $scope.colors = ['#ff6384', '#ff8e72'];
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [

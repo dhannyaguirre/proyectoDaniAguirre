@@ -250,7 +250,7 @@ var n = 0
                 c5 = '#949FB1'
                 c6 =  '#4D5360'
             }   
-            });
+            
             console.log(c1)
            
             $scope.colors[0] = '#ff6384'
@@ -296,6 +296,7 @@ var n = 0
               };
               $scope.groupped = partition(datos, 4);
               i++ 
+              });
             });
 
       }

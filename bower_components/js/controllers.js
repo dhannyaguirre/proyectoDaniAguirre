@@ -172,6 +172,7 @@ var n = 0
                 
 
               if(3 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
+                console.log('aqui estoy')
                 c1 = '#ff6384'
                 c2 = '#ff6384'
                 c3 = '#ff6384'

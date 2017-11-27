@@ -171,7 +171,7 @@ var n = 0
               for(var j= 12; j>0; j--){
                 
 
-              if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
+              if(3 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
                 c1 = '#ff6384'
                 c2 = '#ff6384'
                 c3 = '#ff6384'

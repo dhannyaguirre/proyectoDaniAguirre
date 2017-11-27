@@ -160,7 +160,7 @@ var n = 0
 
             
            
-            console.log($scope.colors2)
+            //console.log($scope.colors2)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [
@@ -272,7 +272,7 @@ var n = 0
                 
 
               if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
-                console.log('aqui estoy')
+                console.log('aqui estoy 1')
                c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'
@@ -288,6 +288,7 @@ var n = 0
             } else if (id == 2){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim3 > datos[n-j].var2 || limites[0].lim4 < datos[n-j].var2 ){
+                    console.log('aqui estoy 2')
                    c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'
@@ -304,6 +305,7 @@ var n = 0
             else if (id == 3){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim5 > datos[n-j].var3 || limites[0].lim6 < datos[n-j].var3 ){
+                    console.log('aqui estoy 3')
                     c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'
@@ -320,6 +322,7 @@ var n = 0
             else if (id == 4){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim7 > datos[n-j].var4 || limites[0].lim8 < datos[n-j].var4 ){
+                    console.log('aqui estoy 4')
                     c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'
@@ -336,6 +339,7 @@ var n = 0
             else if (id == 5){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim9 > datos[n-j].var5 || limites[0].lim10 < datos[n-j].var5 ){
+                    console.log('aqui estoy 5')
                     c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'
@@ -352,6 +356,7 @@ var n = 0
             else if (id == 6){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim11 > datos[n-j].var6 || limites[0].lim12 < datos[n-j].var6 ){
+                    console.log('aqui estoy 6')
                    c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'
@@ -365,19 +370,19 @@ var n = 0
                   }
               }
             }else {
-              c1 = '#d9230f'
-                c2 = '#d9230f'
-                c3 = '#d9230f'
-                c4 = '#d9230f'
-                c5 = '#d9230f'
-                c6 = '#d9230f'
-                c7= '#d9230f'
-                c8= '#d9230f'
-                c9='#d9230f'
-                c10='#d9230f'
+              c1 = '#00ADF9'
+                c2 = '#DCDCDC'
+                c3 = '#46BFBD'
+                c4 = '#FDB45C'
+                c5 = '#949FB1'
+                c6 = '#4D5360'
+                c7= '#00ADF9'
+                c8= '#DCDCDC'
+                c9='#46BFBD'
+                c10='#FDB45C'
             }   
             
-            console.log(c1)
+            //console.log(c1)
            
             $scope.colors[0] = c1
             $scope.colors[1] = c2
@@ -391,7 +396,7 @@ var n = 0
             $scope.colors[9] = c10
             
            
-            console.log($scope.colors)
+            //console.log($scope.colors)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [

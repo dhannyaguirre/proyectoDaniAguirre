@@ -150,8 +150,12 @@ var n = 0
             var c4
             var c5
             var c6
+            var c7
+            var c8
+            var c9
+            var c10
 
-            $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360']
+            $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
       if (type) {
         $scope.type = type;
 
@@ -181,74 +185,102 @@ var n = 0
                 c4 = '#d9230f'
                 c5 = '#d9230f'
                 c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
               }
             }
             } else if (id == 2){
                 for(var j= 12; j>0; j--){
                   if(limites[0].var3 > datos[n-j].var2 || limites[0].var4 < datos[n-j].var2 ){
-                    c1 = '#ff6384'
-                c2 = '#ff6384'
-                c3 = '#ff6384'
-                c4 = '#ff6384'
-                c5 = '#ff6384'
-                c6 = '#ff6384'
+                   c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
                   }
               }
             }
             else if (id == 3){
                 for(var j= 12; j>0; j--){
                   if(limites[0].var5 > datos[n-j].var3 || limites[0].var6 < datos[n-j].var3 ){
-                    c1 = '#ff6384'
-                c2 = '#ff6384'
-                c3 = '#ff6384'
-                c4 = '#ff6384'
-                c5 = '#ff6384'
-                c6 = '#ff6384'
+                    c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
                   }
               }
             } 
             else if (id == 4){
                 for(var j= 12; j>0; j--){
                   if(limites[0].var7 > datos[n-j].var4 || limites[0].var8 < datos[n-j].var4 ){
-                    c1 = '#ff6384'
-                c2 = '#ff6384'
-                c3 = '#ff6384'
-                c4 = '#ff6384'
-                c5 = '#ff6384'
-                c6 = '#ff6384'
+                    c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
                   }
               }
             } 
             else if (id == 5){
                 for(var j= 12; j>0; j--){
                   if(limites[0].var9 > datos[n-j].var5 || limites[0].lim10 < datos[n-j].var5 ){
-                    c1 = '#ff6384'
-                c2 = '#ff6384'
-                c3 = '#ff6384'
-                c4 = '#ff6384'
-                c5 = '#ff6384'
-                c6 = '#ff6384'
+                    c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
                   }
               }
             } 
             else if (id == 6){
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim11 > datos[n-j].var6 || limites[0].lim12 < datos[n-j].var6 ){
-                   c1 = '#ff6384'
-                c2 = '#ff6384'
-                c3 = '#ff6384'
-                c4 = '#ff6384'
-                c5 = '#ff6384'
-                c6 = '#ff6384'
+                   c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
                   }
               }
             }else {
-              c1 = '#00ADF9'
-                c2 = '#DCDCDC'
-                c3 = '#46BFBD'
-                c4 =  '#FDB45C'
-                c5 = '#949FB1'
-                c6 =  '#4D5360'
+              c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
             }   
             
             console.log(c1)
@@ -259,6 +291,11 @@ var n = 0
             $scope.colors[3] = c4
             $scope.colors[4] = c5
             $scope.colors[5] = c6
+            $scope.colors[6] = c7
+            $scope.colors[7] = c8
+            $scope.colors[8] = c9
+            $scope.colors[9] = c10
+            
            
             console.log($scope.colors)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];

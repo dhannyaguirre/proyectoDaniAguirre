@@ -248,7 +248,7 @@ var n = 0
             });
             
             
-            console.log($scope.colors)
+            console.log($scope.colors[0])
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [

@@ -159,10 +159,60 @@ var n = 0
            n = datos.length
            $scope.limites = limites = Limite.query(function (limites) {
             
-            console.log(limites[0].lim1)
-            console.log(datos[n-12].var1)
+           $scope.data = [
+              [limites[0].var1, limites[0].var2],
+              [limites[0].var3, limites[0].var4],
+              [limites[0].var5, limites[0].var6],
+              [limites[0].var7, limites[0].var8],
+              [limites[0].var9, limites[0].var10],
+              [limites[0].var11, limites[0].var12]
+            ];
+
+            if(id == 1){
+              for(var j= 12; j>0; j--){
+              if(limites[0].var1 > datos[n-j].var1 || limites[0].var2 < datos[n-j].var1 ){
+                $scope.colors = ['#ff6384', '#ff8e72'];
+              }
+            }
+            } else if (id == 2){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].var3 > datos[n-j].var2 || limites[0].var4 < datos[n-j].var2 ){
+                    $scope.colors = ['#ff6384', '#ff8e72'];
+                  }
+              }
+            }
+            else if (id == 3){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].var5 > datos[n-j].var3 || limites[0].var6 < datos[n-j].var3 ){
+                    $scope.colors = ['#ff6384', '#ff8e72'];
+                  }
+              }
+            } 
+            else if (id == 4){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].var7 > datos[n-j].var4 || limites[0].var8 < datos[n-j].var4 ){
+                    $scope.colors = ['#ff6384', '#ff8e72'];
+                  }
+              }
+            } 
+            else if (id == 5){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].var9 > datos[n-j].var5 || limites[0].var10 < datos[n-j].var5 ){
+                    $scope.colors = ['#ff6384', '#ff8e72'];
+                  }
+              }
+            } 
+            else if (id == 6){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].var11 > datos[n-j].var6 || limites[0].var11 < datos[n-j].var6 ){
+                    $scope.colors = ['#ff6384', '#ff8e72'];
+                  }
+              }
+            }   
+            }
             
-            $scope.colors = ['#ff6384', '#ff8e72'];
+            
+            
           });
 
 

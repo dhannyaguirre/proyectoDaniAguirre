@@ -68,7 +68,10 @@ var varSchemaJSON = {
   var7 : Number,
   var8 : Number,
   var9 : Number,
-  var10 : Number
+  var10 : Number,
+  hora: Number,
+  min: Number,
+  seg: Number
 };
 
 

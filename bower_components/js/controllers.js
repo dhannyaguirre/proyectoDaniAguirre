@@ -358,12 +358,13 @@ var n = 0
             $scope.colors[8] = c9
             $scope.colors[9] = c10
 
-            console.log("Esta es la hora" + datos[n-12].hora)
+            
 
-/*
 
-                $scope.hora1= datos[n].hora;
-                $scope.hora2= datos[n-1].hora ;
+
+
+                $scope.hora1= datos[n-12].hora;
+/*                $scope.hora2= datos[n-1].hora ;
                 $scope.hora3= datos[n-2].hora;
                 $scope.hora4= datos[n-3].hora;
                 $scope.hora5= datos[n-4].hora;

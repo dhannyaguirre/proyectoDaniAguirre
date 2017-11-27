@@ -358,6 +358,9 @@ var n = 0
             $scope.colors[8] = c9
             $scope.colors[9] = c10
 
+            console.log(datos[n-12].var1)
+/*
+
                 $scope.hora1= datos[n].hora;
                 $scope.hora2= datos[n-1].hora ;
                 $scope.hora3= datos[n-2].hora;
@@ -381,7 +384,7 @@ var n = 0
                 $scope.seg5= datos[n-4].seg;
                 $scope.seg6= datos[n-5].seg;
             
-           
+  */         
             //console.log($scope.colors)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];

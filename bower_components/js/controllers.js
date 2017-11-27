@@ -38,6 +38,7 @@ var n = 0
             var c9
             var c10
 
+
             //$scope.colors = ['#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f']
       if (type) {
         $scope.type = type;
@@ -62,55 +63,46 @@ var n = 0
 
               if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
                 console.log('aqui estoy')
-               color= true
-               console.log(color)
+               c1= true
+               console.log(c1)
               }
             }
 
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim3 > datos[n-j].var2 || limites[0].lim4 < datos[n-j].var2 ){
-                   color= true
-                   console.log(color)
+                   c2= true
+                  
                   }
               }
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim5 > datos[n-j].var3 || limites[0].lim6 < datos[n-j].var3 ){
-                    color= true
-                    console.log(color)
+                    c3= true
+                  //  console.log(c)
                   }
               }
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim7 > datos[n-j].var4 || limites[0].lim8 < datos[n-j].var4 ){
-                    color= true
-                    console.log(color)
+                    c4= true
+                    //console.log(c)
                   }
               }
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim9 > datos[n-j].var5 || limites[0].lim10 < datos[n-j].var5 ){
-                    color= true
-                    console.log(color)
+                    c5= true
+                    //console.log(c)
                   }
               }
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim11 > datos[n-j].var6 || limites[0].lim12 < datos[n-j].var6 ){
-                   color= true
-                   console.log(color)
+                   c6= true
+                   //console.log(color)
                   }
               }
-              
+              console.log(c1)
 
             $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
-            $scope.colors[0] = c1
-            $scope.colors[1] = c2
-            $scope.colors[2] = c3
-            $scope.colors[3] = c4
-            $scope.colors[4] = c5
-            $scope.colors[5] = c6
-            $scope.colors[6] =c7
-            $scope.colors[7] = c8
-            $scope.colors[8] = c9
-            $scope.colors[9] = c10
-
+          
+            $scope.colors2 = ['#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f']
             
            
             //console.log($scope.colors2)

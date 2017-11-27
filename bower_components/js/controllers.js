@@ -175,8 +175,12 @@ var n = 0
 
               if(3 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
                 console.log('aqui estoy')
-               c1 = '#ff6384'
-              
+               c1 = '#ff8e72'
+                c2 = '#ff8e72'
+                c3 = '#ff8e72'
+                c4 = '#ff8e72'
+                c5 = '#ff8e72'
+                c6 = '#ff8e72'
               }
             }
             } else if (id == 2){

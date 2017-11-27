@@ -82,7 +82,7 @@
                   </div>
                   <div ng-if="color2">
                     
-                  <canvas id="line" class="chart chart-line" chart-colors="colors" chart-data="data[1]"
+                  <canvas id="line" class="chart chart-line" chart-colors="colors2" chart-data="data[1]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">
                       </canvas>
@@ -97,7 +97,7 @@
                   </canvas>
               </div>
                 <div ng-if="color2">
-                <canvas id="bar" chart-colors="colors" class="chart chart-bar"
+                <canvas id="bar" chart-colors="colors2" class="chart chart-bar"
                     chart-data="data[1]" chart-labels="labels"> chart-series="series"
                   </canvas>
               </div>                  
@@ -112,7 +112,7 @@
               </div>
               <div ng-if="color2">
                 
-                <canvas id="doughnut" chart-colors="colors" class="chart chart-doughnut"
+                <canvas id="doughnut" chart-colors="colors2" class="chart chart-doughnut"
                   chart-data="data[1]" chart-labels="labels">
                 </canvas>
               </div>
@@ -136,7 +136,7 @@
                       </canvas>
                 </div>
                   <div ng-if="color3">
-                  <canvas id="line" class="chart chart-line" chart-colors="colors" chart-data="data[2]"
+                  <canvas id="line" class="chart chart-line" chart-colors="colors2" chart-data="data[2]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">
                       </canvas>
@@ -151,7 +151,7 @@
                   </canvas>
                  </div>
                  <div ng-if="color3">
-                    <canvas id="bar" chart-colors="colors" class="chart chart-bar"
+                    <canvas id="bar" chart-colors="colors2" class="chart chart-bar"
                     chart-data="data[2]" chart-labels="labels"> chart-series="series"
                   </canvas>
                  </div>
@@ -167,7 +167,7 @@
                 </div>
                 <div ng-if="color3">
                   
-                <canvas id="doughnut" chart-colors="colors" class="chart chart-doughnut"
+                <canvas id="doughnut" chart-colors="colors2" class="chart chart-doughnut"
                   chart-data="data[2]" chart-labels="labels">
                 </canvas>
                 </div>
@@ -192,7 +192,7 @@
                       </canvas>  
                   </div>
                   <div ng-if="color4">
-                    <canvas id="line" class="chart chart-line" chart-colors="colors" chart-data="data[3]"
+                    <canvas id="line" class="chart chart-line" chart-colors="colors2" chart-data="data[3]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">
                       </canvas>  
@@ -209,7 +209,7 @@
                   </div>
                   <div ng-if="color4">
                     
-                  <canvas id="bar" chart-colors="colors" class="chart chart-bar"
+                  <canvas id="bar" chart-colors="colors2" class="chart chart-bar"
                     chart-data="data[3]" chart-labels="labels"> chart-series="series"
                   </canvas>
                   </div>
@@ -224,7 +224,7 @@
                 </div>
                 <div ng-if="color4">
                   
-                <canvas id="doughnut" chart-colors="colors" class="chart chart-doughnut"
+                <canvas id="doughnut" chart-colors="colors2" class="chart chart-doughnut"
                   chart-data="data[3]" chart-labels="labels">
                 </canvas>
                 </div>
@@ -248,7 +248,7 @@
                       </canvas>
                 </div>
                   <div ng-if="color5">
-                  <canvas id="line" chart-colors="colors" class="chart chart-line" chart-data="data[4]"
+                  <canvas id="line" chart-colors="colors2" class="chart chart-line" chart-data="data[4]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">
                       </canvas>
@@ -263,7 +263,7 @@
                   </canvas>
                 </div>
                   <div ng-if="color5">
-                  <canvas id="bar" chart-colors="colors" class="chart chart-bar"
+                  <canvas id="bar" chart-colors="colors2" class="chart chart-bar"
                     chart-data="data[4]" chart-labels="labels"> chart-series="series"
                   </canvas>
                 </div>
@@ -276,7 +276,7 @@
                 </canvas>    
                   </div>
                 <div ng-if="color5">
-                    <canvas id="doughnut" chart-colors="colors" class="chart chart-doughnut"
+                    <canvas id="doughnut" chart-colors="colors2" class="chart chart-doughnut"
                   chart-data="data[4]" chart-labels="labels">
                 </canvas>    
                   </div>
@@ -300,7 +300,7 @@
                       </canvas>
                 </div>
                   <div ng-if="color6">
-                  <canvas id="line" class="chart chart-line" chart-colors="colors" chart-data="data[5]"
+                  <canvas id="line" class="chart chart-line" chart-colors="colors2" chart-data="data[5]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">
                       </canvas>
@@ -315,7 +315,7 @@
                   </canvas>  
                   </div>
                   <div ng-if="color6">
-                    <canvas id="bar" chart-colors="colors" class="chart chart-bar"
+                    <canvas id="bar" chart-colors="colors2" class="chart chart-bar"
                     chart-data="data[5]" chart-labels="labels"> chart-series="series"
                   </canvas>  
                   </div>
@@ -324,13 +324,13 @@
               <div ng-show="isActive(3)">
               <div ng-if="!color6">
                 
-                <canvas id="doughnut" class="chart chart-doughnut"
+                <canvas id="doughnut" chart-colors="colors" class="chart chart-doughnut"
                   chart-data="data[5]" chart-labels="labels">
                 </canvas>
               </div>
               <div ng-if="color6">
                 
-                <canvas id="doughnut" class="chart chart-doughnut"
+                <canvas id="doughnut" chart-colors="colors2" class="chart chart-doughnut"
                   chart-data="data[5]" chart-labels="labels">
                 </canvas>
               </div>

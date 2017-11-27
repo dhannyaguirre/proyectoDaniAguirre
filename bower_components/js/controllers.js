@@ -146,17 +146,17 @@ var n = 0
                   }
               }
               
-            $scope.colors2 = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
-            $scope.colors2[0] = c1
-            $scope.colors2[1] = c2
-            $scope.colors2[2] = c3
-            $scope.colors2[3] = c4
-            $scope.colors2[4] = c5
-            $scope.colors2[5] = c6
-            $scope.colors2[6] =c7
-            $scope.colors2[7] = c8
-            $scope.colors2[8] = c9
-            $scope.colors2[9] = c10
+            $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
+            $scope.colors[0] = c1
+            $scope.colors[1] = c2
+            $scope.colors[2] = c3
+            $scope.colors[3] = c4
+            $scope.colors[4] = c5
+            $scope.colors[5] = c6
+            $scope.colors[6] =c7
+            $scope.colors[7] = c8
+            $scope.colors[8] = c9
+            $scope.colors[9] = c10
 
             
            
@@ -272,10 +272,7 @@ var n = 0
                 
                 console.log(datos[n-j].var1 )
               if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
-                console.log('aqui estoy 1')
-                
-                console.log(limites[0].lim1 )
-                console.log(limites[0].lim2 )
+               
                c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'

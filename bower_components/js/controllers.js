@@ -2,7 +2,7 @@
 var i = 0  
 var n = 0 
   angular.module('ingedex.controllers', [])
-    .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
+    .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', 'Limite' , function ($rootScope, $scope, $routeParams, Ingeniero, Limite) {
       
        var id = $routeParams.id;
        console.log(id)
@@ -53,7 +53,7 @@ var n = 0
            n = datos.length
            $scope.limites = limites = Limite.query(function (limites) {
           
-            if(!id){
+            if(id == 1){
               
               
               

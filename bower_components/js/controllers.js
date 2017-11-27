@@ -270,10 +270,10 @@ var n = 0
               
               for(var j= 12; j>0; j--){
                 
-
+                console.log(datos[n-j].var1 )
               if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
                 console.log('aqui estoy 1')
-                console.log(datos[n-j].var1 )
+                
                 console.log(limites[0].lim1 )
                 console.log(limites[0].lim2 )
                c1 = '#d9230f'

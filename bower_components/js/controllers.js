@@ -251,7 +251,7 @@ var n = 0
                 c6 =  '#4D5360'
             }   
             });
-            
+            console.log(c1)
            
             $scope.colors[0] = c1
              $scope.colors[1] = c2
@@ -260,7 +260,7 @@ var n = 0
             $scope.colors[4] = c5
             $scope.colors[5] = c6
            
-            console.log($scope.colors[0])
+            console.log($scope.colors)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [

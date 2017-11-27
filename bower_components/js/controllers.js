@@ -249,6 +249,12 @@ var n = 0
             
             $scope.colors = []
             $scope.colors.push(c1)
+            $scope.colors.push(c2)
+            $scope.colors.push(c3)
+            $scope.colors.push(c4)
+            $scope.colors.push(c5)
+            $scope.colors.push(c6)
+            
             console.log($scope.colors)
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];

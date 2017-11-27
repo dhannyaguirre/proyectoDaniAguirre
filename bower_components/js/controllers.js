@@ -207,7 +207,7 @@ var n = 0
             
             var c1 = '#ff6384'
             var c2 = '#ff6384'
-            var c2 = '#ff6384'
+            var c3 = '#ff6384'
             
             $scope.colors = [c1, c2, c3];
             $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];

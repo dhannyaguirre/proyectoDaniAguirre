@@ -4,8 +4,16 @@ var n = 0
   angular.module('ingedex.controllers', [])
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', function ($rootScope, $scope, $routeParams, Ingeniero) {
       
+       var id = $routeParams.id;
+       console.log(id)
+       
+       
+       $scope.id= id ;
+
       var type = $routeParams.type;
+      
       var ingenieros = [];
+      var limites = [];
 
       $rootScope.title = "";
 
@@ -14,8 +22,23 @@ var n = 0
          
           $scope.groupped = partition(data, 4);
         });
-*/
+          var c1 = '#ff6384'
+            var c2 = '#ff6384'
+            var c3 = '#ff6384'
 
+*/
+            var c1 
+            var c2 
+            var c3 
+            var c4
+            var c5
+            var c6
+            var c7
+            var c8
+            var c9
+            var c10
+
+            $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
       if (type) {
         $scope.type = type;
 
@@ -24,9 +47,141 @@ var n = 0
           $scope.groupped = partition(datos, 4);
         });
       } else {
+
         $scope.ingenieros = ingenieros = Ingeniero.query(function (datos) {
-          n = datos.length
-          $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
+       
+           n = datos.length
+           $scope.limites = limites = Limite.query(function (limites) {
+          
+            if(id == 1){
+              
+              
+              
+              for(var j= 12; j>0; j--){
+                
+
+              if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
+                console.log('aqui estoy')
+               c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
+              }
+            }
+            } else if (id == 2){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].lim3 > datos[n-j].var2 || limites[0].lim4 < datos[n-j].var2 ){
+                   c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
+                  }
+              }
+            }
+            else if (id == 3){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].lim5 > datos[n-j].var3 || limites[0].lim6 < datos[n-j].var3 ){
+                    c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
+                  }
+              }
+            } 
+            else if (id == 4){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].lim7 > datos[n-j].var4 || limites[0].lim8 < datos[n-j].var4 ){
+                    c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
+                  }
+              }
+            } 
+            else if (id == 5){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].lim9 > datos[n-j].var5 || limites[0].lim10 < datos[n-j].var5 ){
+                    c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
+                  }
+              }
+            } 
+            else if (id == 6){
+                for(var j= 12; j>0; j--){
+                  if(limites[0].lim11 > datos[n-j].var6 || limites[0].lim12 < datos[n-j].var6 ){
+                   c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
+                  }
+              }
+            }else {
+              c1 = '#d9230f'
+                c2 = '#d9230f'
+                c3 = '#d9230f'
+                c4 = '#d9230f'
+                c5 = '#d9230f'
+                c6 = '#d9230f'
+                c7= '#d9230f'
+                c8= '#d9230f'
+                c9='#d9230f'
+                c10='#d9230f'
+            }   
+            
+            console.log(c1)
+           
+            $scope.colors[0] = c1
+            $scope.colors[1] = c2
+            $scope.colors[2] = c3
+            $scope.colors[3] = c4
+            $scope.colors[4] = c5
+            $scope.colors[5] = c6
+            $scope.colors[6] = c7
+            $scope.colors[7] = c8
+            $scope.colors[8] = c9
+            $scope.colors[9] = c10
+            
+           
+            console.log($scope.colors)
+            $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
             $scope.series = ['Temperatura'];
             $scope.data = [
               [datos[n-12].var1, datos[n-11].var1,datos[n-10].var1,datos[n-9].var1,datos[n-8].var1,datos[n-7].var1, datos[n-6].var1,datos[n-5].var1,datos[n-4].var1,datos[n-3].var1,datos[n-2].var1,,datos[n-1].var1],
@@ -36,7 +191,6 @@ var n = 0
               [datos[n-12].var5, datos[n-11].var5,datos[n-10].var5,datos[n-9].var5,datos[n-8].var5,datos[n-7].var5, datos[n-6].var5,datos[n-5].var5,datos[n-4].var5,datos[n-3].var5,datos[n-2].var5,,datos[n-1].var5],
               [datos[n-12].var6, datos[n-11].var6,datos[n-10].var6,datos[n-9].var6,datos[n-8].var6,datos[n-7].var6, datos[n-6].var6,datos[n-5].var6,datos[n-4].var6,datos[n-3].var6,datos[n-2].var6,,datos[n-1].var6]
             ];
-            
 
               $scope.onClick = function (points, evt) {
                 console.log(points, evt);
@@ -60,54 +214,15 @@ var n = 0
                   ]
                 }
               };
-          $scope.groupped = partition(datos, 4);
+              $scope.groupped = partition(datos, 4);
               i++ 
-        });
+              });
+            });
 
       }
-
-      
-           //$rootScope.title = "hola";
-          //$scope.ingeniero = ingeniero;
-          //console.log(ingeniero.var1)
+           
   
-  /*
-   $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
-          
-/*
-        $scope.labels = ["Medicion1", "Medicion2", "Medicion3", "Medicion4", "Medicion5", "Medicion6", "Medicion7","Medicion8","Medicion9","Medicion10"];
-        $scope.series = ['Temperatura'];
-        $scope.data = [
-          [datos[i].var1, datos[i].var2, datos[i].var3, datos[i].var4, datos[i].var5, datos[i].var6, datos[i].var7, datos[i].var8, datos[i].var9, datos[i].var10]
-        ];
-          $scope.groupped = partition(datos, 4);
-          i++
-  
-     });
-
-   console.log($scope.data)
-    //console.log(ingenieros[0])
-*/      
-/*
-
-      $scope.search = function () {
-        var result = ingenieros;
-
-        if ($scope.searchTerm) {
-          result = ingenieros.filter(function (ingeniero) {
-            var name = ingeniero && ingeniero.name || "";
-
-            return name.toLowerCase().indexOf($scope.searchTerm.toLowerCase()) !== -1;
-          });
-        }
-
-        $scope.ingenieros = result;
-        $scope.groupped = partition(result, 4);
-      };
-
-
-*/
-      function partition(datos, n) {
+       function partition(datos, n) {
         return _.chain(datos).groupBy(function (element, index) {
           return Math.floor(index / n);
         }).toArray().value();
@@ -116,7 +231,6 @@ var n = 0
 
     
  
-
 
 
     }])
@@ -177,7 +291,7 @@ var n = 0
               for(var j= 12; j>0; j--){
                 
 
-              if(3 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
+              if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
                 console.log('aqui estoy')
                c1 = '#d9230f'
                 c2 = '#d9230f'
@@ -193,7 +307,7 @@ var n = 0
             }
             } else if (id == 2){
                 for(var j= 12; j>0; j--){
-                  if(limites[0].var3 > datos[n-j].var2 || limites[0].var4 < datos[n-j].var2 ){
+                  if(limites[0].lim3 > datos[n-j].var2 || limites[0].lim4 < datos[n-j].var2 ){
                    c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'
@@ -209,7 +323,7 @@ var n = 0
             }
             else if (id == 3){
                 for(var j= 12; j>0; j--){
-                  if(limites[0].var5 > datos[n-j].var3 || limites[0].var6 < datos[n-j].var3 ){
+                  if(limites[0].lim5 > datos[n-j].var3 || limites[0].lim6 < datos[n-j].var3 ){
                     c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'
@@ -225,7 +339,7 @@ var n = 0
             } 
             else if (id == 4){
                 for(var j= 12; j>0; j--){
-                  if(limites[0].var7 > datos[n-j].var4 || limites[0].var8 < datos[n-j].var4 ){
+                  if(limites[0].lim7 > datos[n-j].var4 || limites[0].lim8 < datos[n-j].var4 ){
                     c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'
@@ -241,7 +355,7 @@ var n = 0
             } 
             else if (id == 5){
                 for(var j= 12; j>0; j--){
-                  if(limites[0].var9 > datos[n-j].var5 || limites[0].lim10 < datos[n-j].var5 ){
+                  if(limites[0].lim9 > datos[n-j].var5 || limites[0].lim10 < datos[n-j].var5 ){
                     c1 = '#d9230f'
                 c2 = '#d9230f'
                 c3 = '#d9230f'

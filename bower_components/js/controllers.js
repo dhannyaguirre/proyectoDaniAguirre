@@ -209,6 +209,11 @@ var n = 0
                     $scope.colors = ['#ff6384', '#ff8e72'];
                   }
               }
+            }else {
+              c1 = '#803690'
+                c2 = '#00ADF9'
+                c3 = '#DCDCDC'
+              // , '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'
             }   
             });
             

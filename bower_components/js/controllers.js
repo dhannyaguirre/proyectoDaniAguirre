@@ -166,8 +166,8 @@ var n = 0
 
             if(id == 1){
               console.log("dentro de id 1")
-              console.log(limites[0].var1)
-              console.log(limites[0].var2)
+              console.log(limites)
+              console.log(limites)
               
               for(var j= 12; j>0; j--){
               if(limites[0].var1 > datos[n-j].var1 || limites[0].var2 < datos[n-j].var1 ){

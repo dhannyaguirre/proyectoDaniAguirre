@@ -14,7 +14,7 @@ var n = 0
       
       var ingenieros = [];
       var limites = [];
-
+       var color = false
       $rootScope.title = "";
 
     /*  $scope.ingenieros = ingenieros = Ingeniero.query(function (data) {
@@ -62,90 +62,43 @@ var n = 0
 
               if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
                 console.log('aqui estoy')
-               c1 = '#d9230f'
-                c2 = '#d9230f'
-                c3 = '#d9230f'
-                c4 = '#d9230f'
-                c5 = '#d9230f'
-                c6 = '#d9230f'
-                c7= '#d9230f'
-                c8= '#d9230f'
-                c9='#d9230f'
-                c10='#d9230f'
+               color= true
+               console.log(color)
               }
             }
 
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim3 > datos[n-j].var2 || limites[0].lim4 < datos[n-j].var2 ){
-                   c1 = '#d9230f'
-                c2 = '#d9230f'
-                c3 = '#d9230f'
-                c4 = '#d9230f'
-                c5 = '#d9230f'
-                c6 = '#d9230f'
-                c7= '#d9230f'
-                c8= '#d9230f'
-                c9='#d9230f'
-                c10='#d9230f'
+                   color= true
+                   console.log(color)
                   }
               }
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim5 > datos[n-j].var3 || limites[0].lim6 < datos[n-j].var3 ){
-                    c1 = '#d9230f'
-                c2 = '#d9230f'
-                c3 = '#d9230f'
-                c4 = '#d9230f'
-                c5 = '#d9230f'
-                c6 = '#d9230f'
-                c7= '#d9230f'
-                c8= '#d9230f'
-                c9='#d9230f'
-                c10='#d9230f'
+                    color= true
+                    console.log(color)
                   }
               }
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim7 > datos[n-j].var4 || limites[0].lim8 < datos[n-j].var4 ){
-                    c1 = '#d9230f'
-                c2 = '#d9230f'
-                c3 = '#d9230f'
-                c4 = '#d9230f'
-                c5 = '#d9230f'
-                c6 = '#d9230f'
-                c7= '#d9230f'
-                c8= '#d9230f'
-                c9='#d9230f'
-                c10='#d9230f'
+                    color= true
+                    console.log(color)
                   }
               }
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim9 > datos[n-j].var5 || limites[0].lim10 < datos[n-j].var5 ){
-                    c1 = '#d9230f'
-                c2 = '#d9230f'
-                c3 = '#d9230f'
-                c4 = '#d9230f'
-                c5 = '#d9230f'
-                c6 = '#d9230f'
-                c7= '#d9230f'
-                c8= '#d9230f'
-                c9='#d9230f'
-                c10='#d9230f'
+                    color= true
+                    console.log(color)
                   }
               }
                 for(var j= 12; j>0; j--){
                   if(limites[0].lim11 > datos[n-j].var6 || limites[0].lim12 < datos[n-j].var6 ){
-                   c1 = '#d9230f'
-                c2 = '#d9230f'
-                c3 = '#d9230f'
-                c4 = '#d9230f'
-                c5 = '#d9230f'
-                c6 = '#d9230f'
-                c7= '#d9230f'
-                c8= '#d9230f'
-                c9='#d9230f'
-                c10='#d9230f'
+                   color= true
+                   console.log(color)
                   }
               }
               
+
             $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
             $scope.colors[0] = c1
             $scope.colors[1] = c2

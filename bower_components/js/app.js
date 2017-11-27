@@ -19,7 +19,7 @@
       })
       .when('/', {
         templateUrl: 'views/ingedex.html',
-        controller: 'IngedexController'
+        controller: 'IngedexController'   
       })
        .when('/:type', {
         templateUrl: 'views/ingedex.html',

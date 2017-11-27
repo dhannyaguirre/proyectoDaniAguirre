@@ -181,7 +181,7 @@ app.post('/menu', function(req, res ) {
 // ruta de ingreso a admin
 app.get("/admin",function(req,res){
 
-	res.render("admin/form")
+	res.render("admin/form" )
 
 });
 

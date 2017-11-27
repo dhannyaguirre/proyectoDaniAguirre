@@ -16,7 +16,7 @@
             
               <!-- Ingenierias -->
               <div ng-show="isActive(1)">
-                  <canvas id="line" class="chart chart-line" chart-data="data[0]"
+                  <canvas id="line" class="chart chart-line"  chart-colors="colors" chart-data="data[0]"
                       chart-labels="labels" chart-series="series" chart-options="options"
                       chart-dataset-override="datasetOverride" chart-click="onClick">
                       </canvas>
@@ -25,13 +25,13 @@
               <!-- Stats -->
               <div ng-show="isActive(2)">
 
-                  <canvas id="bar" class="chart chart-bar"
+                  <canvas id="bar"  chart-colors="colors" class="chart chart-bar"
                     chart-data="data[0]" chart-labels="labels"> chart-series="series"
                   </canvas>
                 </div>
                <!-- Evolucion -->
               <div ng-show="isActive(3)">
-                <canvas id="doughnut" class="chart chart-doughnut"
+                <canvas id="doughnut"  chart-colors="colors" class="chart chart-doughnut"
                   chart-data="data[0]" chart-labels="labels">
                 </canvas>
               </div>

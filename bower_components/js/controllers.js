@@ -268,7 +268,7 @@ var n = 0
               
               
               
-              for(var j= 12; j>0; j--){
+              for(var j= 10; j>0; j--){
                 
                 console.log(datos[n-j].var1 )
               if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){

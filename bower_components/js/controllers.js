@@ -143,9 +143,9 @@ var n = 0
             var c2 = '#ff6384'
             var c3 = '#ff6384'
 */
-            var c1 = '#ff6384'
-            var c2 = '#ff6384'
-            var c3 = '#ff6384'
+            var c1 
+            var c2 
+            var c3 
 
       if (type) {
         $scope.type = type;
@@ -168,7 +168,7 @@ var n = 0
               for(var j= 12; j>0; j--){
                 
 
-              if(3 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
+              if(limites[0].lim1 > datos[n-j].var1 || limites[0].lim2 < datos[n-j].var1 ){
                 c1 = '#ff6384'
                 c2 = '#ff6384'
                 c3 = '#ff6384'

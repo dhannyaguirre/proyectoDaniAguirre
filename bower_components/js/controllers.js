@@ -358,28 +358,28 @@ var n = 0
             $scope.colors[8] = c9
             $scope.colors[9] = c10
 
-             $scope.hora1= [datos[n].hora;
-                $scope.hora2= [datos[n-1].hora ;
-                $scope.hora3= [datos[n-2].hora;
-                $scope.hora4= [datos[n-3].hora;
-                $scope.hora5= [datos[n-4].hora;
-                $scope.hora6= [datos[n-5].hora;
+                $scope.hora1= datos[n].hora;
+                $scope.hora2= datos[n-1].hora ;
+                $scope.hora3= datos[n-2].hora;
+                $scope.hora4= datos[n-3].hora;
+                $scope.hora5= datos[n-4].hora;
+                $scope.hora6= datos[n-5].hora;
               
 
-                $scope.min1= [datos[n].min;
-                $scope.min2= [datos[n-1].min ;
-                $scope.min3= [datos[n-2].min;
-                $scope.min4= [datos[n-3].min;
-                $scope.min5= [datos[n-4].min;
-                $scope.min6= [datos[n-5].min;
+                $scope.min1= datos[n].min;
+                $scope.min2= datos[n-1].min ;
+                $scope.min3= datos[n-2].min;
+                $scope.min4= datos[n-3].min;
+                $scope.min5= datos[n-4].min;
+                $scope.min6= datos[n-5].min;
 
 
-                $scope.seg1= [datos[n].seg;
-                $scope.seg2= [datos[n-1].seg ;
-                $scope.seg3= [datos[n-2].seg;
-                $scope.seg4= [datos[n-3].seg;
-                $scope.seg5= [datos[n-4].seg;
-                $scope.seg6= [datos[n-5].seg;
+                $scope.seg1= datos[n].seg;
+                $scope.seg2= datos[n-1].seg ;
+                $scope.seg3= datos[n-2].seg;
+                $scope.seg4= datos[n-3].seg;
+                $scope.seg5= datos[n-4].seg;
+                $scope.seg6= datos[n-5].seg;
             
            
             //console.log($scope.colors)

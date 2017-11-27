@@ -27,7 +27,7 @@ var n = 0
             var c3 = '#ff6384'
 
 */
-            var c1 
+            var c1 = false
             var c2 
             var c3 
             var c4
@@ -98,6 +98,7 @@ var n = 0
                    //console.log(color)
                   }
               }
+
               console.log(c1)
 
             $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']

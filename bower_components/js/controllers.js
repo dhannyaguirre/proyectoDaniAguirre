@@ -38,7 +38,7 @@ var n = 0
             var c9
             var c10
 
-            $scope.colors = ['#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f']
+            //$scope.colors = ['#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f','#d9230f']
       if (type) {
         $scope.type = type;
 

@@ -146,7 +146,7 @@ var n = 0
                   }
               }
               
-            
+            $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
             $scope.colors[0] = '#d9230f'
             $scope.colors[1] = '#d9230f'
             $scope.colors[2] = '#d9230f'

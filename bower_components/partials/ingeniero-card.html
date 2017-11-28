@@ -2,9 +2,16 @@
   <div class="panel-heading">
     <ingeniero-name></ingeniero-name>
   </div>
-  <div class="panel-body">
+ <div ng-if="i!=7">
+ 	<div class="panel-body">
     <a href="/#ingeniero/{{i}}">
       <ingeniero-image></ingeniero-image>
     </a>
-  </div>
+  </div>	
+ </div>
+ <div ng-if="i==7">
+ 	<div class="panel-body">
+    	Aqui va ir control de mando
+  </div>	
+ </div>
 </div>

@@ -142,12 +142,6 @@ var n = 0
                       type: 'linear',
                       display: true,
                       position: 'left'
-                    },
-                    {
-                      id: 'y-axis-2',
-                      type: 'linear',
-                      display: true,
-                      position: 'right'
                     }
                   ]
                 }
@@ -411,12 +405,6 @@ var n = 0
                       type: 'linear',
                       display: true,
                       position: 'left'
-                    },
-                    {
-                      id: 'y-axis-2',
-                      type: 'linear',
-                      display: true,
-                      position: 'right'
                     }
                   ]
                 }

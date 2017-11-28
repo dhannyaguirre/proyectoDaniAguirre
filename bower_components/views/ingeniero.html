@@ -21,7 +21,9 @@
           <div class="col-md-6">
             <div class="col-md-12" ng-controller="TabsController">
         
-
+                      <div  class="alert alert-danger">ALARMA ACTIVADA</div>
+                  <!-- /solicitud -->
+              </div>
               <div ng-if="id == 1">
                   <ul class="nav nav-tabs nav-justidfied">
                    <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
@@ -242,7 +244,5 @@
         </div>
         <!-- solicitudes -->
         <ingeniero-solicitudes name="{{ingeniero.var1}}"></ingeniero-solicitudes>
-        <div  class="alert alert-danger">ALARMA ACTIVADA</div>
-          <!-- /solicitud -->
-      </div>
+        
       <!-- /ingeniero -->

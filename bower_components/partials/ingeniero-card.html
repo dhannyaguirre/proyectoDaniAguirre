@@ -10,20 +10,29 @@
   </div>	
  </div>
  <div ng-if="i==7">
- 	<form ng-submit="" >
- 		<div  class="panel-body">
-	 		<h2>Comandos:</h2>
-	 		<h3>Digital:</h3>
-	 		<div class="col-md-12">	
-	 			<input class="col-md-6" type="radio" name="digital" value="1"> ON
-  				<input class="col-md-6" type="radio" name="digital" value="0"> OFF
-  				<button class= "btn btn-primary" type="submit">Enviar</button>
-	 		</div>
-	 		
-	 		<h3>Analogos:</h3>
-	 		<input type="number">
-	 		<button class= "btn btn-primary" type="submit">Enviar</button>
-  		</div>	
- 	</form>
+	 	<form>
+		  <div class="form-group">
+		    <label for="comandos">Comandos</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="" placeholder="Enter email">
+		    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Digital</label>
+		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		  </div>
+		  <div class="form-check">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input">
+		      SI
+		    </label>
+		  </div>
+		  <div class="form-check">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input">
+		      NO
+		    </label>
+		  </div>
+		  <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
  </div>
 </div>

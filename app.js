@@ -301,7 +301,7 @@ app.get('/api/documentos', function (req, res) {
 Var.find({
   }).
   limit(12).
-  //sort({ occupation: -1 }).
+  sort({ _id: -1 }).
   exec(function(error,documento){
     if(error){ console.log(error); }
     var docs = documento;

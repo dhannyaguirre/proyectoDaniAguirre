@@ -297,6 +297,7 @@ Lim.find({
 
 app.get('/api/documentos', function (req, res) {
 
+console.log(req.body)
   //var area = req.query.type;
 Var.find({
   }).

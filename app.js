@@ -158,10 +158,7 @@ app.get("/menu",function(req,res){
 
 //route para guardar un registro en la base de datos 
 app.post('/menu', function(req, res ) {
-	
-  	console.log(req.body.hora)
-  	console.log(req.body.min)
-  	console.log(req.body.seg)
+	console.log("esoty dentro de post")
   	var data = {
   		var1: req.body.var1,
 			var2: req.body.var2,

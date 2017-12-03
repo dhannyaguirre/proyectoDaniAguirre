@@ -164,21 +164,21 @@ app.post('/menu', function(req, res ) {
 	console.log(req.body)
   	var data = {
   		var1: req.body.var1,
-			var2: req.body.var2,
-			var3: req.body.var3,
-			var4: req.body.var4,
-			var5: req.body.var5,
-			var6: req.body.var6,
-			var7: req.body.var7,
-			var8: req.body.var8,
-			var9: req.body.var9,
-			var10: req.body.var10,
-			hora: req.body.hora,
-			min: req.body.min,
-			seg: req.body.seg,
-			anio: req.body.anio,
-			mes: req.body.mes,
-			dia: req.body.dia
+		var2: req.body.var2,
+		var3: req.body.var3,
+		var4: req.body.var4,
+		var5: req.body.var5,
+		var6: req.body.var6,
+		var7: req.body.var7,
+		var8: req.body.var8,
+		var9: req.body.var9,
+		var10: req.body.var10,
+		hora: req.body.hora,
+		min: req.body.min,
+		seg: req.body.seg,
+		anio: req.body.anio,
+		mes: req.body.mes,
+		dia: req.body.dia
 
   	}
   	var documento = new Var(data);

@@ -228,38 +228,6 @@ app.get("/menu/edit/:id",function(req,res){
 
 //ruta para guardar editar un registro por el id
 
-app.put("/menu", function( req, res ){
-	
-	if(req.body.password == app_password){
-		var data = {
-			var1: req.body.var1,
-			var2: req.body.var2,
-			var3: req.body.var3,
-			var4: req.body.var4,
-			var5: req.body.var5,
-			var6: req.body.var6,
-			var7: req.body.var7,
-			var8: req.body.var8,
-			var9: req.body.var9,
-			var10: req.body.var10,
-			var10: req.body.var11,
-			var10: req.body.var12
-		};
-		var id = '5a1b44a1ac0a66747cc9593b'
-		console.log(data)
-		Lim.update({"_id": id},data,function(documento){
-			
-			res.redirect("/menu");
-		});
-							
-	/*
-	fecha hora y valor
-	*/
-	}
-});
-
-
-
 app.put("/menu/:id", function( req, res ){
 	console.log('estoy dentro del metodo product')
 	if(req.body.password == app_password){
@@ -273,14 +241,11 @@ app.put("/menu/:id", function( req, res ){
 			var7: req.body.var7,
 			var8: req.body.var8,
 			var9: req.body.var9,
-			var10: req.body.var10,
-			var10: req.body.var11,
-			var10: req.body.var12
+			var10: req.body.var10
 		};
 
 		console.log(data)
-		Lim.update({"_id": req.params.id},data,function(documento){
-
+		Var.update({"_id": req.params.id},data,function(documento){
 			res.redirect("/menu");
 		});
 							

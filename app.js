@@ -193,6 +193,9 @@ app.post('/menu', function(req, res ) {
 });
 
 
+
+
+
 // ruta de ingreso a admin
 app.get("/admin",function(req,res){
 
@@ -238,11 +241,13 @@ app.put("/menu/:id", function( req, res ){
 			var7: req.body.var7,
 			var8: req.body.var8,
 			var9: req.body.var9,
-			var10: req.body.var10
+			var10: req.body.var10,
+			var10: req.body.var11,
+			var10: req.body.var12
 		};
 
 		console.log(data)
-		Var.update({"_id": req.params.id},data,function(documento){
+		Lim.update({"_id": req.params.id},data,function(documento){
 			res.redirect("/menu");
 		});
 							

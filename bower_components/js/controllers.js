@@ -352,7 +352,14 @@ var n = 0
             $scope.colors[8] = c9
             $scope.colors[9] = c10
 
-            
+            //alarma
+            $scope.alarm1 = false
+            $scope.alarm1 = false
+            $scope.alarm1 = false
+            $scope.alarm1 = false
+            $scope.alarm1 = false
+            $scope.alarm1 = false
+                        
 
 
 

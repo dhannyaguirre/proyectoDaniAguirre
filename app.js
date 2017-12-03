@@ -304,7 +304,6 @@ Var.find({
   sort({ occupation: -1 }).
   exec(function(error,documento){
     if(error){ console.log(error); }
-    console.log(documento)
     var docs = documento;
     console.log(docs);	
      res.send(docs);

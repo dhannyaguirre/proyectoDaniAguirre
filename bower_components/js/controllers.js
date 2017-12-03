@@ -202,6 +202,12 @@ var n = 0
             var c8
             var c9
             var c10
+            var alarm1 = false
+            var alarm2 = false
+            var alarm3 = false
+            var alarm4 = false
+            var alarm5 = false
+            var alarm6 = false
 
             $scope.colors = ['#00ADF9','#DCDCDC','#46BFBD','#FDB45C','#949FB1','#4D5360','#00ADF9','#DCDCDC','#46BFBD','#FDB45C']
       if (type) {
@@ -240,6 +246,7 @@ var n = 0
                 c8= '#d9230f'
                 c9='#d9230f'
                 c10='#d9230f'
+                alarm1 = true
               }
             }
             } else if (id == 2){
@@ -256,6 +263,7 @@ var n = 0
                 c8= '#d9230f'
                 c9='#d9230f'
                 c10='#d9230f'
+                alarm2 = true
                   }
               }
             }
@@ -273,6 +281,7 @@ var n = 0
                 c8= '#d9230f'
                 c9='#d9230f'
                 c10='#d9230f'
+                alarm3 = true
                   }
               }
             } 
@@ -290,6 +299,7 @@ var n = 0
                 c8= '#d9230f'
                 c9='#d9230f'
                 c10='#d9230f'
+                alarm4 = true
                   }
               }
             } 
@@ -307,6 +317,7 @@ var n = 0
                 c8= '#d9230f'
                 c9='#d9230f'
                 c10='#d9230f'
+                alarm5 = true
                   }
               }
             } 
@@ -324,6 +335,7 @@ var n = 0
                 c8= '#d9230f'
                 c9='#d9230f'
                 c10='#d9230f'
+                alarm6 = true
                   }
               }
             }else {
@@ -354,7 +366,14 @@ var n = 0
 
             //alarma
             
-            $scope.alarm1 = true
+            $scope.alarm1 = alarm1
+            $scope.alarm2 = alarm2
+            $scope.alarm3 = alarm3
+            $scope.alarm4 = alarm4
+            $scope.alarm5 = alarm5
+            $scope.alarm6 = alarm6
+
+
                         
 
 

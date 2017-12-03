@@ -144,7 +144,7 @@ var n = 0
                 console.log(points, evt);
               };
 
-                console.log(data[6] );
+                console.log($scope.data[6] );
               $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
               $scope.options = {
                 scales: {

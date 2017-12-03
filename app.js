@@ -71,7 +71,10 @@ var varSchemaJSON = {
   var10 : Number,
   hora: Number,
   min: Number,
-  seg: Number
+  seg: Number,
+  anio: Number,
+  mes: Number,
+  dia: Number
 };
 
 
@@ -172,7 +175,10 @@ app.post('/menu', function(req, res ) {
 			var10: req.body.var10,
 			hora: req.body.hora,
 			min: req.body.min,
-			seg: req.body.seg
+			seg: req.body.seg,
+			anio: req.body.anio,
+			mes: req.body.mes,
+			dia: req.body.dia
 
   	}
   	var documento = new Var(data);

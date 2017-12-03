@@ -99,6 +99,14 @@ var n = 0
                   }
               }
 
+               for(var j= 12; j>0; j--){
+                  if(limites[0].lim12 > datos[n-j].var7 || limites[0].lim13 < datos[n-j].var7 ){
+                   c7= true
+                   //console.log(color)
+                  }
+              }
+
+
               
                $scope.color1= c1 ;
                 $scope.color2= c2 ;
@@ -127,7 +135,9 @@ var n = 0
               [datos[n-12].var3, datos[n-11].var3,datos[n-10].var3,datos[n-9].var3,datos[n-8].var3,datos[n-7].var3, datos[n-6].var3,datos[n-5].var3,datos[n-4].var3,datos[n-3].var3,datos[n-2].var3,,datos[n-1].var3],
               [datos[n-12].var4, datos[n-11].var4,datos[n-10].var4,datos[n-9].var4,datos[n-8].var4,datos[n-7].var4, datos[n-6].var4,datos[n-5].var4,datos[n-4].var4,datos[n-3].var4,datos[n-2].var4,,datos[n-1].var4],
               [datos[n-12].var5, datos[n-11].var5,datos[n-10].var5,datos[n-9].var5,datos[n-8].var5,datos[n-7].var5, datos[n-6].var5,datos[n-5].var5,datos[n-4].var5,datos[n-3].var5,datos[n-2].var5,,datos[n-1].var5],
-              [datos[n-12].var6, datos[n-11].var6,datos[n-10].var6,datos[n-9].var6,datos[n-8].var6,datos[n-7].var6, datos[n-6].var6,datos[n-5].var6,datos[n-4].var6,datos[n-3].var6,datos[n-2].var6,,datos[n-1].var6]
+              [datos[n-12].var6, datos[n-11].var6,datos[n-10].var6,datos[n-9].var6,datos[n-8].var6,datos[n-7].var6, datos[n-6].var6,datos[n-5].var6,datos[n-4].var6,datos[n-3].var6,datos[n-2].var6,,datos[n-1].var6],
+              [datos[n-12].var7, datos[n-11].var7,datos[n-10].var7,datos[n-9].var7,datos[n-8].var7,datos[n-7].var7, datos[n-6].var7,datos[n-5].var7,datos[n-4].var7,datos[n-3].var7,datos[n-2].var7,,datos[n-1].var7]
+            
             ];
 
               $scope.onClick = function (points, evt) {

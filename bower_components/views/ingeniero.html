@@ -15,9 +15,7 @@
         <div class="page-header">
        
           <ingeniero-name></ingeniero-name>
-          <div ng-if= "alarm1">
-          <div class="alert alert-danger">ALARMA ACTIVADA</div>  
-          </div>
+          
           
         </div>
         <div class="row">
@@ -27,6 +25,9 @@
         
 
               <div ng-if="id == 1">
+                  <div ng-if= "alarm1">
+                  <div class="alert alert-danger">ALARMA ACTIVADA</div>  
+                  </div>
                   <ul class="nav nav-tabs nav-justidfied">
                    <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
                   <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>

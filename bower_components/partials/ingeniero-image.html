@@ -341,7 +341,11 @@
 
 
         <div ng-if="i == 8">
-             hola
+              <ul class="nav nav-tabs nav-justified">
+               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+              <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+              <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+            </ul>
         </div>
            
           </div>  

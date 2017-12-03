@@ -358,7 +358,7 @@ var n = 0
             $scope.alarm1 = false
             $scope.alarm1 = false
             $scope.alarm1 = false
-            $scope.alarm1 = false
+            $scope.alarm1 = true
                         
 
 

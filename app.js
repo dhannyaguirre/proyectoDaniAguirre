@@ -91,9 +91,7 @@ var limSchemaJSON = {
   lim9 : Number,
   lim10 : Number,
   lim11 : Number,
-  lim12 : Number,
-  lim13 : Number,
-  lim14 : Number
+  lim12 : Number
 };
 /*
 var ingenieroSchemaJSON = {
@@ -166,21 +164,21 @@ app.post('/menu', function(req, res ) {
 	console.log(req.body)
   	var data = {
   		var1: req.body.var1,
-		var2: req.body.var2,
-		var3: req.body.var3,
-		var4: req.body.var4,
-		var5: req.body.var5,	
-		var6: req.body.var6,
-		var7: req.body.var7,
-		var8: req.body.var8,
-		var9: req.body.var9,
-		var10: req.body.var10,
-		hora: req.body.hora,
-		min: req.body.min,
-		seg: req.body.seg,
-		anio: req.body.anio,
-		mes: req.body.mes,
-		dia: req.body.dia
+			var2: req.body.var2,
+			var3: req.body.var3,
+			var4: req.body.var4,
+			var5: req.body.var5,
+			var6: req.body.var6,
+			var7: req.body.var7,
+			var8: req.body.var8,
+			var9: req.body.var9,
+			var10: req.body.var10,
+			hora: req.body.hora,
+			min: req.body.min,
+			seg: req.body.seg,
+			anio: req.body.anio,
+			mes: req.body.mes,
+			dia: req.body.dia
 
   	}
   	var documento = new Var(data);
@@ -209,9 +207,7 @@ app.post('/menulim', function(req, res ) {
 			lim9: req.body.var9,
 			lim10: req.body.var10,
 			lim11: req.body.var11,
-			lim12: req.body.var12,
-			lim13: req.body.var13,
-			lim14: req.body.var14
+			lim12: req.body.var12
   	}
   	var documento = new Lim(data);
 	documento.save(function(err){

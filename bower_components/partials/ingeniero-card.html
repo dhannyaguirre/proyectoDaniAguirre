@@ -10,14 +10,18 @@
   </div>	
  </div>
  <div ng-if="i==7">
-	 
+	   <h1>COMANDOS</h1>
+     <h2> DIGITAL:</h2>
     <form class="form-horizontal" role="form">
-                <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox1" value="option1"> SI
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> SI
         </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox2" value="option2"> NO
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> NO
         </label>
+      <button type="submit" class="btn btn-default">ENVIAR</button>
+    </form>
+    <form class="form-horizontal" role="form">
         <label class="radio-inline">
           <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> SI
         </label>
@@ -27,8 +31,7 @@
 
       
       <div class="form-group">
-      <h1>COMANDOS</h1>
-        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+              <label class="sr-only" for="exampleInputEmail2">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
       </div>
       <div class="form-group">

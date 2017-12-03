@@ -318,8 +318,8 @@ app.get('/api/limites', function (req, res) {
   //var area = req.query.type;
 Lim.find({
   }).
-  limit(12).
-  sort({ occupation: -1 }).
+  limit(1).
+  sort({ _id: -1 }).
   exec(function(error,documento){
     if(error){ console.log(error); }
     var docs = documento;

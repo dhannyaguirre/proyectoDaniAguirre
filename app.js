@@ -177,6 +177,10 @@ app.post('/menu', function(req, res ) {
   	}
   	var documento = new Var(data);
 	documento.save(function(err){
+		if(err){
+			console.log(esta grabando)	
+		}
+		
 		res.redirect("/menu");
 	});
 

@@ -278,7 +278,6 @@ app.delete("/menu/:id",function(req,res){
 //get proyecto Principal
 
 app.get('/api/limites', function (req, res) {
-	console.log("limitando")
   //var area = req.query.type;
 Lim.find({
   }).
@@ -286,7 +285,6 @@ Lim.find({
   sort({ occupation: -1 }).
   exec(function(error,documento){
     if(error){ console.log(error); }
-    console.log(documento)
     var docs = documento;
      res.send(docs);
   });

@@ -308,6 +308,7 @@ Var.find({
     if(error){ console.log(error); }
     console.log(documento)
     var docs = documento;
+    console.log(docs);
      res.send(docs);
   });
 

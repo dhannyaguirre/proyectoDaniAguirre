@@ -158,7 +158,7 @@ app.get("/menu",function(req,res){
 
 //route para guardar un registro en la base de datos 
 app.post('/menu', function(req, res ) {
-	console.log(re1.body)
+	console.log(req.body)
   	var data = {
   		var1: req.body.var1,
 			var2: req.body.var2,

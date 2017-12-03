@@ -10,37 +10,15 @@
   </div>	
  </div>
  <div ng-if="i==7">
-	 <form class="was-validated">
-  <label class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" required>
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Check this custom checkbox</span>
-  </label>
+	 	<form>
+	 		<div class="checkbox checkbox-primary">
+	  <input id="checkbox" type="checkbox" checked>
+	</div>
 
-  <div class="custom-controls-stacked d-block my-3">
-    <label class="custom-control custom-radio">
-      <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input" required>
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Toggle this custom radio</span>
-    </label>
-    <label class="custom-control custom-radio">
-      <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input" required>
-      <span class="custom-control-indicator"></span>
-      <span class="custom-control-description">Or toggle this other custom radio</span>
-    </label>
-  </div>
-
-  <select class="custom-select d-block my-3" required>
-    <option value="">Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-
-  <label class="custom-file">
-    <input type="file" id="file" class="custom-file-input" required>
-    <span class="custom-file-control"></span>
-  </label>
-</form>
+<div class="checkbox checkbox-success">
+  <input id="checkbox" type="checkbox">
+</div>
+		  <button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
  </div>
 </div>

@@ -187,7 +187,7 @@ app.post('/menu', function(req, res ) {
 			console.log("esta grabando")	
 		}
 		
-		res.redirect("/menu");
+		res.redirect("/");
 	});
 
 });
@@ -215,7 +215,7 @@ app.post('/menulim', function(req, res ) {
 			console.log("esta grabando")	
 		}
 		
-		res.redirect("/menu");
+		res.redirect("/");
 	});
 
 });

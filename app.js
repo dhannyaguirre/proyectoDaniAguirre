@@ -284,7 +284,7 @@ app.put("/menu/:id", function( req, res ){
 });
 
 // ruta para un nuevo documento
-app.get("/menu/new", function(req,res){
+app.get("/limites", function(req,res){
 	res.render("menu/new");
 });
 

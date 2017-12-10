@@ -385,11 +385,11 @@ Var.find({
 });
 
 
-app.get('/api/descargar', function (req, res) {
+app.get('/api/descargar/:id', function (req, res) {
 
 //console.log(req.body)
   //var area = req.query.type;
-
+ var id = req.params.id;
   	Var.find({
   }).
   limit(12).
@@ -397,7 +397,8 @@ app.get('/api/descargar', function (req, res) {
   exec(function(error,documento){
     if(error){ console.log(error); }
     //console.log(documento[0])
-    var datos = {
+    if(id == 1){
+    		var datos = {
 			var1: documento[0].var1,
 			var2: documento[1].var1,
 			var3: documento[2].var1,
@@ -409,7 +410,74 @@ app.get('/api/descargar', function (req, res) {
 			var9: documento[8].var1,
 			var10: documento[9].var1
 		};
-   // var docs = documento;	
+   	
+    }else if (id == 2){
+    		var datos = {
+			var1: documento[0].var2,
+			var2: documento[1].var2,
+			var3: documento[2].var2,
+			var4: documento[3].var2,
+			var5: documento[4].var2,
+			var6: documento[5].var2,
+			var7: documento[6].var2,
+			var8: documento[7].var2,
+			var9: documento[8].var2,
+			var10: documento[9].var2
+		};
+    }else if (id == 3){
+    		var datos = {
+			var1: documento[0].var3,
+			var2: documento[1].var3,
+			var3: documento[2].var3,
+			var4: documento[3].var3,
+			var5: documento[4].var3,
+			var6: documento[5].var3,
+			var7: documento[6].var3,
+			var8: documento[7].var3,
+			var9: documento[8].var3,
+			var10: documento[9].var3
+		};
+    }else if (id == 4){
+    		var datos = {
+			var1: documento[0].var4,
+			var2: documento[1].var4,
+			var3: documento[2].var4,
+			var4: documento[3].var4,
+			var5: documento[4].var4,
+			var6: documento[5].var4,
+			var7: documento[6].var4,
+			var8: documento[7].var4,
+			var9: documento[8].var4,
+			var10: documento[9].var4
+		};
+    }else if (id == 5){
+    		var datos = {
+			var1: documento[0].var5,
+			var2: documento[1].var5,
+			var3: documento[2].var5,
+			var4: documento[3].var5,
+			var5: documento[4].var5,
+			var6: documento[5].var5,
+			var7: documento[6].var5,
+			var8: documento[7].var5,
+			var9: documento[8].var5,
+			var10: documento[9].var5
+		};
+    }else if (id == 6){
+    		var datos = {
+			var1: documento[0].var6,
+			var2: documento[1].var6,
+			var3: documento[2].var6,
+			var4: documento[3].var6,
+			var5: documento[4].var6,
+			var6: documento[5].var6,
+			var7: documento[6].var6,
+			var8: documento[7].var6,
+			var9: documento[8].var6,
+			var10: documento[9].var6
+		};
+    }
+    // var docs = documento;	
     var data = JSON.stringify(datos)
     	fs.writeFile('data.json', data, function(err){
     		console.log('todo los datos')

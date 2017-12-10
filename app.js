@@ -590,12 +590,12 @@ app.get('/api/descargarxls/:id', function (req, res) {
     // var docs = documento;	
    csv
    .writeToPath("data.csv", [
-       ["a", "b"],
+       ["a", documento[0].var6],
        ["a1", "b1"],
        ["a2", "b2"]
    ], {headers: true})
    .on("finish", function(){
-      res.download('data.csv')
+      res.download('data.csv')4klñ 
    });
     
        

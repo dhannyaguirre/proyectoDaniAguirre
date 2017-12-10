@@ -18,7 +18,8 @@ var fs = require('fs');
 require( 'string.prototype.startswith' );
 
 //words probando json file
-var data = fs.readFileSync('data.json')
+var buffer = fs.readFileSync('data.json')
+var data = JSON.parse(buffer)
 console.log(data)
 
 /* cambios aplicacione

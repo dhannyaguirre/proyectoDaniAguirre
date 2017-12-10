@@ -16,7 +16,7 @@ var sizeOf    =   require( 'image-size' );
 var exphbs    =   require( 'express-handlebars' );
 var fs = require('fs');
 var csv = require('fast-csv')
-var ws = fs.createWriteStream('data.csv')
+var ws = fs.createWriteStream('data.csv');
 require( 'string.prototype.startswith' );
 
 //words probando json file

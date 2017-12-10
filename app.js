@@ -18,8 +18,8 @@ var fs = require('fs');
 require( 'string.prototype.startswith' );
 
 //words probando json file
-var words = fs.readFileSync('data.json')
-console.log('server is starting')
+var data = fs.readFileSync('data.json')
+console.log(data)
 
 /* cambios aplicacione
 	color gris

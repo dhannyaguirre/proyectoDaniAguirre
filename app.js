@@ -400,8 +400,9 @@ app.get('/api/descargar', function (req, res) {
     var data = JSON.stringify(docs)
     	fs.writeFile('data.json', data, function(err){
     		console.log('todo los datos')
+    		 res.download('data.json')
     	})
-     res.download('data.json')
+    
      
      //res.send(docs);
      //res.download(docs);

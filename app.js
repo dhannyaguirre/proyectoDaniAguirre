@@ -483,7 +483,7 @@ app.get('/api/descargar/:id', function (req, res) {
     	fs.writeFile('data.json', data, function(err){
     		console.log('todo los datos')
     		 res.download('data.json')
-    		 res.download('data.csv')
+    		
     	})
     
      
@@ -532,6 +532,7 @@ app.get('/api/descargarxls/:id', function (req, res) {
 				["var10", documento[9].var1]
 			], {headers: true})
    			.pipe(ws);
+   			 res.download('data.csv')
 		
     }else if (id == 2){
     		

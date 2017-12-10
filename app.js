@@ -387,9 +387,29 @@ Var.find({
 
 app.get('/api/descargar', function (req, res) {
 
-console.log(req.body)
+//console.log(req.body)
   //var area = req.query.type;
-  res.download('data.json')
+
+  	Var.find({
+  }).
+  limit(12).
+  sort({ _id: -1 }).
+  exec(function(error,documento){
+    if(error){ console.log(error); }
+    var docs = documento;	
+    var data = JSON.stringify(docs)
+    	fs.writeFile('data.json', data, function(err){
+    		console.log('todo los datos')
+    	})
+     res.download('data.json')
+     
+     //res.send(docs);
+     //res.download(docs);
+  });
+
+
+
+  
 });
 
 

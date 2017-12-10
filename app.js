@@ -396,9 +396,21 @@ app.get('/api/descargar', function (req, res) {
   sort({ _id: -1 }).
   exec(function(error,documento){
     if(error){ console.log(error); }
-    console.log(documento[0])
-    var docs = documento;	
-    var data = JSON.stringify(docs)
+    //console.log(documento[0])
+    var datos = {
+			var1: documento[0].var1,
+			var2: documento[1].var1,
+			var3: documento[2].var1,
+			var4: documento[3].var1,
+			var5: documento[4].var1,
+			var6: documento[5].var1,
+			var7: documento[6].var1,
+			var8: documento[7].var1,
+			var9: documento[8].var1,
+			var10: documento[9].var1
+		};
+   // var docs = documento;	
+    var data = JSON.stringify(datos)
     	fs.writeFile('data.json', data, function(err){
     		console.log('todo los datos')
     		 res.download('data.json')

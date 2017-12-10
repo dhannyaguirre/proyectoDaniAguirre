@@ -389,7 +389,7 @@ app.get('/api/descargar', function (req, res) {
 
 console.log(req.body)
   //var area = req.query.type;
-  res.download('main.js')
+  res.download('data.json')
 });
 
 

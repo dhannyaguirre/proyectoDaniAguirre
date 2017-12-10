@@ -505,7 +505,7 @@ app.get('/api/descargar/:id', function (req, res) {
 
 ///
 
-
+/*
 app.get('/api/descargarxls/:id', function (req, res) {
 
 //console.log(req.body)
@@ -556,7 +556,7 @@ app.get('/api/descargarxls/:id', function (req, res) {
   
 });
 
-
+*/
 
 app.get('/api/documentos/:id', function (req, res) {
 	

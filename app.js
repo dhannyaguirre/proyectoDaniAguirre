@@ -545,14 +545,7 @@ app.get('/api/descargarxls/:id', function (req, res) {
     }else if (id == 6){
     	
     }
-    // var docs = documento;	
-    var data = JSON.stringify(datos)
-    	fs.writeFile('data.json', data, function(err){
-    		console.log('todo los datos')
-    		 res.download('data.json')
-    		 res.download('data.csv')
-    	})
-    
+    // var docs = documento;
      
      //res.send(docs);
      //res.download(docs);

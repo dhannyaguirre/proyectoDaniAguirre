@@ -396,6 +396,7 @@ app.get('/api/descargar', function (req, res) {
   sort({ _id: -1 }).
   exec(function(error,documento){
     if(error){ console.log(error); }
+    console.log(documento[0])
     var docs = documento;	
     var data = JSON.stringify(docs)
     	fs.writeFile('data.json', data, function(err){

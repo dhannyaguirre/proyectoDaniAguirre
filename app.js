@@ -379,7 +379,7 @@ app.get('/api/descargar', function (req, res) {
 
 console.log(req.body)
   //var area = req.query.type;
-  res.send('horla mundo')
+  res.download('/main.js')
 });
 
 

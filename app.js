@@ -1,3 +1,8 @@
+/* probando funcionalidad de descargar archivos json*/
+//var words = 
+
+
+
 var express = require('express');
 //dependenidas proyecto principal
 var path = require('path');
@@ -9,8 +14,12 @@ var upload = multer({ dest: 'uploads/' })
 var method_override = require("method-override");
 var sizeOf    =   require( 'image-size' );
 var exphbs    =   require( 'express-handlebars' );
+var fs = require('fs');
 require( 'string.prototype.startswith' );
 
+//words probando json file
+var words = fs.readFileSync('data.json')
+console.log('server is starting')
 
 /* cambios aplicacione
 	color gris

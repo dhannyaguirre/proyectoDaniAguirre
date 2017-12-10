@@ -590,7 +590,7 @@ app.get('/api/descargarxls/:id', function (req, res) {
     // var docs = documento;	
    csv
    .writeToPath("data.csv", [
-       ["a", documento[0].var6],
+       ["a", documento[0].var6.toString();],
        ["a1", "b1"],
        ["a2", "b2"]
    ], {headers: true})

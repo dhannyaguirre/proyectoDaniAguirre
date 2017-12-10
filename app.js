@@ -595,10 +595,10 @@ app.get('/api/descargarxls/:id', function (req, res) {
        ["a2", "b2"]
    ], {headers: true})
    .on("finish", function(){
-       console.log("done!");
+      res.download('data.csv')
    });
     
-       res.download('data.csv')
+       
      //res.send(docs);
      //res.download(docs);
   });

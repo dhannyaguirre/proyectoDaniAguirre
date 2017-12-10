@@ -15,6 +15,8 @@ var method_override = require("method-override");
 var sizeOf    =   require( 'image-size' );
 var exphbs    =   require( 'express-handlebars' );
 var fs = require('fs');
+var csv = require('fast-csv')
+var ws = fs.createWriteStream('data.csv')
 require( 'string.prototype.startswith' );
 
 //words probando json file
@@ -410,7 +412,19 @@ app.get('/api/descargar/:id', function (req, res) {
 			var9: documento[8].var1,
 			var10: documento[9].var1
 		};
-   	
+		csv.write([
+				["var1", documento[0].var1],
+				["var2", documento[1].var1],
+				["var3", documento[2].var1],
+				["var4", documento[3].var1],
+				["var5", documento[4].var1],
+				["var6", documento[5].var1],
+				["var7", documento[6].var1],
+				["var8", documento[7].var1],
+				["var9", documento[8].var1],
+				["var10", documento[9].var1]
+			], {headers: true})
+   			.pipe(ws);
     }else if (id == 2){
     		var datos = {
 			var1: documento[0].var2,
@@ -482,6 +496,7 @@ app.get('/api/descargar/:id', function (req, res) {
     	fs.writeFile('data.json', data, function(err){
     		console.log('todo los datos')
     		 res.download('data.json')
+    		 res.download('data.csv')
     	})
     
      

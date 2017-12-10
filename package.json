@@ -15,6 +15,7 @@
     "cloudinary": "^1.4.1",
     "express": "^4.14.0",
     "express-handlebars": "^2.0.1",
+    "fast-csv": "^2.4.1",
     "handlebars": "^4.0.4",
     "image-size": "^0.3.5",
     "jade": "^1.11.0",

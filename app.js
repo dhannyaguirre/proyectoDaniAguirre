@@ -412,19 +412,6 @@ app.get('/api/descargar/:id', function (req, res) {
 			var9: documento[8].var1,
 			var10: documento[9].var1
 		};
-		csv.write([
-				["var1", documento[0].var1],
-				["var2", documento[1].var1],
-				["var3", documento[2].var1],
-				["var4", documento[3].var1],
-				["var5", documento[4].var1],
-				["var6", documento[5].var1],
-				["var7", documento[6].var1],
-				["var8", documento[7].var1],
-				["var9", documento[8].var1],
-				["var10", documento[9].var1]
-			], {headers: true})
-   			.pipe(ws);
     }else if (id == 2){
     		var datos = {
 			var1: documento[0].var2,
@@ -490,6 +477,72 @@ app.get('/api/descargar/:id', function (req, res) {
 			var9: documento[8].var6,
 			var10: documento[9].var6
 		};
+    }
+    // var docs = documento;	
+    var data = JSON.stringify(datos)
+    	fs.writeFile('data.json', data, function(err){
+    		console.log('todo los datos')
+    		 res.download('data.json')
+    		 res.download('data.csv')
+    	})
+    
+     
+     //res.send(docs);
+     //res.download(docs);
+  });
+
+
+
+  
+});
+
+
+
+
+
+
+/*datoa para csv*/
+
+///
+
+
+app.get('/api/descargarxls/:id', function (req, res) {
+
+//console.log(req.body)
+  //var area = req.query.type;
+ var id = req.params.id;
+  	Var.find({
+  }).
+  limit(12).
+  sort({ _id: -1 }).
+  exec(function(error,documento){
+    if(error){ console.log(error); }
+    //console.log(documento[0])
+    if(id == 1){
+    		csv.write([
+				["var1", documento[0].var1],
+				["var2", documento[1].var1],
+				["var3", documento[2].var1],
+				["var4", documento[3].var1],
+				["var5", documento[4].var1],
+				["var6", documento[5].var1],
+				["var7", documento[6].var1],
+				["var8", documento[7].var1],
+				["var9", documento[8].var1],
+				["var10", documento[9].var1]
+			], {headers: true})
+   			.pipe(ws);
+		
+    }else if (id == 2){
+    		
+    }else if (id == 3){
+    	
+    }else if (id == 4){
+    	
+    }else if (id == 5){
+    	
+    }else if (id == 6){
+    	
     }
     // var docs = documento;	
     var data = JSON.stringify(datos)

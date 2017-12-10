@@ -343,9 +343,10 @@ Var.find({
   exec(function(error,documento){
     if(error){ console.log(error); }
     var docs = documento;	
-     //res.send(docs);
-     res.download(docs);
+     res.send(docs);
+     //res.download(docs);
   });
+
 
 
 
@@ -372,6 +373,15 @@ Var.find({
 	});
   */
 });
+
+
+app.get('/api/descargar', function (req, res) {
+
+console.log(req.body)
+  //var area = req.query.type;
+  res.send('horla mundo')
+});
+
 
 
 app.get('/api/documentos/:id', function (req, res) {

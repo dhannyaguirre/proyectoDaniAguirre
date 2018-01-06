@@ -177,12 +177,12 @@ app.get("/menu",function(req,res){
 
 //ingreso de cuadro de mando
 app.post('/comado', function(req, res ) {
-	console.log(req.body)
+	console.log('Estamos en post comando')
 }); 
 
 
 app.post('/comadoa', function(req, res ) {
-	console.log(req.body)
+	console.log('estamos en post comando 2')
 }); 
 
 //ver demas  endpoints

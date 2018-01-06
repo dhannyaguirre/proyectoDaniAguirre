@@ -105,6 +105,14 @@ var limSchemaJSON = {
   lim11 : Number,
   lim12 : Number
 };
+
+//cuadro de mando schema
+
+var cuadroSchemaJSON = {
+
+  var1: Number,
+  var2: Number
+};
 /*
 var ingenieroSchemaJSON = {
 	ci: Number,
@@ -128,6 +136,8 @@ var ingenieroSchemaJSON = {
 //var ingenieroSchema = new Schema(ingenieroSchemaJSON);
 var varSchema = new Schema(varSchemaJSON);
 var limSchema = new Schema(limSchemaJSON);
+// cuadro de mando 
+var cuadroSchema = new Schema(cuadroSchemaJSON);
 /*
 ingenieroSchema.virtual("image.url").get(function(){
 	if(this.imageUrl === "" || this.imageUrl === "data.png"){
@@ -138,6 +148,7 @@ ingenieroSchema.virtual("image.url").get(function(){
 */
 var Lim = mongoose.model("Lim", limSchema);
 var Var = mongoose.model("Var", varSchema);
+var Cuadro = mongoose.model("Cuadro", cuadroSchema);
 //var Ingeniero = mongoose.model("Ingeniero", ingenieroSchema);
 
 app.set("view engine","jade");
@@ -177,7 +188,8 @@ app.get("/menu",function(req,res){
 
 //ingreso de cuadro de mando
 app.post('/comando', function(req, res ) {
-	console.log('Estamos en post comando')
+	console.log(req.body);
+
 }); 
 
 

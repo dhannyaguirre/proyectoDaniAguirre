@@ -209,6 +209,20 @@ app.post('/comando', function(req, res ) {
 
 }); 
 
+app.get('/comando', function(req, res ) {
+	
+	Cuadro.find({
+	  }).
+	  limit(1).
+	  sort({ _id: -1 }).
+	  exec(function(error,documento){
+	    if(error){ console.log(error); }
+	    var docs = documento;
+	     res.send(docs);
+  	});
+
+}); 
+
 
 app.post('/comandoa', function(req, res ) {
 	var data = {
@@ -216,6 +230,7 @@ app.post('/comandoa', function(req, res ) {
   	}
   	var documento = new Cuadro2(data);
 	documento.save(function(err){
+
 		if(err){
 			console.log("esta grabando")	
 		}

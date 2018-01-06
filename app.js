@@ -111,7 +111,11 @@ var limSchemaJSON = {
 var cuadroSchemaJSON = {
 
   var1: Number,
-  var2: Number
+};
+
+var cuadro2SchemaJSON = {
+
+  var1: Number,
 };
 /*
 var ingenieroSchemaJSON = {
@@ -138,6 +142,7 @@ var varSchema = new Schema(varSchemaJSON);
 var limSchema = new Schema(limSchemaJSON);
 // cuadro de mando 
 var cuadroSchema = new Schema(cuadroSchemaJSON);
+var cuadro2Schema = new Schema(cuadro2SchemaJSON);
 /*
 ingenieroSchema.virtual("image.url").get(function(){
 	if(this.imageUrl === "" || this.imageUrl === "data.png"){
@@ -149,6 +154,7 @@ ingenieroSchema.virtual("image.url").get(function(){
 var Lim = mongoose.model("Lim", limSchema);
 var Var = mongoose.model("Var", varSchema);
 var Cuadro = mongoose.model("Cuadro", cuadroSchema);
+var Cuadro2 = mongoose.model("Cuadro2", cuadroSchema);
 //var Ingeniero = mongoose.model("Ingeniero", ingenieroSchema);
 
 app.set("view engine","jade");
@@ -188,13 +194,34 @@ app.get("/menu",function(req,res){
 
 //ingreso de cuadro de mando
 app.post('/comando', function(req, res ) {
-	console.log(req.body);
+	
+	var data = {
+  		var1: req.body.inlineRadioOptions,
+  	}
+  	var documento = new Cuadro(data);
+	documento.save(function(err){
+		if(err){
+			console.log("esta grabando")	
+		}
+		
+		res.redirect("/");
+	});
 
 }); 
 
 
 app.post('/comandoa', function(req, res ) {
-	console.log('estamos en post comando 2')
+	var data = {
+  		var1: req.body.inlineRadioOptions,
+  	}
+  	var documento = new Cuadro2(data);
+	documento.save(function(err){
+		if(err){
+			console.log("esta grabando")	
+		}
+		
+		res.redirect("/");
+	});
 }); 
 
 //ver demas  endpoints

@@ -181,9 +181,10 @@ app.post('/comado', function(req, res ) {
 }); 
 
 
-app.post('/comado2', function(req, res ) {
+app.post('/comadoa', function(req, res ) {
 	console.log(req.body)
 }); 
+
 //ver demas  endpoints
 app.post('/menu', function(req, res ) {
 	console.log(req.body)

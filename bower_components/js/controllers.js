@@ -2,6 +2,15 @@
 var i = 0  
 var n = 0 
   angular.module('ingedex.controllers', [])
+    .controller('TodoCtrl', function($scope, $http){
+      $scope.add = function( event ){
+        if ( event.keyCode == 13){
+          $http.post('/comando',{text: $scope.new_todo}).success(function(data){
+            console.log(data);
+          });
+        }
+      }
+    })
     .controller('IngedexController', ['$rootScope', '$scope', '$routeParams', 'Ingeniero', 'Limite' , function ($rootScope, $scope, $routeParams, Ingeniero, Limite) {
       
        var id = $routeParams.id;

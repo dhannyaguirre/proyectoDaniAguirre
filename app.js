@@ -252,7 +252,7 @@ app.post('/menulim', function(req, res ) {
 
 // ruta de ingreso a admin
 app.get("/admin",function(req,res){
-	console.log('estoy en ruta admin');
+	
 	res.render("admin/form" )
 
 });

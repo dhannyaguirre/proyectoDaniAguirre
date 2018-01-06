@@ -226,7 +226,7 @@ app.get('/comando', function(req, res ) {
 
 app.post('/comandoa', function(req, res ) {
 	var data = {
-  		var1: req.body.inlineRadioOptions,
+  		var1: req.body.var1,
   	}
   	var documento = new Cuadro2(data);
 	documento.save(function(err){

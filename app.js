@@ -249,7 +249,8 @@ app.get('/comandoa', function(req, res ) {
 	  exec(function(error,documento){
 	    if(error){ console.log(error); }
 	    var docs = documento;
-	     res.send(docs.var1);
+	    console.log(docs);
+	     res.send(docs);
   	});
 
 }); 

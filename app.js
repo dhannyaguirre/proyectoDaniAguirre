@@ -218,7 +218,7 @@ app.get('/comando', function(req, res ) {
 	  exec(function(error,documento){
 	    if(error){ console.log(error); }
 	    var docs = documento;
-	     res.send(docs);
+	     res.send(docs.var1);
   	});
 
 }); 
@@ -249,7 +249,7 @@ app.get('/comandoa', function(req, res ) {
 	  exec(function(error,documento){
 	    if(error){ console.log(error); }
 	    var docs = documento;
-	     res.send(docs);
+	     res.send(docs.var1);
   	});
 
 }); 

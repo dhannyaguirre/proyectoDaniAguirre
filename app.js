@@ -110,12 +110,12 @@ var limSchemaJSON = {
 
 var cuadroSchemaJSON = {
 
-  var1: Number,
+  var1: String,
 };
 
 var cuadro2SchemaJSON = {
 
-  var1: Number,
+  var1: String,
 };
 /*
 var ingenieroSchemaJSON = {

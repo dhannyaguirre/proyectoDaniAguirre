@@ -176,7 +176,7 @@ app.get("/menu",function(req,res){
 
 
 //ingreso de cuadro de mando
-app.get('/comado', function(req, res ) {
+app.post('/comado', function(req, res ) {
 	console.log('Estamos en post comando')
 }); 
 

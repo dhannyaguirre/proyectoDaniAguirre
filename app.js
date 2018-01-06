@@ -176,12 +176,12 @@ app.get("/menu",function(req,res){
 
 
 //ingreso de cuadro de mando
-app.post('/comado', function(req, res ) {
+app.post('/comando', function(req, res ) {
 	console.log('Estamos en post comando')
 }); 
 
 
-app.post('/comadoa', function(req, res ) {
+app.post('/comandoa', function(req, res ) {
 	console.log('estamos en post comando 2')
 }); 
 
@@ -252,7 +252,7 @@ app.post('/menulim', function(req, res ) {
 
 // ruta de ingreso a admin
 app.get("/admin",function(req,res){
-	
+
 	res.render("admin/form" )
 
 });

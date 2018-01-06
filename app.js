@@ -239,6 +239,21 @@ app.post('/comandoa', function(req, res ) {
 	});
 }); 
 
+
+app.get('/comandoa', function(req, res ) {
+	
+	Cuadro2.find({
+	  }).
+	  limit(1).
+	  sort({ _id: -1 }).
+	  exec(function(error,documento){
+	    if(error){ console.log(error); }
+	    var docs = documento;
+	     res.send(docs);
+  	});
+
+}); 
+
 //ver demas  endpoints
 app.post('/menu', function(req, res ) {
 	console.log(req.body)

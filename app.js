@@ -172,6 +172,19 @@ app.get("/menu",function(req,res){
 );
 
 //route para guardar un registro en la base de datos 
+
+
+
+//ingreso de cuadro de mando
+app.post('/comado', function(req, res ) {
+	console.log(req.body)
+}); 
+
+
+app.post('/comado2', function(req, res ) {
+	console.log(req.body)
+}); 
+//ver demas  endpoints
 app.post('/menu', function(req, res ) {
 	console.log(req.body)
   	var data = {
